@@ -10,8 +10,8 @@
 window.SiteBrainAPI = (function () {
   'use strict';
 
-  // Default local dev target; override with window.SITEBRAIN_API_BASE before this script loads
-  const BASE = window.SITEBRAIN_API_BASE || 'http://localhost:8000';
+  // Use relative path for production API calls or fallback to localhost for development
+  const BASE = window.SITEBRAIN_API_BASE || (window.location.hostname === 'localhost' ? 'http://localhost:8000' : '');
   const TIMEOUT_MS = 9000;
 
   async function _fetchJSON(path, options, timeoutMs) {
