@@ -426,3 +426,89 @@ input[type="range"]::-webkit-slider-thumb:active {
   }
 }
 
+/* ── Flexible Map Layout ── */
+/* Collapsed diagnostic panel (slim rail) */
+#diagPanel.panel-collapsed {
+  width: 64px !important;
+  min-width: 64px !important;
+  overflow-x: hidden !important;
+  transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1), min-width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Map expands when panel collapsed */
+#mapSection.panel-expanded {
+  width: 100% !important;
+  transition: width 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Stack map above panel below lg breakpoint */
+@media (max-width: 1023px) {
+  #mapSection { height: 60vh; }
+  #diagPanel { height: auto; min-height: 40vh; }
+}
+
+/* Map header strip (glass bar atop map) */
+#mapHeaderStrip {
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+/* Layer controls bottom strip */
+#layerControlsBottom {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Resize divider between map and panel */
+#mapDivider {
+  transition: background 0.2s ease;
+}
+
+/* Full-screen map: hide panel, expand map */
+body.map-fullscreen #diagPanel {
+  display: none !important;
+}
+body.map-fullscreen #mapSection {
+  width: 100% !important;
+  height: 100vh !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 2000 !important;
+}
+body.map-fullscreen header {
+  z-index: 2100 !important;
+}
+
+/* Full-screen exit hint */
+.fullscreen-hint {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2200;
+  padding: 0.75rem 1rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+body.map-fullscreen .fullscreen-hint {
+  opacity: 1;
+}
+
+/* Hide panel content when collapsed (keep stepper rail minimal) */
+#diagPanel.panel-collapsed .step-label,
+#diagPanel.panel-collapsed > .flex-1,
+#diagPanel.panel-collapsed .glass-panel-strong:not(.sticky) {
+  display: none;
+}
+#diagPanel.panel-collapsed .sticky {
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+}
+

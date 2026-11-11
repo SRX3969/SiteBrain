@@ -251,6 +251,9 @@ window.mapEngine = (function () {
     setText('map-anchor-count', loc.anchors.length);
     setText('map-prop-count', (loc.properties || []).length);
 
+    // Actually add the populated layer groups to the map (pins, catchment, anchors, listings)
+    applyLayerState();
+
     // Signal completion after the longest staggered drop
     const totalDelay = animateScan ? 1600 : 60;
     schedule(() => { if (token === scanToken && typeof onComplete === 'function') onComplete(); }, totalDelay);
@@ -293,28 +296,83 @@ window.mapEngine = (function () {
   }
 
   let isFullScreen = false;
+  let panelCollapsed = false;
+  let dividerStartX = 0;
+  let dividerStartMapW = 0;
 
   function toggleFullScreen() {
     isFullScreen = !isFullScreen;
-    const mapContainer = document.getElementById('surveyMap').parentElement;
-    const rightPanel = document.querySelector('section[aria-label="Diagnostic survey panel"]');
-    
-    if (isFullScreen) {
-      mapContainer.classList.add('fixed', 'inset-0', 'z-[2000]');
-      rightPanel.classList.add('hidden');
-    } else {
-      mapContainer.classList.remove('fixed', 'inset-0', 'z-[2000]');
-      rightPanel.classList.remove('hidden');
+    document.body.classList.toggle('map-fullscreen', isFullScreen);
+    resize();
+  }
+
+  function togglePanelCollapse() {
+    panelCollapsed = !panelCollapsed;
+    const panel = document.getElementById('diagPanel');
+    const mapSection = document.getElementById('mapSection');
+    const btn = document.getElementById('mapCollapseBtn');
+    if (panel) panel.classList.toggle('panel-collapsed', panelCollapsed);
+    if (mapSection) mapSection.classList.toggle('panel-expanded', panelCollapsed);
+    if (btn) {
+      const icon = btn.querySelector('svg');
+      if (icon) {
+        icon.setAttribute('d', panelCollapsed
+          ? 'M4 12h16M12 4l4 4-4 4'
+          : 'M20 12H4M12 20l-4-4 4-4');
+      }
     }
     resize();
   }
+
+  function setupDividerDrag() {
+    const divider = document.getElementById('mapDivider');
+    const panel = document.getElementById('diagPanel');
+    const mapSection = document.getElementById('mapSection');
+    if (!divider || !panel || !mapSection) return;
+
+    divider.addEventListener('mousedown', e => {
+      dividerStartX = e.clientX;
+      const rect = mapSection.getBoundingClientRect();
+      dividerStartMapW = rect.width;
+      document.addEventListener('mousemove', onDrag);
+      document.addEventListener('mouseup', stopDrag);
+    });
+
+    function onDrag(e) {
+      const dx = e.clientX - dividerStartX;
+      const mapW = dividerStartMapW + dx;
+      const panelW = panel.parentElement.getBoundingClientRect().width - mapW;
+      if (mapW > 300 && panelW > 200) {
+        mapSection.style.width = mapW + 'px';
+        panel.style.width = panelW + 'px';
+        panelCollapsed = false;
+        panel.classList.remove('panel-collapsed');
+        mapSection.classList.remove('panel-expanded');
+        resize();
+      }
+    }
+
+    function stopDrag() {
+      document.removeEventListener('mousemove', onDrag);
+      document.removeEventListener('mouseup', stopDrag);
+    }
+  }
+
+  // Esc exits full-screen
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && isFullScreen) {
+      toggleFullScreen();
+    }
+  });
 
   return {
     init,
     scanLocation,
     toggleLayer,
     toggleFullScreen,
+    togglePanelCollapse,
     resize,
-    getCurrentLocId
+    getCurrentLocId,
+    setupDividerDrag
   };
 })();

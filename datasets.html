@@ -23,6 +23,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/js/tailwind-config.js"></script>
 
+  <!-- Leaflet.js (genuine map engine) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
   <!-- SiteBrain Custom Stylesheets -->
   <link rel="stylesheet" href="assets/css/main.css" />
   <link rel="stylesheet" href="assets/css/components.css" />
@@ -95,6 +99,37 @@
         </p>
       </div>
       <div id="dsSourceTable" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════════
+     CORRIDOR MAP — Bengaluru micro-market overview
+     ══════════════════════════════════════════════════════════════════ -->
+  <section id="corridor-map" class="relative py-16 lg:py-20 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Corridor Map</span>
+        </div>
+        <h2 class="section-headline mb-3">Bengaluru micro-markets at a glance.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Click any corridor to launch a full 3km geospatial survey in that micro-market.
+        </p>
+      </div>
+      <div class="glass-panel-strong rounded-3xl border border-black/[0.06] shadow-sm overflow-hidden">
+        <div id="dsCorridorMap" class="w-full h-[260px] lg:h-[320px]"></div>
+        <div class="absolute bottom-4 left-4 z-20 flex flex-col gap-1.5">
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-[#0071E3]"></span> Low Risk
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-[#FF9500]"></span> Medium Risk
+          </div>
+          <div class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs font-medium">
+            <span class="w-2 h-2 rounded-full bg-[#FF3B30]"></span> High Risk
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -239,5 +274,57 @@
   <script src="assets/js/data.js"></script>
   <script src="assets/js/utils.js"></script>
   <script src="assets/js/datasets.js"></script>
+
+  <!-- Corridor map (genuine Leaflet) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mapEl = document.getElementById('dsCorridorMap');
+      if (!window.SITEBRAIN_DATA || !mapEl) return;
+
+      const corridorMap = L.map('dsCorridorMap', {
+        zoomControl: true,
+        attributionControl: true,
+        scrollWheelZoom: false
+      }).setView([12.9716, 77.5946], 11);
+
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        maxZoom: 19,
+        subdomains: 'abcd',
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+      }).addTo(corridorMap);
+
+      const riskColor = {
+        low: '#0071E3',
+        medium: '#FF9500',
+        high: '#FF3B30'
+      };
+
+      Object.values(window.SITEBRAIN_DATA.locations).forEach(loc => {
+        const color = riskColor[loc.riskClassification] || '#0071E3';
+        L.marker(loc.center, {
+          icon: L.divIcon({
+            className: '',
+            html: `<div style="position:relative;width:16px;height:16px;display:flex;align-items:center;justify-content:center;">
+              <div style="position:absolute;inset:-4px;border-radius:50%;border:2px solid ${color};opacity:0.5;"></div>
+              <div style="width:10px;height:10px;border-radius:50%;background:${color};border:2px solid #FFFFFF;box-shadow:0 2px 8px rgba(0,0,0,0.3);"></div>
+            </div>`,
+            iconSize: [16, 16], iconAnchor: [8, 8]
+          })
+        }).bindPopup(`
+          <div style="font-family:-apple-system,sans-serif;padding:4px 3px;">
+            <div style="font-size:13px;font-weight:600;color:#1D1D1F;">${loc.name}</div>
+            <div style="font-size:11px;color:#86868B;">${loc.corridor}</div>
+            <div style="font-size:11px;color:#666;margin-top:2px;">Viability: ${loc.baseViabilityScore}/100</div>
+          </div>
+        `, { closeButton: false })
+        .on('click', () => {
+          window.location.href = `survey.html?location=${loc.id}`;
+        })
+        .addTo(corridorMap);
+      });
+
+      corridorMap.invalidateSize();
+    });
+  </script>
 </body>
 </html>

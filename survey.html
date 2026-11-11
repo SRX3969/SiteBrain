@@ -102,10 +102,32 @@
   <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
 
     <!-- ── LEFT VIEWPORT: GEOSPATIAL MAP SURFACE ── -->
-    <section class="w-full lg:w-[58%] xl:w-[60%] h-[45vh] lg:h-full relative flex-shrink-0 bg-white" aria-label="3km catchment map scan">
+    <section id="mapSection" class="w-full lg:w-[60%] h-[60vh] lg:h-full relative flex-shrink-0 bg-white" aria-label="3km catchment map scan">
 
-        <!-- Floating Map Layer Controls (Top Left) -->
-        <div class="absolute top-4 left-4 z-[400] flex flex-col gap-2">
+      <!-- Map header strip: coordinates + scan status -->
+      <div id="mapHeaderStrip" class="absolute top-0 left-0 right-0 z-[350] flex items-center justify-between gap-3 px-4 py-2.5 bg-white/80 backdrop-blur border-b border-black/[0.06] shadow-sm">
+        <div class="hidden sm:flex items-center gap-2.5 px-3 py-1 rounded-full glass-panel-strong border border-black/[0.08] shadow-2xs text-xs font-mono text-apple-title">
+          <span class="w-2 h-2 rounded-full bg-brand animate-ping"></span>
+          <span id="map-coord-display">12.9784° N, 77.6408° E • 3km Catchment</span>
+        </div>
+        <div id="scanningOverlay" class="hidden-modal flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-strong border border-brand/25 shadow-lg text-xs font-medium text-apple-title whitespace-nowrap">
+          <span class="relative flex items-center justify-center w-4 h-4">
+            <span class="absolute w-4 h-4 rounded-full border-2 border-brand/30 border-t-brand animate-spin"></span>
+          </span>
+          <span id="scanningText">Scanning 3km catchment zone…</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="mapCollapseBtn" onclick="window.mapEngine.togglePanelCollapse()" class="p-2 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs text-apple-title hover:bg-white transition-colors" title="Collapse panel">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="20" y1="12" x2="4" y2="12"/></svg>
+          </button>
+          <button onclick="window.mapEngine.toggleFullScreen()" class="p-2 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs text-brand hover:bg-white transition-colors" title="Expand map full-screen">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 21h3a2 2 0 0 0 2-2v-3M21 8v3a2 2 0 0 1-2 2h-3M3 16v-3a2 2 0 0 1 2-2h3"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Layer controls as bottom sheet (pill strip above map edges) -->
+      <div id="layerControlsBottom" class="absolute bottom-0 left-0 right-0 z-[350] flex items-center justify-center gap-2 px-4 py-3 bg-white/70 backdrop-blur border-t border-black/[0.06] shadow-sm">
           <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
             <input type="checkbox" id="toggleIsochrone" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('isochrone')" />
             <span>3km Catchment</span>
@@ -127,27 +149,9 @@
             <input type="checkbox" id="toggleHeatmap" class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('heatmap')" />
             <span>Pedestrian Heatmap</span>
           </label>
-          <!-- Added: Full-Screen toggle -->
-          <button onclick="window.mapEngine.toggleFullScreen()" class="flex items-center justify-center w-full px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs font-medium text-brand hover:bg-white transition-all">
-             <span>⤢ Expand Map</span>
-          </button>
         </div>
 
-      <!-- Live Coordinates Display (Top Right) -->
-      <div class="absolute top-4 right-6 z-[400] hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-strong border border-black/[0.08] shadow-2xs text-xs font-mono text-apple-title">
-        <span class="w-2 h-2 rounded-full bg-brand animate-ping"></span>
-        <span id="map-coord-display">12.9784° N, 77.6408° E • 3km Catchment</span>
-      </div>
-
-      <!-- Live Scanning Status Overlay (Top Center) -->
-      <div id="scanningOverlay" class="modal-overlay hidden-modal absolute top-4 left-1/2 -translate-x-1/2 z-[450] flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-strong border border-brand/25 shadow-lg">
-        <span class="relative flex items-center justify-center w-4 h-4">
-          <span class="absolute w-4 h-4 rounded-full border-2 border-brand/30 border-t-brand animate-spin"></span>
-        </span>
-        <span id="scanningText" class="text-xs font-medium text-apple-title whitespace-nowrap">Scanning 3km catchment zone…</span>
-      </div>
-
-      <!-- Map Legend (Bottom Left) -->
+      <!-- Map Legend (Bottom Left, above layer controls strip) -->
       <div class="absolute bottom-4 left-4 z-[400] px-3.5 py-2.5 rounded-2xl glass-panel-strong border border-black/[0.08] shadow-2xs">
         <div class="text-[10px] font-semibold text-apple-title uppercase tracking-wider mb-1.5">Spatial Layer Legend</div>
         <div class="flex flex-col gap-1 text-[11px] font-medium text-apple-body">
@@ -161,11 +165,13 @@
 
       <!-- Full-Height Leaflet Map Canvas -->
       <div id="surveyMap" class="w-full h-full"></div>
+
+      <!-- Resize divider (lg+ only) -->
+      <div id="mapDivider" class="hidden lg:block w-1 cursor-ew-resize bg-black/[0.08] hover:bg-brand/40 transition-colors z-[300]"></div>
     </section>
 
     <!-- ── RIGHT VIEWPORT: SCROLLABLE DIAGNOSTIC PANEL ── -->
-    <section class="w-full lg:w-[42%] xl:w-[40%] h-[55vh] lg:h-full overflow-y-auto border-l border-black/[0.06] bg-apple-surface/30" aria-label="Diagnostic survey panel">
-
+    <section id="diagPanel" class="w-full lg:w-[40%] h-full overflow-y-auto border-l border-black/[0.06] bg-apple-surface/30 flex flex-col" aria-label="Diagnostic survey panel">
       <!-- Sticky 5-Step Pipeline Stepper -->
       <div class="sticky top-0 z-20 bg-apple-surface/30 backdrop-blur-2xl border-b border-black/[0.05] px-5 sm:px-7 pt-4 pb-3">
         <div class="flex items-center justify-between">
@@ -181,7 +187,7 @@
         </div>
       </div>
 
-      <div class="p-5 sm:p-7 space-y-6">
+      <div class="flex-1 overflow-y-auto p-5 sm:p-7 space-y-6">
 
         <!-- STEP 1: GEMINI EXECUTIVE FEASIBILITY BRIEF -->
         <div id="geminiBriefOutput" aria-live="polite">
@@ -609,6 +615,8 @@
       <p class="text-[11px] text-apple-muted" id="toastDesc">Scanned 3km micro-market successfully.</p>
     </div>
   </div>
+
+  <div id="fullscreenHint" class="fullscreen-hint">Press Esc to exit full-screen map</div>
 
   <!-- ── SITEBRAIN JS ENGINE SCRIPTS ── -->
   <script src="assets/js/data.js"></script>

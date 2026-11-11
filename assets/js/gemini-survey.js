@@ -43,6 +43,7 @@ window.geminiSurvey = (function () {
     }
 
     window.mapEngine.init('surveyMap', currentSurveyState.locationId);
+    window.mapEngine.setupDividerDrag();
     executeSurveyRun(currentSurveyState.locationId, currentSurveyState.categoryId, currentSurveyState.budget, false);
     setupEventListeners();
 
@@ -466,15 +467,6 @@ window.geminiSurvey = (function () {
 
     // Deterministic negotiation ceiling: rent per sq.ft that holds RTR ≤ 18%
     const maxRentSqft = Math.max(60, Math.round((metrics.achievedRevenue * 0.18) / metrics.sqft));
-
-    // Strongest incumbent within the scanned catchment (ranked by public rating where available)
-    const ratedCompetitors = loc.competitors.filter(c => typeof c.rating === 'number' && c.rating > 0);
-    const topCompetitor = (ratedCompetitors.length ? ratedCompetitors : loc.competitors)
-      .slice().sort((a, b) => (b.rating || 0) - (a.rating || 0))[0];
-    const nearestCompetitor = loc.competitors.slice().sort((a, b) => a.distanceMeters - b.distanceMeters)[0];
-    const avgRating = ratedCompetitors.length
-      ? (ratedCompetitors.reduce((s, c) => s + c.rating, 0) / ratedCompetitors.length).toFixed(1) + '★'
-      : 'not publicly rated';
 
     // Strongest incumbent within the scanned catchment (ranked by public rating where available)
     const ratedCompetitors = loc.competitors.filter(c => typeof c.rating === 'number' && c.rating > 0);
