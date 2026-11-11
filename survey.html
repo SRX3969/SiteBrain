@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteBrain Workbench — Geospatial Location Survey &amp; AI Diagnostic</title>
+  <meta name="description" content="Interactive geospatial commercial real estate intelligence survey. 3km radial competitor scanning, deterministic break-even calculations, and Google Gemini 2.5 Pro execution masterplan." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SiteBrain Workbench — AI Geospatial Location Survey" />
+  <meta property="og:description" content="Determine store profitability before you sign the lease. 3km competitor scans, deterministic underwriting, and a Gemini execution masterplan." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230071E3'/%3E%3Ccircle cx='12' cy='12' r='3.2' fill='white'/%3E%3Ccircle cx='12' cy='12' r='7.5' stroke='white' stroke-width='1.4' fill='none' stroke-dasharray='3 3'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) & JetBrains Mono (Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN + shared design tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- SiteBrain Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+
+<body class="spatial-grid-bg h-screen flex flex-col overflow-hidden text-apple-title selection:bg-brand/15 selection:text-brand">
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 1. TOP APP HEADER BAR                   -->
+  <!-- ════════════════════════════════════════ -->
+  <header class="h-16 px-5 border-b border-black/[0.06] glass-panel-strong z-30 flex items-center justify-between gap-3 flex-shrink-0">
+
+    <!-- Left: Navigation Back, Logo & Hotspot Pills -->
+    <div class="flex items-center gap-3 min-w-0">
+      <a href="index.html" class="flex items-center gap-1.5 text-xs font-medium text-apple-muted hover:text-apple-title transition-colors py-1.5 px-3 rounded-full hover:bg-black/5 flex-shrink-0">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span class="hidden sm:inline">Back to Home</span>
+      </a>
+
+      <div class="h-4 w-px bg-black/[0.08] hidden sm:block"></div>
+
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <div class="w-6 h-6 rounded-lg bg-brand flex items-center justify-center text-white shadow-2xs">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.5" fill="white"/><circle cx="12" cy="12" r="8" stroke="white" stroke-width="1.6" stroke-dasharray="3 3"/></svg>
+        </div>
+        <span class="font-semibold text-sm tracking-tight hidden md:inline">SiteBrain Workbench</span>
+      </div>
+
+      <!-- Hotspot Quick-Switch Pills -->
+      <div class="hidden lg:flex items-center gap-1.5 ml-1">
+        <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="indiranagar">Indiranagar</button>
+        <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="koramangala">Koramangala</button>
+        <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="hsr">HSR Layout</button>
+        <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="whitefield">Whitefield</button>
+      </div>
+    </div>
+
+    <!-- Center: Active Survey Status Pill -->
+    <div id="headerStatusPill" class="hidden xl:flex items-center gap-2 px-4 py-1.5 rounded-full bg-apple-surface border border-black/[0.05] text-xs shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-risk-low animate-pulse"></span>
+      <span class="font-medium text-apple-title">Indiranagar 100ft Rd</span>
+      <span class="text-apple-muted">•</span>
+      <span class="text-apple-body">Specialty Coffee</span>
+      <span class="text-apple-muted">•</span>
+      <span class="font-mono text-brand font-semibold">CapEx: ₹45L</span>
+    </div>
+
+    <!-- Right: Actions -->
+    <div class="flex items-center gap-2 flex-shrink-0">
+      <button onclick="window.geminiSurvey.openRelatedLocationsModal()" class="btn-apple-secondary text-xs !py-2 !px-3 shadow-2xs flex items-center gap-1.5" title="View Related Sites">
+        <svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+        <span class="hidden sm:inline">Related Sites</span>
+      </button>
+      <button onclick="window.geminiSurvey.openScriptModal()" class="btn-apple-secondary text-xs !py-2 !px-3 shadow-2xs flex items-center gap-1.5" title="Lease Script Generator">
+        <svg class="w-3.5 h-3.5 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="hidden sm:inline">Negotiate Script</span>
+      </button>
+      <button onclick="window.print()" class="btn-apple-secondary text-xs !py-2 !px-3 shadow-2xs hidden md:flex items-center gap-1.5" title="Export PDF Audit">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Print Audit</span>
+      </button>
+      <button onclick="window.geminiSurvey.openSetupModal()" class="btn-apple-primary text-xs !py-2 !px-4 shadow-2xs">
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>New Survey</span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 2. MAIN SPLIT WORKBENCH CONTAINER        -->
+  <!-- ════════════════════════════════════════ -->
+  <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
+
+    <!-- ── LEFT VIEWPORT: GEOSPATIAL MAP SURFACE ── -->
+    <section class="w-full lg:w-[58%] xl:w-[60%] h-[45vh] lg:h-full relative flex-shrink-0 bg-white" aria-label="3km catchment map scan">
+
+        <!-- Floating Map Layer Controls (Top Left) -->
+        <div class="absolute top-4 left-4 z-[400] flex flex-col gap-2">
+          <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
+            <input type="checkbox" id="toggleIsochrone" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('isochrone')" />
+            <span>3km Catchment</span>
+          </label>
+          <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
+            <input type="checkbox" id="toggleCompetitors" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('competitors')" />
+            <span>Competitors (<span id="map-comp-count">12</span>)</span>
+          </label>
+          <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
+            <input type="checkbox" id="toggleAnchors" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('anchors')" />
+            <span>Anchors (<span id="map-anchor-count">6</span>)</span>
+          </label>
+          <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
+            <input type="checkbox" id="toggleProperties" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('properties')" />
+            <span>Listings (<span id="map-prop-count">4</span>)</span>
+          </label>
+          <!-- Added: Heatmap toggle -->
+          <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
+            <input type="checkbox" id="toggleHeatmap" class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('heatmap')" />
+            <span>Pedestrian Heatmap</span>
+          </label>
+          <!-- Added: Full-Screen toggle -->
+          <button onclick="window.mapEngine.toggleFullScreen()" class="flex items-center justify-center w-full px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs font-medium text-brand hover:bg-white transition-all">
+             <span>⤢ Expand Map</span>
+          </button>
+        </div>
+
+      <!-- Live Coordinates Display (Top Right) -->
+      <div class="absolute top-4 right-6 z-[400] hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel-strong border border-black/[0.08] shadow-2xs text-xs font-mono text-apple-title">
+        <span class="w-2 h-2 rounded-full bg-brand animate-ping"></span>
+        <span id="map-coord-display">12.9784° N, 77.6408° E • 3km Catchment</span>
+      </div>
+
+      <!-- Live Scanning Status Overlay (Top Center) -->
+      <div id="scanningOverlay" class="modal-overlay hidden-modal absolute top-4 left-1/2 -translate-x-1/2 z-[450] flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-strong border border-brand/25 shadow-lg">
+        <span class="relative flex items-center justify-center w-4 h-4">
+          <span class="absolute w-4 h-4 rounded-full border-2 border-brand/30 border-t-brand animate-spin"></span>
+        </span>
+        <span id="scanningText" class="text-xs font-medium text-apple-title whitespace-nowrap">Scanning 3km catchment zone…</span>
+      </div>
+
+      <!-- Map Legend (Bottom Left) -->
+      <div class="absolute bottom-4 left-4 z-[400] px-3.5 py-2.5 rounded-2xl glass-panel-strong border border-black/[0.08] shadow-2xs">
+        <div class="text-[10px] font-semibold text-apple-title uppercase tracking-wider mb-1.5">Spatial Layer Legend</div>
+        <div class="flex flex-col gap-1 text-[11px] font-medium text-apple-body">
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-risk-high shadow-2xs"></span>Competitor Shop</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-brand shadow-2xs"></span>Footfall Anchor</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-low shadow-2xs"></span>Listing — Rent</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-[#5856D6] shadow-2xs"></span>Listing — Sale</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-medium shadow-2xs"></span>Listing — BTS Lease</div>
+        </div>
+      </div>
+
+      <!-- Full-Height Leaflet Map Canvas -->
+      <div id="surveyMap" class="w-full h-full"></div>
+    </section>
+
+    <!-- ── RIGHT VIEWPORT: SCROLLABLE DIAGNOSTIC PANEL ── -->
+    <section class="w-full lg:w-[42%] xl:w-[40%] h-[55vh] lg:h-full overflow-y-auto border-l border-black/[0.06] bg-apple-surface/30" aria-label="Diagnostic survey panel">
+
+      <!-- Sticky 5-Step Pipeline Stepper -->
+      <div class="sticky top-0 z-20 bg-apple-surface/30 backdrop-blur-2xl border-b border-black/[0.05] px-5 sm:px-7 pt-4 pb-3">
+        <div class="flex items-center justify-between">
+          <span class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-widest">Survey Pipeline</span>
+          <span class="text-[10px] font-mono text-apple-muted">PostGIS → FastAPI → Gemini</span>
+        </div>
+        <div class="stepper mt-2.5">
+          <div class="step-item" data-step="1"><span class="step-dot"></span><span class="step-label">Brief</span></div>
+          <div class="step-item" data-step="2"><span class="step-dot"></span><span class="step-label">Scan</span></div>
+          <div class="step-item" data-step="3"><span class="step-dot"></span><span class="step-label">Underwriting</span></div>
+          <div class="step-item" data-step="4"><span class="step-dot"></span><span class="step-label">Verdict</span></div>
+          <div class="step-item" data-step="5"><span class="step-dot"></span><span class="step-label">Masterplan</span></div>
+        </div>
+      </div>
+
+      <div class="p-5 sm:p-7 space-y-6">
+
+        <!-- STEP 1: GEMINI EXECUTIVE FEASIBILITY BRIEF -->
+        <div id="geminiBriefOutput" aria-live="polite">
+          <!-- Rendered dynamically by gemini-survey.js -->
+        </div>
+
+        <!-- STEP 2 OUTPUT: MICRO-MARKET OVERVIEW HEADER -->
+        <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <h3 class="text-sm font-semibold text-apple-title" id="ov-location-name">Indiranagar 100ft Road</h3>
+              <p class="text-[11px] text-apple-muted" id="ov-corridor">100ft Road &amp; 12th Main Strip</p>
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-apple-surface text-apple-muted border border-black/[0.05]">3km Catchment Scan</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Competitors Detected</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-competitors">12</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Daily Pedestrian Footfall</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-footfall">14,200</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Avg Commercial Rent</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-rent">₹350/sq.ft</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Foot Traffic Index</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-traffic">8.6 / 10</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Weekend Demand Delta</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-weekend">+48%</span>
+            </div>
+            <div class="p-3 rounded-2xl bg-apple-surface">
+              <span class="text-[10px] text-apple-muted block leading-tight">Saturation Headroom</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-saturation">72% addressable</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: DETERMINISTIC FINANCIAL UNDERWRITING -->
+        <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-apple-surface flex items-center justify-center text-apple-title">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+              <div>
+                <h3 class="text-sm font-semibold text-apple-title">Deterministic Financial Underwriting</h3>
+                <p class="text-[10px] text-apple-muted font-mono">Python FastAPI Math Core • Zero Math Hallucination</p>
+              </div>
+            </div>
+            <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand/10 text-brand">Cloud Run v1.2</span>
+          </div>
+
+          <div class="space-y-5 text-xs">
+            <!-- Upfront Setup Capital -->
+            <div>
+              <div class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-wider mb-2">Upfront Setup Capital (CapEx)</div>
+              <div class="space-y-2">
+                <div class="p-3 rounded-2xl bg-apple-surface flex justify-between items-center">
+                  <div>
+                    <span class="font-semibold text-apple-title block">Monthly Base Rent</span>
+                    <span class="text-[10px] text-apple-muted" id="fg-rent-sqft">₹350/sq.ft</span>
+                  </div>
+                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-monthly-rent">₹4,20,000</span>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="p-3 rounded-2xl bg-apple-surface">
+                    <span class="text-[10px] text-apple-muted block mb-0.5">Security Deposit (10 Mo)</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-deposit">₹42,00,000</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-apple-surface">
+                    <span class="text-[10px] text-apple-muted block mb-0.5">Interior Fit-out &amp; Signage</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-fitout">₹22,20,000</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <div class="p-3 rounded-2xl bg-apple-surface">
+                    <span class="text-[10px] text-apple-muted block mb-0.5">Equipment &amp; Initial Licensing</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-equipment">₹12,50,000</span>
+                    <span class="text-[10px] text-apple-muted font-mono block" id="fg-licensing">incl. ₹1,40,000 licensing</span>
+                  </div>
+                  <div class="p-3 rounded-2xl bg-apple-surface">
+                    <span class="text-[10px] text-apple-muted block mb-0.5">Working Capital Reserve (3 Mo)</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-working-capital">₹20,73,600</span>
+                  </div>
+                </div>
+                <div class="p-3.5 rounded-2xl bg-white border border-black/[0.06] shadow-2xs flex justify-between items-center">
+                  <div>
+                    <span class="font-semibold text-apple-title block">Total Setup Capital Required</span>
+                    <span class="text-[10px] font-mono font-semibold text-risk-high" id="fg-budget-gap">− ₹53.84L vs budget</span>
+                  </div>
+                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-total-capex">₹98,83,600</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Monthly Operating Expenses -->
+            <div>
+              <div class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-wider mb-2">Monthly Operating Expenses (OpEx)</div>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Staff Payroll &amp; Benefits</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-payroll">₹1,20,000</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Power, Water &amp; Internet</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-utilities">₹42,000</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Marketing &amp; CAM Charges</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-marketing">₹1,09,200</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">COGS at Projected Volume</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-cogs">₹2,53,260</span>
+                </div>
+              </div>
+              <div class="p-3.5 rounded-2xl bg-brand/5 border border-brand/15 flex justify-between items-center mt-2">
+                <div>
+                  <span class="font-semibold text-brand block">Fixed Monthly Cash Burn (OpEx)</span>
+                  <span class="text-[10px] text-apple-muted">Rent + Payroll + Utilities + Marketing + Maintenance</span>
+                </div>
+                <span class="font-mono font-semibold text-brand text-sm" id="fg-fixed-burn">₹6.91L/mo</span>
+              </div>
+            </div>
+
+            <!-- Break-Even & Survival -->
+            <div>
+              <div class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-wider mb-2">Break-Even &amp; Survival Threshold</div>
+              <div class="grid grid-cols-2 gap-2">
+                <div class="p-3 rounded-2xl bg-white border border-black/[0.06] shadow-2xs">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Full Capital Payback</span>
+                  <span class="font-mono font-semibold text-risk-high text-base" id="fg-breakeven-months">Not Achievable</span>
+                  <span class="text-[10px] text-apple-muted block">incl. recoverable deposit</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-white border border-black/[0.06] shadow-2xs">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Projected Volume</span>
+                  <span class="font-mono font-semibold text-brand text-base"><span id="fg-daily-covers">67</span> <span id="fg-volume-label">covers/day</span></span>
+                  <span class="text-[10px] text-apple-muted block">vs <span id="fg-covers-required">72</span> required to survive</span>
+                </div>
+              </div>
+              <div class="p-3 rounded-2xl bg-apple-surface mt-2">
+                <div class="flex justify-between items-center mb-1.5">
+                  <span class="text-[10px] text-apple-muted">Volume Coverage vs Break-Even</span>
+                  <span class="text-[10px] font-mono font-semibold" id="fg-achieved-label" style="color:#FF3B30;">67 projected vs 72 required covers/day · 93% of break-even volume</span>
+                </div>
+                <div class="gauge-track">
+                  <div class="gauge-fill" id="fg-achieved-bar" style="width:93%;background:#FF3B30;"></div>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2">
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Rent-to-Revenue Stress</span>
+                  <span class="font-mono font-semibold text-risk-high text-base" id="fg-rtr">46.4%</span>
+                </div>
+                <div class="p-3 rounded-2xl bg-apple-surface">
+                  <span class="text-[10px] text-apple-muted block mb-0.5">Monthly Net at Projection</span>
+                  <span class="font-mono font-semibold text-risk-high text-base" id="fg-net-monthly">− ₹0.40L</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: RISK VS. REWARD SPEEDOMETER GAUGE -->
+        <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <h3 class="text-sm font-semibold text-apple-title">Risk vs. Reward Speedometer</h3>
+              <p class="text-[11px] text-apple-muted font-mono">0–100 Micro-Market Viability Index</p>
+            </div>
+            <span id="speedoRiskBadge" class="text-xs font-semibold px-3 py-1 rounded-full border" style="color:#FF3B30;border-color:#FF3B3040;background:#FF3B3012;">Severe Risk / Capital Exposure</span>
+          </div>
+
+          <!-- SVG Speedometer with graded risk zones -->
+          <div class="speedometer-container my-3">
+            <svg viewBox="0 0 200 120" class="w-full" role="img" aria-label="Viability score gauge">
+              <!-- Graded zone arcs: Crimson 0–40, Amber 41–69, Emerald 70–100 -->
+              <path d="M 25 100 A 75 75 0 0 1 76.83 28.67" class="gauge-zone gauge-zone-red" />
+              <path d="M 76.83 28.67 A 75 75 0 0 1 144.08 39.32" class="gauge-zone gauge-zone-amber" />
+              <path d="M 144.08 39.32 A 75 75 0 0 1 175 100" class="gauge-zone gauge-zone-green" />
+              <!-- Dynamic filled arc -->
+              <path id="speedoArcFill" d="M 25 100 A 75 75 0 0 1 175 100" class="gauge-arc-fill" style="stroke:#FF3B30;stroke-dasharray:235.6;stroke-dashoffset:155.5;" />
+              <!-- Scale ticks -->
+              <text x="18" y="114" class="gauge-tick">0</text>
+              <text x="96" y="16" class="gauge-tick">50</text>
+              <text x="168" y="114" class="gauge-tick">100</text>
+              <!-- Center needle -->
+              <g id="speedoNeedle" class="speedometer-needle" style="transform:rotate(-28.8deg);">
+                <line x1="100" y1="100" x2="100" y2="34" stroke="#1D1D1F" stroke-width="3" stroke-linecap="round" />
+                <circle cx="100" cy="100" r="7" fill="#1D1D1F" />
+                <circle cx="100" cy="100" r="3" fill="#FFFFFF" />
+              </g>
+            </svg>
+            <div class="text-center -mt-3">
+              <span class="text-4xl font-semibold font-mono tracking-tight text-apple-title" id="speedoScoreVal">34</span>
+              <span class="text-xs text-apple-muted font-medium">/ 100</span>
+            </div>
+          </div>
+
+          <!-- Risk vs Reward columns -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-black/[0.05]">
+            <div class="p-3.5 rounded-2xl bg-risk-high-bg/50 border border-risk-high-border/60">
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="w-2 h-2 rounded-full bg-risk-high"></span>
+                <h5 class="text-[11px] font-semibold text-risk-high uppercase tracking-wide">Key Risk Factors</h5>
+              </div>
+              <ul id="fg-risk-factors" class="space-y-1"></ul>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-risk-low-bg/50 border border-risk-low-border/60">
+              <div class="flex items-center gap-1.5 mb-2">
+                <span class="w-2 h-2 rounded-full bg-risk-low"></span>
+                <h5 class="text-[11px] font-semibold text-risk-low uppercase tracking-wide">Key Reward Drivers</h5>
+              </div>
+              <ul id="fg-reward-drivers" class="space-y-1"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 5: FINAL EXECUTION MASTERPLAN -->
+        <div id="geminiMasterplanContainer" aria-live="polite">
+          <!-- Rendered dynamically by gemini-survey.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- MODAL: INTERACTIVE RESEARCH SETUP POPUP  -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="researchSetupModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="setupModalTitle">
+    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[92vh] overflow-y-auto">
+
+      <button onclick="window.geminiSurvey.closeSetupModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close research setup">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="flex items-center gap-2.5 mb-2">
+        <div class="w-8 h-8 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+        </div>
+        <h3 id="setupModalTitle" class="text-lg font-semibold text-apple-title">What business do you want to research &amp; launch?</h3>
+      </div>
+      <p class="text-xs text-apple-muted mb-5 leading-relaxed">
+        Select your micro-market, retail category, and capital budget. Gemini will summarize demographics and run an animated 3km competitor scan.
+      </p>
+
+      <div class="space-y-4 mb-6">
+        <!-- Target Micro-Market -->
+        <div>
+          <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupLocationSelect">Target Bengaluru Micro-Market</label>
+          <select id="setupLocationSelect" class="w-full text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand">
+            <option value="indiranagar">📍 Indiranagar 100ft Rd (Affluent Tech / High Elasticity)</option>
+            <option value="koramangala">📍 Koramangala 5th Block (Peak Volume / High Saturation)</option>
+            <option value="hsr">📍 HSR Layout Sector 2 &amp; 4 (Rapid Gentrification / Fastest Payback)</option>
+            <option value="whitefield">📍 Whitefield ITPL Main Rd (Tech Park Heavy / Weekend Slump)</option>
+          </select>
+        </div>
+
+        <!-- Business Category -->
+        <div>
+          <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupCategorySelect">Business Category</label>
+          <select id="setupCategorySelect" class="w-full text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand">
+            <option value="coffee">☕ Specialty Coffee &amp; Roastery</option>
+            <option value="qsr">🍽️ Fast-Casual QSR / Cloud Kitchen</option>
+            <option value="fitness">🏋️ Boutique Fitness Studio</option>
+            <option value="clinic">🩺 Diagnostic / Dental Clinic</option>
+          </select>
+        </div>
+
+        <!-- Capital Budget Slider -->
+        <div>
+          <div class="flex justify-between items-baseline mb-1.5">
+            <label class="text-xs font-semibold text-apple-title" for="setupBudgetInput">Total Capital Budget (CapEx + 3mo Runway)</label>
+            <span class="text-xs font-mono font-semibold text-brand" id="setupBudgetLabel">₹45.0 Lakhs (45,00,000)</span>
+          </div>
+          <input type="range" id="setupBudgetInput" min="2500000" max="15000000" step="250000" value="4500000" />
+          <div class="flex justify-between text-[10px] font-mono text-apple-muted mt-1">
+            <span>₹25 Lakhs</span>
+            <span>₹87.5 Lakhs</span>
+            <span>₹1.5 Crore</span>
+          </div>
+        </div>
+
+        <!-- Concept Description Textarea -->
+        <div>
+          <div class="flex justify-between items-baseline mb-1.5">
+            <label class="text-xs font-semibold text-apple-title" for="setupConceptInput">Describe Your Concept in Natural Language</label>
+            <span class="text-[10px] text-apple-muted">Raw Founder Notes</span>
+          </div>
+          <textarea id="setupConceptInput" rows="3" class="w-full text-xs p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand leading-relaxed" placeholder="e.g., I want to open a 1,200 sq.ft specialty artisanal cafe targeting remote tech workers, specialty pour-overs, and weekend evening crowd..."></textarea>
+        </div>
+
+        <!-- Enhance with Gemini -->
+        <button type="button" id="btnEnhanceGemini" onclick="window.geminiSurvey.enhanceWithGemini()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand/10 to-purple-500/10 text-brand text-xs font-medium hover:from-brand/15 hover:to-purple-500/15 border border-brand/20 transition-all flex items-center justify-center gap-1.5">
+          <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
+          <span>✨ Enhance &amp; Summarize with Gemini 2.5 Pro</span>
+        </button>
+      </div>
+
+      <!-- Primary Action -->
+      <button onclick="window.geminiSurvey.submitSetupAndScan()" class="w-full py-3.5 rounded-2xl bg-brand text-white text-xs font-medium hover:bg-brand-hover transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm font-semibold">
+        <span>Build 3km Radius &amp; Scan Nearby Shops →</span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- MODAL: INSTITUTIONAL LANDLORD TERM SHEET -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="termSheetModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="tsModalHeading">
+    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-black/[0.08] shadow-2xl relative">
+      <button onclick="window.geminiSurvey.closeTermSheetModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close term sheet">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="flex items-center gap-2.5 mb-2">
+        <div class="w-8 h-8 rounded-lg bg-risk-low-bg text-risk-low flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 id="tsModalHeading" class="text-lg font-semibold text-apple-title">Institutional Commercial Lease Terms</h3>
+      </div>
+      <p class="text-xs text-apple-muted mb-5">Pre-verified commercial title deed and municipal compliance terms.</p>
+
+      <div class="bg-apple-surface rounded-2xl p-4 border border-black/[0.04] space-y-2.5 mb-6 text-xs">
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Storefront Node:</span>
+          <span class="font-semibold text-apple-title" id="tsModalTitle">12th Main High-Street Corner Plate</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Address:</span>
+          <span class="text-apple-title text-[11px]" id="tsModalAddress">496, 12th Main Rd, HAL 2nd Stage, Indiranagar</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Carpet Area:</span>
+          <span class="font-mono font-medium text-apple-title" id="tsModalSqft">1200 sq.ft (Ground Floor Frontage)</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Asking Monthly Rent:</span>
+          <span class="font-mono font-semibold text-brand" id="tsModalRent">₹3,36,000 / month (₹280/sq.ft)</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Security Deposit:</span>
+          <span class="font-mono text-apple-title" id="tsModalDeposit">₹33,60,000 (10 Months)</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Rent-Free Fit-out:</span>
+          <span class="font-mono text-apple-title">45 Calendar Days Mandated</span>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-apple-muted">Listing Broker:</span>
+          <span class="font-mono text-apple-title text-[11px]" id="tsModalBroker">Colliers Commercial Bengaluru</span>
+        </div>
+      </div>
+
+      <button onclick="window.geminiSurvey.submitTenantDossier()" class="w-full py-3.5 rounded-2xl bg-brand text-white text-xs font-medium hover:bg-brand-hover transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm font-semibold">
+        <span>Dispatch Pre-Qualified Tenant Dossier to Landlord →</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- MODAL: RELATED LOCATIONS                  -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="relatedLocationsModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="relModalHeading">
+    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="window.geminiSurvey.closeRelatedLocationsModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close modal">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="flex items-center gap-2.5 mb-2">
+        <div class="w-8 h-8 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+        </div>
+        <h3 id="relModalHeading" class="text-lg font-semibold text-apple-title">Related High-Yield Micro-Markets</h3>
+      </div>
+      <p class="text-xs text-apple-muted mb-5">Algorithmically filtered alternative locations matching your category with superior viability scores.</p>
+
+      <div id="relatedLocationsList" class="space-y-3">
+        <!-- Dynamically rendered -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- MODAL: LEASE NEGOTIATION SCRIPT          -->
+  <!-- ════════════════════════════════════════ -->
+  <div id="scriptModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="scriptModalHeading">
+    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <button onclick="window.geminiSurvey.closeScriptModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close modal">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+
+      <div class="flex items-center gap-2.5 mb-2">
+        <div class="w-8 h-8 rounded-xl bg-risk-low-bg text-risk-low flex items-center justify-center">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3 id="scriptModalHeading" class="text-lg font-semibold text-apple-title">AI Lease Negotiation Script</h3>
+      </div>
+      <p class="text-xs text-apple-muted mb-4">WhatsApp / Email ready term sheet counter-offer script based on calculated rent-to-revenue stress.</p>
+
+      <div class="bg-apple-surface rounded-2xl p-4 border border-black/[0.04] mb-5">
+        <pre id="negotiationScriptText" class="text-xs text-apple-title font-mono whitespace-pre-wrap leading-relaxed select-all"></pre>
+      </div>
+
+      <button onclick="window.geminiSurvey.copyNegotiationScript()" class="w-full py-3 rounded-2xl bg-brand text-white text-xs font-semibold hover:bg-brand-hover transition-all flex items-center justify-center gap-2 shadow-sm">
+        <span>Copy Negotiation Script to Clipboard</span>
+      </button>
+    </div>
+  </div>
+  <div id="toast" class="fixed bottom-6 right-6 z-[10000] glass-panel-strong px-5 py-3.5 rounded-2xl border border-black/[0.08] shadow-2xl flex items-center gap-3 max-w-sm" role="status">
+    <div class="w-8 h-8 rounded-xl bg-risk-low-bg text-risk-low flex items-center justify-center flex-shrink-0">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div>
+      <p class="text-xs font-semibold text-apple-title" id="toastTitle">Survey Synchronized</p>
+      <p class="text-[11px] text-apple-muted" id="toastDesc">Scanned 3km micro-market successfully.</p>
+    </div>
+  </div>
+
+  <!-- ── SITEBRAIN JS ENGINE SCRIPTS ── -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/financial-gauge.js"></script>
+  <script src="assets/js/map-engine.js"></script>
+  <script src="assets/js/gemini-survey.js"></script>
+
+  <!-- Bootstrap Workbench -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.geminiSurvey.init();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteBrain — Data Room: Datasets, Sources &amp; Provenance</title>
+  <meta name="description" content="Every dataset behind SiteBrain's Bengaluru micro-market surveys — OpenStreetMap POI scans, BMRCL ridership, Cushman & Wakefield rent benchmarks — with licenses, retrieval dates, and CSV exports." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SiteBrain Data Room — every number, sourced." />
+  <meta property="og:description" content="47 OSM-verified competitors, 22 BMRCL-measured footfall anchors, and C&W Q4 2025 rent benchmarks across 4 Bengaluru corridors." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230071E3'/%3E%3Ccircle cx='12' cy='12' r='3.2' fill='white'/%3E%3Ccircle cx='12' cy='12' r='7.5' stroke='white' stroke-width='1.4' fill='none' stroke-dasharray='3 3'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) & JetBrains Mono (Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN + shared design tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- SiteBrain Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+
+<body class="spatial-grid-bg relative text-apple-title selection:bg-brand/15 selection:text-brand">
+  <div class="spatial-grid-overlay"></div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 1. FLOATING APPLE ISLAND NAVBAR          -->
+  <!-- ════════════════════════════════════════ -->
+  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 px-4 pt-4 transition-all duration-300">
+    <div id="navCapsule" class="max-w-7xl mx-auto px-6 h-16 rounded-full glass-panel flex items-center justify-between transition-all duration-300">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-8 h-8 rounded-xl bg-brand flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="3.2" fill="white"/>
+            <circle cx="12" cy="12" r="8" stroke="white" stroke-width="1.6" stroke-dasharray="3.2 3.2"/>
+            <line x1="12" y1="2" x2="12" y2="5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="12" y1="18.5" x2="12" y2="22" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="2" y1="12" x2="5.5" y2="12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="18.5" y1="12" x2="22" y2="12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="font-semibold tracking-tight text-lg text-apple-title">SiteBrain</span>
+        <span class="hidden sm:inline text-[10px] font-mono px-2 py-0.5 rounded-full bg-brand/[0.07] text-brand border border-brand/20 font-semibold uppercase tracking-wider">Data Room</span>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="datasets.html" class="hidden sm:inline text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors mr-2">Sources</a>
+        <a href="survey.html" class="btn-apple-primary text-xs !py-2.5 !px-5 whitespace-nowrap shadow-2xs">
+          <span>Start Location Survey</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 2. HERO — DATASET IDENTITY               -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="relative pt-32 lg:pt-40 pb-14 overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand/[0.07] border border-brand/20 mb-7 shadow-2xs">
+          <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+          <span class="text-xs font-medium text-brand tracking-wide">Dataset <span class="font-mono" id="dsVersion">—</span> · generated <span class="font-mono" id="dsGenerated">—</span></span>
+        </div>
+        <h1 class="hero-headline mb-5">Every number,<br/><span class="text-brand">sourced.</span></h1>
+        <p class="text-base text-apple-body leading-relaxed">
+          The complete provenance record behind SiteBrain's Bengaluru micro-market surveys — competitor geometry from OpenStreetMap, footfall from BMRCL's station-wise ridership, and rent benchmarks from published Cushman &amp; Wakefield market research. Estimates are labeled as estimates.
+        </p>
+      </div>
+      <div id="dsHeroStats" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 max-w-4xl mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 3. DARK BAND — SOURCE REGISTRY           -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="sources" class="dark-band relative py-20 lg:py-24 overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 mb-4">
+          <span class="text-xs font-medium text-[#7EB3F5]">Source Registry</span>
+        </div>
+        <h2 class="section-headline !text-white mb-3">Eight sources. Zero invented inputs.</h2>
+        <p class="text-base text-white/60 max-w-2xl mx-auto leading-relaxed">
+          Each dataset carries its license, retrieval date, and exact role in the model. Open data is attributed per ODbL; published research is cited; SiteBrain estimates are explicitly labeled.
+        </p>
+      </div>
+      <div id="dsSourceTable" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 4. CORRIDOR ECONOMICS                    -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="corridors" class="relative py-20 lg:py-24">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Corridor Economics</span>
+        </div>
+        <h2 class="section-headline mb-3">Four micro-markets, benchmarked.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Asking rents follow the Cushman &amp; Wakefield India Bangalore Retail MarketBeat Q4 2025. Demand composites blend foot-traffic, saturation, and the weekday/weekend split.
+        </p>
+      </div>
+      <div id="dsCorridorCards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 5. COMPETITOR REGISTRY                   -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="competitors" class="relative py-20 lg:py-24 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Competitor Registry</span>
+        </div>
+        <h2 class="section-headline mb-3">Real shops, real coordinates.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Every competitor pin in the survey workbench resolves to a named OpenStreetMap feature with a verifiable OSM reference and haversine distance from the survey center.
+        </p>
+      </div>
+      <div id="dsCompetitorRegistry"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 6. FOOTFALL ANCHORS                     -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="anchors" class="relative py-20 lg:py-24">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Footfall Anchors</span>
+        </div>
+        <h2 class="section-headline mb-3">Metro ridership, not guesswork.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Transit anchor volumes come from BMRCL's station-wise ridership (September 2025), obtained via RTI and published by OpenCity. The Whitefield weekend collapse — 12,150 → 1,901 riders at Sri Sathya Sai Hospital station — is visible in the raw numbers.
+        </p>
+      </div>
+      <div id="dsAnchorRegistry"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 7. LISTINGS + CSV EXPORTS                -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="listings" class="relative py-20 lg:py-24 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Listing Registry</span>
+        </div>
+        <h2 class="section-headline mb-3">Listings aligned to published bands.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Listing templates are aligned to published corridor rent bands (e.g., Lokazen's 2026 Indiranagar guide) and clearly labeled as representative templates — never as live broker inventory.
+        </p>
+      </div>
+      <div id="dsListingRegistry"></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 8. CSV EXPORTS + ATTRIBUTION             -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="exports" class="relative py-20 lg:py-24">
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+      <div class="text-center mb-10 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Machine-Readable Exports</span>
+        </div>
+        <h2 class="section-headline mb-3">Take the data with you.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Flat CSV exports generated from the same canonical dataset that powers the survey engine — regenerate any time with <span class="font-mono text-sm">python data/build.py</span>.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 reveal">
+        <a href="data/exports/corridor-economics.csv" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">corridor-economics.csv</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">4 corridors · rents, viability, demand composites</div>
+        </a>
+        <a href="data/exports/competitors.csv" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">competitors.csv</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">47 competitors · ratings, distances, OSM refs</div>
+        </a>
+        <a href="data/exports/anchors.csv" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">anchors.csv</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">22 anchors · BMRCL volumes with sources</div>
+        </a>
+        <a href="data/exports/listings.csv" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">listings.csv</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">16 listings · deal terms, band sources</div>
+        </a>
+        <a href="data/exports/category-economics.csv" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">category-economics.csv</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">4 categories · CapEx, OpEx, capacity models</div>
+        </a>
+        <a href="data/SOURCES.md" class="glass-panel-strong rounded-2xl p-4 border border-black/[0.06] shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all group">
+          <div class="text-xs font-semibold text-apple-title group-hover:text-brand transition-colors">SOURCES.md</div>
+          <div class="text-[10px] font-mono text-apple-muted mt-1">Full provenance log with retrieval commands</div>
+        </a>
+      </div>
+
+      <p class="text-center text-[11px] text-apple-muted mt-10 leading-relaxed max-w-2xl mx-auto">
+        Geometry, competitor names, and station coordinates © OpenStreetMap contributors, licensed under the
+        <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener noreferrer" class="text-brand hover:underline">Open Database License (ODbL) 1.0</a>.
+        BMRCL ridership is Government of India data obtained via RTI and republished by OpenCity under a non-commercial license.
+        Rent benchmarks are cited market research — see the Source Registry above.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 9. FOOTER                                -->
+  <!-- ════════════════════════════════════════ -->
+  <footer class="relative border-t border-black/[0.06] bg-apple-surface/40">
+    <div class="max-w-7xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span class="text-xs text-apple-muted">© 2026 SiteBrain Intelligence Inc.</span>
+      <div class="flex items-center gap-5 text-xs text-apple-body">
+        <a href="index.html" class="hover:text-brand transition-colors">← Back to landing</a>
+        <a href="survey.html" class="hover:text-brand transition-colors">Survey Workbench</a>
+      </div>
+      <span class="text-[10px] font-mono text-apple-muted/70">Deterministic core · Gemini counsel · Bengaluru</span>
+    </div>
+  </footer>
+
+  <!-- Data Room rendering (loads the same dataset as the survey engine) -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/datasets.js"></script>
+</body>
+</html>

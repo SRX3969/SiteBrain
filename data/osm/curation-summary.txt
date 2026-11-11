@@ -1,0 +1,1087 @@
+﻿
+======================================================================
+INDIRANAGAR ΓÇö Indiranagar 100ft Road (center 12.9784, 77.6408)
+  cached data\osm\indiranagar.json (865 named POIs)
+
+======================================================================
+KORAMANGALA ΓÇö Koramangala 5th Block (center 12.9352, 77.6245)
+  cached data\osm\koramangala.json (754 named POIs)
+
+======================================================================
+HSR ΓÇö HSR Layout Sector 2 & 4 (center 12.9121, 77.6446)
+  cached data\osm\hsr.json (514 named POIs)
+
+======================================================================
+WHITEFIELD ΓÇö Whitefield ITPL Main Rd (center 12.978, 77.728)
+  cached data\osm\whitefield.json (665 named POIs)
+
+======================================================================
+CURATION SUMMARY (candidates for the dataset)
+======================================================================
+
+### INDIRANAGAR
+
+  -- cafe (135 total, showing 40) --
+      88m  Glen's Bakehouse [pancake;breakfast;ice_cream;cake;coffee_shop]  (12.979151,77.640537) osm:way/331330192
+     150m  Cafe Muziris  (12.977799,77.639558) osm:node/12367522179
+     151m  Anaia Cafe  (12.977047,77.640678) osm:node/11493951524
+     157m  Chaayos [tea]  (12.97863,77.642232) osm:node/14188959089
+     181m  Happy Belly Bakes  (12.979014,77.642347) osm:node/8244271796
+     211m  Chai Point [tea]  (12.978648,77.642731) osm:node/1474220554
+     216m  Le Cremosa  (12.980095,77.639819) osm:node/3556379076
+     223m  Cafe Coffee Day [coffee_shop]  (12.978143,77.638758) osm:node/3369890731
+     227m  Cafe Terra  (12.979878,77.639358) osm:node/10171897485
+     257m  Gloria Jean's [coffee_shop]  (12.976128,77.641214) osm:node/1474258844
+     282m  Anama Coffee  (12.980089,77.638863) osm:node/14226189002
+     287m  Paper & Pie [coffee_shop]  (12.980973,77.641004) osm:node/9908694116
+     301m  TEKA [coffee_shop]  (12.979836,77.638443) osm:node/13366204719
+     316m  Kaori by Chiran  (12.981217,77.640431) osm:node/13366228004
+     322m  Cafe Coffee Day [coffee_shop]  (12.975542,77.64125) osm:node/11131430566
+     325m  Playful Palette Bistro  (12.981311,77.640526) osm:node/10297771171
+     326m  Cafe Coffee Day [coffee_shop]  (12.975496,77.641244) osm:node/423744924
+     326m  Spoonful Sugar Pastisserie & caf├¿  (12.979302,77.643659) osm:node/4101957728
+     339m  Beanlore Coffee Roasters [coffee_shop]  (12.978729,77.643906) osm:node/1474220544
+     391m  Yogi-sthaan (Yoga House) [indian]  (12.981038,77.63841) osm:way/314209406
+     392m  Chai Gali [tea]  (12.981682,77.639488) osm:node/3726120743
+     406m  The Studio by Copper + Cloves  (12.977852,77.637093) osm:node/10178386010
+     434m  Brahmin's Tatte Idli  (12.980191,77.637244) osm:node/3726145522
+     454m  Starbucks [coffee_shop]  (12.978323,77.644993) osm:node/13062869347
+     460m  Panetteria Bengaluru  (12.979228,77.636645) osm:node/12287399683
+     462m  Kaapi Right  (12.982273,77.63925) osm:node/6702708923
+     466m  Juicea- Fresh juice and ice creams  (12.982223,77.639035) osm:node/3556124476
+     470m  Casa Fresco  (12.982602,77.640363) osm:node/13114307278
+     481m  Teal Door Cafe  (12.982486,77.639338) osm:node/4457721688
+     487m  Third Wave  (12.978657,77.645291) osm:node/6063102085
+     518m  German BrezelHaus [german]  (12.98246,77.638451) osm:node/10075729572
+     529m  Muru Muru [coffee_shop]  (12.982184,77.637846) osm:node/12157006659
+     547m  Fruit Face [juice;salad]  (12.981157,77.636618) osm:node/3665564554
+     559m  Sree Manjunatha Coffee Bar  (12.982402,77.637685) osm:node/3556046875
+     587m  Mountain Bee kombucha Hive [kombucha]  (12.981259,77.636247) osm:node/13227070703
+     624m  BUNGEO [ice_cream;korean;ramen]  (12.97495,77.636263) osm:node/13959537901
+     625m  Shambhu's Cafe  (12.97278,77.640893) osm:node/11003327933
+     626m  Grumpy Girl Coffee  (12.974919,77.636264) osm:node/13392604832
+     636m  Neon Market  (12.972767,77.639759) osm:node/12107634725
+     645m  Sable Cafe  (12.979444,77.646652) osm:node/13384664049
+
+  -- fast_food (163 total, showing 40) --
+      64m  Urban Turban  (12.978896,77.640498) osm:node/4713078056
+      85m  Lokesh Vada Pav Stall [indian]  (12.977698,77.641108) osm:node/4985145721
+      86m  99 Dosa [indian]  (12.977699,77.641143) osm:node/2198288187
+      91m  Biryani Palace  (12.979151,77.641132) osm:node/3726162435
+     115m  Chaithanya  (12.979242,77.641417) osm:node/4101452150
+     122m  Momo  (12.977661,77.641629) osm:node/2271731924
+     123m  Indian Biryani  (12.979258,77.64151) osm:node/4101450023
+     142m  Halli Mani Rotti  (12.979266,77.641762) osm:node/4101450024
+     144m  Vasavi Super Sandwich  (12.979251,77.641798) osm:node/4901462721
+     178m  Punjab Khazana  (12.979248,77.642191) osm:node/4102107050
+     219m  Beijing Bites [chinese]  (12.978072,77.63881) osm:node/13570680530
+     230m  Milano Pizza [pizza]  (12.976374,77.641204) osm:node/13104002195
+     232m  Leon Grill [burger]  (12.980475,77.641051) osm:node/11539167043
+     244m  KFC [chicken]  (12.978111,77.638564) osm:node/312835604
+     248m  McDonald's [burger]  (12.978113,77.638526) osm:node/1808798770
+     250m  Nashville Fried Chicken [burger]  (12.976167,77.6405) osm:node/12862846451
+     265m  Truffles [burger]  (12.980771,77.640524) osm:node/14222438368
+     270m  Five Star Cafe [chicken]  (12.980819,77.641) osm:node/3370230949
+     274m  Domino's [pizza]  (12.980851,77.640516) osm:node/1078369539
+     295m  Burger King [burger]  (12.978138,77.638087) osm:node/7301746563
+     296m  Amma & Appa Idli Stall [regional]  (12.976148,77.639351) osm:node/11939689178
+     297m  Shree Panjurli Cafe [south_indian]  (12.97845,77.638061) osm:node/13104075608
+     322m  Pani Puri [indian]  (12.976016,77.639121) osm:node/6987406045
+     341m  Juice Junction [indian]  (12.979084,77.643867) osm:node/4101616562
+     378m  The Rameshwaram Cafe [south_indian]  (12.981799,77.64097) osm:node/9545465489
+     396m  Nakshatra Condiments Mess & Fast Food  (12.981623,77.639248) osm:node/3370023218
+     426m  Thatha Tea  (12.982043,77.639575) osm:node/13287336882
+     477m  Juicemaker [juice]  (12.98249,77.639473) osm:node/5155524813
+     490m  Good Flippin' Burgers [burger]  (12.97836,77.636276) osm:node/12294001116
+     500m  Roll Khazana  (12.9822,77.638333) osm:node/3389131742
+     520m  Juice Cafe [juice]  (12.982417,77.638339) osm:node/4457262461
+     542m  Indira Food Court  (12.982613,77.638292) osm:node/3389118175
+     551m  Chetty's Coffee [lassi]  (12.981244,77.63664) osm:node/3470991526
+     566m  Calcutta Roll Centre  (12.973421,77.639733) osm:node/5821783054
+     568m  Sri Raghavendra Hotel  (12.974184,77.637835) osm:node/5585615329
+     569m  MM Fast Food  (12.973418,77.639611) osm:node/5821774754
+     571m  Bengali Food Court  (12.974162,77.637817) osm:node/5585615330
+     628m  Shri Vinayaka Hot Chips  (12.980866,77.646019) osm:node/6484718432
+     647m  WoW China  (12.980184,77.646479) osm:node/11275493814
+     654m  Ganesh Juice Center [sandwich;juice]  (12.980998,77.64621) osm:node/10224421217
+
+  -- restaurant (343 total, showing 40) --
+      27m  Pizza Hut [pizza]  (12.978225,77.640632) osm:node/423744888
+      74m  FOMO - Flavours of Modern Orient  (12.979027,77.640582) osm:node/13781654129
+     112m  Little Italy  (12.977395,77.640698) osm:node/3725719377
+     138m  Ouzo by Fire  (12.977169,77.640672) osm:node/11968859185
+     145m  Coorg Restaurant  (12.97902,77.641976) osm:node/4102048400
+     171m  Taiki  (12.976865,77.640688) osm:node/11637864324
+     178m  Aramane Donne Biryani  (12.979318,77.642149) osm:node/1328610588
+     193m  Kund [indian]  (12.980115,77.640551) osm:node/1078369543
+     193m  Dofu [asian]  (12.980126,77.640597) osm:node/9908694114
+     194m  Paratha Plaza [indian]  (12.980119,77.64048) osm:node/10197286017
+     197m  Kobe Sizzler [international]  (12.978234,77.64261) osm:node/1474220540
+     198m  Barebones  (12.980171,77.640592) osm:node/3371304648
+     202m  Lajawaab [indian]  (12.978287,77.642663) osm:node/3370020257
+     206m  Imli  (12.979833,77.639589) osm:way/331669853
+     210m  Viceroy's Sarathi [regional]  (12.979283,77.642517) osm:node/3837026832
+     210m  Crackle Kitchen  (12.980257,77.64047) osm:node/12320285695
+     212m  Zama [kebab]  (12.98029,77.640548) osm:node/9892036251
+     212m  ilumi [asian]  (12.980278,77.640471) osm:node/12633608555
+     219m  Dosa Camp  (12.97977,77.639343) osm:node/3369957258
+     222m  Wanley Restaurant [chinese]  (12.979271,77.642644) osm:node/3837015994
+     227m  Yuki [asian]  (12.98043,77.641037) osm:node/11539167044
+     236m  Tadka Singh [indian]  (12.978138,77.638642) osm:node/3369890732
+     236m  Si Nonna's [pizza]  (12.98051,77.641028) osm:node/12927909818
+     240m  MTR 1924  (12.980543,77.640557) osm:node/3369857851
+     248m  Thai Basil [thai]  (12.980617,77.64101) osm:node/9908694115
+     253m  Tovo  (12.98066,77.641084) osm:node/12145301148
+     255m  Pulimanchi  (12.980679,77.640511) osm:node/6397870986
+     256m  Rasa India [indian]  (12.978206,77.643158) osm:node/3370020259
+     256m  three dots and a dash  (12.980692,77.641005) osm:node/4878036555
+     257m  Truffles [italian]  (12.980697,77.640565) osm:node/5711066684
+     267m  Cafe Bengaluru [indian]  (12.980034,77.638997) osm:node/14247790301
+     289m  Durga Andhra Mess (Veg/Non-Veg) [indian]  (12.980442,77.639147) osm:node/3370171473
+     299m  Onest├á [pizza]  (12.978728,77.643536) osm:node/4059440074
+     305m  Koshe Kosha [bengali]  (12.978104,77.638) osm:node/12260569947
+     310m  Izanagi [japanese]  (12.981168,77.640483) osm:node/12158796350
+     313m  Hotel Orange tree Residency  (12.979318,77.643535) osm:node/4101957723
+     316m  Meghana Biryani  (12.978095,77.637904) osm:node/13112169128
+     319m  Punjabi Rasoi [punjabi]  (12.981255,77.640526) osm:node/6422664985
+     324m  Fullyfilled  (12.976174,77.638866) osm:node/9333624192
+     325m  Anjappar Chettinad Restaurant [south_indian]  (12.975535,77.641369) osm:node/3725679610
+
+  -- fitness (18 total, showing 18) --
+     471m  Fit Free  (12.977976,77.636472) osm:node/11945113519
+     583m  Yogakshema  (12.975422,77.636369) osm:node/6443160709
+     710m  Academy of Strength  (12.972016,77.640906) osm:node/8758566369
+     794m  Impact Fitness Studio  (12.971476,77.638994) osm:node/4490237942
+     921m  SLAM Lifestyle And Fitness Studio  (12.970533,77.64346) osm:node/4314394289
+     923m  Gold's Gym  (12.970096,77.640898) osm:node/3884997057
+     924m  Fitness studio  (12.970263,77.639056) osm:node/4322794147
+     945m  Sutvacha Skin and Laser Clinic  (12.970386,77.637897) osm:node/5661127826
+     977m  cult.fit  (12.970576,77.644902) osm:node/10293625127
+     991m  Fitness One  (12.971432,77.635102) osm:node/11131430553
+    1298m  Transformation Studio  (12.972535,77.651156) osm:node/12366544584
+    1393m  Kamaraj's Gym  (12.97797,77.627953) osm:node/11710512183
+    1448m  Bend Body Studio  (12.965423,77.641891) osm:node/3725719375
+    1480m  Fitness One  (12.965378,77.63799) osm:node/1655556505
+    1634m  the Studio by Copper + Cloves  (12.9639,77.638356) osm:node/14026889501
+    1643m  cult.fit  (12.963656,77.641849) osm:node/9930197125
+    2631m  Pyro Fitness Center  (12.987822,77.618531) osm:node/4845223688
+    2981m  Vishwa Purnima Yoga  (12.958883,77.659662) osm:node/13408774269
+
+  -- clinic (148 total, showing 40) --
+      41m  Dr. Batra's  (12.978638,77.64109) osm:node/4101994934
+      74m  Dento Facial  (12.978605,77.641449) osm:node/4101994933
+     103m  Beyond Smiles  (12.979196,77.640317) osm:node/3370230944
+     132m  Lotus Diagnostic Centre  (12.9786,77.641998) osm:node/4446883154
+     160m  Narayan Nethralaya  (12.977022,77.641217) osm:node/11637653603
+     174m  Angels Advanced Clinic Pvt Ltd.  (12.978202,77.642398) osm:node/4446243122
+     176m  Lotus Diagnostic centre  (12.97866,77.642406) osm:node/1474220555
+     220m  My Family Doctor  (12.979921,77.639496) osm:node/4135914110
+     226m  Bhargavi Clinic  (12.977768,77.638816) osm:node/3514613490
+     241m  Vijaya Nursing Home, Bengaluru Urban  (12.977829,77.638657) osm:node/6948216053
+     253m  Dr. Rama's Test Tube Baby Centre  (12.979288,77.642951) osm:node/4101531445
+     260m  The Family Doctor & The Family Pharma Indiranagar  (12.980097,77.639155) osm:node/4446271461
+     292m  Qi Spine Clinic  (12.975808,77.64126) osm:node/3374572371
+     313m  Dr C Jagadeesh's Dental Clinic, The Center for Smile Correction and Dental Implants  (12.977663,77.643587) osm:node/7976322810
+     331m  Dental Care Centre  (12.980887,77.639119) osm:node/3370171472
+     335m  Baba Dental care  (12.977279,77.637929) osm:node/3370242727
+     382m  Heart lung clinic  (12.978705,77.644316) osm:node/1474220548
+     396m  Dr G S Palaksha Psychatrist  (12.975927,77.638168) osm:node/5722218821
+     408m  Athos  (12.982058,77.640478) osm:node/3370230942
+     410m  Dr. Vageesh Aiyyar's Clinic  (12.9777,77.644514) osm:node/6570619035
+     428m  Kairali Ayurvedic and Treatment Center  (12.982185,77.641494) osm:way/347118960
+     432m  Health Total  (12.980181,77.637262) osm:node/3556256975
+     439m  Mangesh Clinic  (12.981171,77.637916) osm:node/3389142592
+     445m  Dr. Supriya's Dental Clinic  (12.974416,77.641233) osm:node/3725708023
+     453m  Root Canal Center  (12.974346,77.641231) osm:node/3725708024
+     459m  Nationwide Indira Nagar Clinic  (12.978326,77.645039) osm:node/4446234535
+     474m  Dezy  (12.977781,77.636473) osm:node/11945113518
+     477m  Maple Clinic  (12.975245,77.643788) osm:node/3370164258
+     481m  Nationwide  (12.978347,77.645237) osm:node/3370084884
+     486m  Supriya Dental Clinic  (12.974034,77.640875) osm:node/3725850701
+     497m  Mascot Speciality Dental Clinic  (12.976733,77.636544) osm:node/3369909138
+     497m  Samatvam Diabeties Center  (12.982734,77.63968) osm:node/3389118184
+     506m  ClinRad  (12.978354,77.64547) osm:node/3370084883
+     511m  Cosmetic Dental clinic  (12.982178,77.638111) osm:node/3556124475
+     511m  MM Clinic  (12.974353,77.638576) osm:node/5738207822
+     519m  Devaki Dental Clinic  (12.982417,77.638356) osm:node/3389118174
+     528m  Dr NVS Krishnan  (12.982664,77.638645) osm:node/3389118182
+     537m  Vijaya Speciality Clinic  (12.978383,77.635847) osm:node/4272785490
+     538m  Dr. Sujaya Hegde's Dermatology Clinic  (12.978374,77.635838) osm:node/4446280538
+     586m  Dr.Spine Clinic  (12.975422,77.636333) osm:node/3370287787
+
+  -- metro_station (7 total, showing 7) --
+     232m  Indiranagar  (12.978333,77.638661) osm:node/6400857551
+     948m  Swami Vivekananda Road  (12.985931,77.644897) osm:node/6400857550
+    1544m  Halasuru  (12.976499,77.626686) osm:node/6400857552
+    1851m  Baiyyappanahalli Junction  (12.991209,77.651714) osm:node/1177155562
+    1860m  Baiyappanahalli  (12.990759,77.652361) osm:node/6400857549
+    2364m  Sir M Visvesvaraya Terminal  (12.999655,77.641154) osm:node/12514337068
+    2645m  Trinity  (12.973022,77.61702) osm:node/6400857553
+
+  -- mall (5 total, showing 5) --
+    2137m  Lido Mall  (12.973448,77.621747) osm:way/347060424
+    2283m  One M G Road  (12.973421,77.620363) osm:way/147558632
+    2766m  Gopalan Signature Mall  (12.992943,77.661511) osm:way/176675169
+    2797m  Kemp Fort Mall  (12.958635,77.656768) osm:way/133355000
+    3023m  Gopalan Grand Mall  (12.993442,77.664039) osm:way/182175832
+
+  -- college (13 total, showing 13) --
+     183m  Kairalee Nikethan Education Trust  (12.97927,77.639368) osm:node/3369957259
+     407m  FFE IT - Foundation for excellence india trust  (12.980141,77.637495) osm:node/3556214254
+     441m  Indian Institute of Fashion Technology  (12.977791,77.636779) osm:node/11945087365
+     452m  K M J College Of Nursing.  (12.977444,77.636747) osm:node/3374315087
+     539m  Business Excellence Institute  (12.982474,77.638101) osm:node/3389094364
+     734m  Sri Bhagavan Mahaveer Jain College  (12.976587,77.63429) osm:way/59358860
+     775m  Dr Ambedkar College  (12.972007,77.637962) osm:way/138223660
+    1009m  Montfort College  (12.98555,77.646536) osm:way/135266048
+    1354m  Lavonne Academy of Baking Science and Pastry Arts  (12.966835,77.636901) osm:node/7178597786
+    1668m  The Energy Resource Institute  (12.963662,77.637921) osm:way/56734546
+    2653m  Sacred Heart College  (12.965931,77.661671) osm:node/1466482752
+    2784m  Hasnath College for Women  (12.979332,77.615128) osm:node/10887396863
+    2973m  Vishweshwaraiah College  (12.957811,77.658309) osm:way/122918713
+
+  -- park (29 total, showing 29) --
+     380m  BDA Public Site  (12.975056,77.640068) osm:way/330471450
+     466m  Defence Colony Park  (12.976261,77.644503) osm:way/36327876
+     476m  Double Road Park  (12.981263,77.637539) osm:way/59358786
+     511m  Senior Citizens Park  (12.974917,77.64388) osm:way/343842765
+     544m  Wood Park  (12.979511,77.635913) osm:way/59358734
+     554m  Defence Colony Childrens Park  (12.975428,77.644902) osm:way/343842758
+     791m  Jogger's Park  (12.980138,77.633718) osm:way/105317893
+     793m  Indiranagar Park  (12.979067,77.633516) osm:way/59358836
+     811m  BM Kaval Childrens Park  (12.981104,77.647751) osm:way/309936964
+     842m  Dr Ambedkar Park  (12.971338,77.638008) osm:way/217536635
+     870m  Indiranagar Park  (12.971272,77.644105) osm:way/343842760
+    1169m  Doopanahalli Park  (12.968633,77.636799) osm:way/128510778
+    1227m  Udani Layout Park  (12.969993,77.633458) osm:way/169709339
+    1329m  B R Ambedkar Playground  (12.979024,77.628547) osm:way/59358729
+    1355m  Gandhiji Park  (12.969433,77.649265) osm:way/119132968
+    1361m  Visvesvaraya Park  (12.970693,77.650559) osm:way/118926926
+    1389m  Paramahansa Yogananda Circle  (12.966308,77.637583) osm:way/169717868
+    1472m  Children's Park  (12.978884,77.62722) osm:way/217536640
+    1477m  BBMP Park  (12.96563,77.63705) osm:way/56734547
+    1516m  L.A.Perumal Childrens Park  (12.965572,77.636075) osm:way/166560446
+    1536m  Kuvempu Park  (12.974983,77.654539) osm:way/98005709
+    1646m  BBMP Park  (12.963662,77.639361) osm:way/55981268
+    1763m  Shankarnag Park  (12.962917,77.637312) osm:way/105318901
+    1793m  GP Raja Ratnam Park  (12.973388,77.656523) osm:way/118926923
+    1895m  Domlur SAARC Park  (12.961417,77.63938) osm:way/217565867
+    1914m  Kanakadasa Park  (12.961196,77.641411) osm:way/217565212
+    2162m  Ulsoor Lake Park  (12.985395,77.622183) osm:way/182177279
+    2676m  Dr. BR Ambedkar Park  (12.954423,77.642925) osm:way/324651009
+    2812m  Sadanandanagara Jogging Park  (12.996755,77.658651) osm:way/130361475
+
+  -- marketplace (4 total, showing 4) --
+     366m  Nitin Stores  (12.977142,77.637675) osm:node/3506436514
+    1240m  Thippasandra Market  (12.972548,77.650537) osm:way/119132975
+    1420m  Halasuru Fruit and Vegetable Market  (12.978542,77.627699) osm:way/217536638
+    1424m  Murphy Town Market  (12.97889,77.627672) osm:way/169709281
+
+### KORAMANGALA
+
+  -- cafe (102 total, showing 40) --
+      52m  Dialogues Cafe  (12.935349,77.62496) osm:node/4447594673
+      63m  Fast Coffee [coffee_shop]  (12.93505,77.625059) osm:node/12395928081
+      97m  Bagelstein  (12.935619,77.625281) osm:node/13509361280
+     118m  The Hole In The Wall Cafe [american]  (12.934761,77.625489) osm:way/347237497
+     269m  Cafe Reset  (12.93762,77.62438) osm:node/11780212783
+     308m  The Tea Toast Co.  (12.933387,77.622352) osm:node/10728008696
+     344m  Brunch Project  (12.93331,77.627007) osm:node/12208448673
+     357m  Glen's Bakehouse  (12.937942,77.626209) osm:node/11117270552
+     357m  Blue Tokai  (12.933862,77.621501) osm:node/13987851130
+     378m  Fresh Pressery  (12.935628,77.621039) osm:node/11096390256
+     385m  Via Milano  (12.937011,77.627526) osm:node/5247276738
+     391m  Roastea  (12.935795,77.628055) osm:node/11968859180
+     397m  Java City  (12.933497,77.621281) osm:node/5036138595
+     425m  Maverick and Farmer Coffee  (12.935354,77.628416) osm:node/10649347387
+     437m  Daily Bakehouse  (12.931396,77.623472) osm:node/11758608876
+     517m  Coffee Lounge [coffee_shop]  (12.936749,77.620007) osm:node/1474324439
+     526m  Barista [coffee_shop]  (12.934944,77.62935) osm:node/1274328868
+     531m  What's In a Name  (12.933843,77.6198) osm:node/10068956760
+     557m  Third Wave Coffee Roasters [coffee_shop]  (12.93474,77.629621) osm:node/10314122725
+     567m  Cafe Coffee Day [coffee_shop]  (12.930361,77.62286) osm:node/2531029517
+     601m  Pahala Rasagola shop [regional;odia]  (12.935523,77.618967) osm:node/4307156988
+     607m  Chubby Chai  (12.939169,77.628347) osm:node/9954120118
+     635m  Tea Coffee House  (12.940911,77.62427) osm:node/10036648122
+     640m  Cafe de Verde  (12.940859,77.623418) osm:node/13084285574
+     701m  Cafe Five Guys  (12.941449,77.623635) osm:node/10036648219
+     723m  Chaayos [tea]  (12.939076,77.619148) osm:node/11398011945
+     727m  Booster Juice [indian]  (12.93893,77.618989) osm:node/1471128660
+     733m  Tim Hortons [coffee_shop]  (12.939466,77.619342) osm:node/11398011946
+     736m  The Lean Kafe  (12.934492,77.617744) osm:node/13964773250
+     772m  Dyu Art Cafe [coffee_shop]  (12.93719,77.61768) osm:node/3510047245
+     774m  Blue Tokai  (12.940758,77.620207) osm:node/10068956859
+     777m  The Peck  (12.940836,77.620259) osm:node/12129019639
+     800m  Juice Maker [coffee_shop]  (12.941777,77.62151) osm:node/3510015824
+     817m  Hatti Kaapi  (12.93399,77.617068) osm:node/5915409401
+     819m  Atta Galatta  (12.934221,77.617012) osm:node/10220802211
+     819m  Starbucks [coffee_shop]  (12.932389,77.631484) osm:node/11385511632
+     822m  Jalandhar Sweets  (12.93412,77.616995) osm:node/11096390285
+     850m  Dialogues Cafe  (12.93255,77.631859) osm:node/12083603348
+     892m  Costa [coffee_shop]  (12.934525,77.6163) osm:node/1375978263
+     908m  Helloo Dilli  (12.931798,77.632117) osm:node/12083603349
+
+  -- fast_food (137 total, showing 40) --
+     153m  Kota Kachori  (12.936231,77.625431) osm:node/1328615136
+     223m  Madurai Idly shop  (12.937202,77.624452) osm:node/1463745568
+     366m  Fermentation Stories [pizza]  (12.933433,77.621654) osm:node/11096818320
+     376m  Taco Bell [tex-mex]  (12.937623,77.626926) osm:node/1091310761
+     391m  KFC [chicken]  (12.937694,77.627039) osm:node/1722528824
+     562m  Domino's [pizza]  (12.940236,77.624887) osm:node/10047410617
+     566m  Sri Ganesh Juice Junction [juice]  (12.940276,77.624847) osm:node/11505724627
+     578m  Domino's [pizza]  (12.940345,77.625288) osm:way/345895237
+     629m  Panipuri Shop  (12.938572,77.629165) osm:node/10036672717
+     632m  Darjeeling Momo  (12.938622,77.629162) osm:node/10036672617
+     649m  Original Burger Co. [burger]  (12.933742,77.618698) osm:node/12862846438
+     660m  Shree Ganesh Juice Centre  (12.940702,77.626791) osm:node/10047410321
+     765m  The Chatpata Affair  (12.933879,77.617571) osm:node/11096390284
+     788m  Santhosh Fast Food  (12.941497,77.627837) osm:node/9961663517
+     837m  α▓åα▓╢α│Çα▓░α│ìα▓╡α▓╛α▓ªα│ì α▓░α│åα▓╕α│ìα▓ƒα│ïα▓░α▓éα▓ƒα│ì - α▓╕α▓╕α│ìα▓»α▓╛α▓╣α▓╛α▓░α▓┐  (12.931021,77.61808) osm:node/4805858622
+     850m  Gayathri Chats and Paratha  (12.942028,77.628034) osm:node/10105885618
+     857m  α▓òα│ïα▓╕α│ìα▓ƒα▓▓α│ì α▓¼α│ç - α▓«α▓╛α▓éα▓╕α▓╛α▓╣α▓╛α▓░α▓┐  (12.930848,77.617972) osm:node/4805862921
+     866m  α▓¼α│çα▓òα│ìα▓╕α│ì α▓àα▓éα▓íα│ì α▓╢α│çα▓òα│ìα▓╕α│ì  (12.930759,77.617931) osm:node/4805858621
+     876m  Jumboking Vadapav  (12.934165,77.616484) osm:node/1675556127
+     879m  Goli Vada Pav [indian]  (12.934197,77.61645) osm:node/1675555859
+     880m  Domino's [pizza]  (12.934176,77.616451) osm:node/13246318504
+     914m  Frozen Bottle [ice_cream;juice]  (12.934422,77.616109) osm:node/10068956723
+     941m  Easy Bites by Empire [burger]  (12.934782,77.615828) osm:node/12862846462
+     963m  Popeyes [chicken]  (12.936276,77.615679) osm:node/10302658790
+     972m  IDC [regional]  (12.93371,77.615662) osm:node/10728008694
+     980m  Biryani Blues  (12.936092,77.615507) osm:node/11295513152
+     985m  Domino's [pizza]  (12.931187,77.632602) osm:node/11385511631
+     986m  McDonald's [burger]  (12.935447,77.615409) osm:node/1465610689
+    1025m  C.Kosila Kitchen  (12.94353,77.628548) osm:node/10095556817
+    1028m  Ksheera Sagar [indian;south_indian]  (12.941172,77.617257) osm:node/4191976704
+    1035m  Sri Udupi Utsav  (12.943858,77.620999) osm:node/11385580189
+    1049m  Al Taza [kebab;burger;shawarma]  (12.930826,77.633078) osm:node/11659905698
+    1059m  Sri Balaji Dosa Corner  (12.936528,77.61482) osm:node/4716734089
+    1064m  Khana Junction  (12.944044,77.620761) osm:node/11385580174
+    1064m  Big Guys: Wings & More [burger;wings;chicken]  (12.925648,77.625096) osm:node/12862846454
+    1118m  Truffles [cake;burger;grill;italian_pizza;breakfast;american;donut;international;hot_dog;french;coffee_shop;barbecue;ice_cream]  (12.933563,77.614322) osm:node/3709164638
+    1153m  Manasa Veg [indian]  (12.943062,77.617568) osm:node/1781959088
+    1167m  Boss Burger [burger]  (12.935284,77.61373) osm:node/12862846443
+    1194m  Krispy Kreme [donut]  (12.935155,77.613478) osm:node/4723511153
+    1205m  McDonald's [burger]  (12.945118,77.620026) osm:node/10036567521
+
+  -- restaurant (348 total, showing 40) --
+      49m  Sour House  (12.935075,77.624929) osm:node/9810748012
+     148m  Imperial Hotel [indian]  (12.936408,77.62508) osm:node/1468025779
+     154m  Tamrind Restaurant  (12.934247,77.623472) osm:node/1328615138
+     154m  Champaran Handiwale [indian]  (12.934586,77.62577) osm:node/13536791401
+     156m  De Shack  (12.934515,77.623246) osm:node/11096390239
+     173m  The Doner Company  (12.934623,77.62302) osm:node/11096390238
+     178m  Yuki [japanese]  (12.934107,77.623297) osm:node/13688767224
+     181m  Mitra Cafe [indian]  (12.93678,77.624912) osm:node/12229924652
+     182m  Brooks And Bonds  (12.934054,77.623296) osm:node/13688767222
+     184m  Ambrosia restaurant [international]  (12.936184,77.625864) osm:node/1468540676
+     187m  Naati oota [indian]  (12.936869,77.624723) osm:node/1468516359
+     188m  Chinese Cottage [chinese]  (12.936885,77.624621) osm:node/1468516372
+     190m  Ocean restaurant [international]  (12.936871,77.62487) osm:node/1468025791
+     202m  Maffei Kitchen [mediterranean]  (12.935119,77.622637) osm:node/10695242204
+     205m  Coast to Coast Sea food restaurant  (12.937042,77.624591) osm:node/1328615137
+     211m  Kubey Seafood Restaurant  (12.9371,77.624542) osm:node/1328615139
+     237m  heritage of Bengal [indian]  (12.937323,77.624368) osm:node/1468025780
+     239m  Ferrara [italian]  (12.936282,77.622594) osm:node/11277885671
+     242m  Bhojohori manna [indian]  (12.937369,77.624314) osm:node/1468025770
+     245m  Kebapci [turkish]  (12.936162,77.622471) osm:node/12550773109
+     256m  Sukh Sagar  (12.933365,77.623073) osm:node/306585721
+     267m  The Filter Coffee  (12.933631,77.622632) osm:node/12285673035
+     270m  The Filter Coffee [south_indian]  (12.933784,77.62248) osm:node/12155310940
+     273m  Ping [chinese]  (12.933633,77.622557) osm:node/1375978266
+     273m  The Tower Of Pizza [italian_pizza;italian]  (12.933191,77.623059) osm:node/4596325797
+     277m  Tim Tai [chinese;thai]  (12.933693,77.622465) osm:node/10068956768
+     278m  Black Pepper Lounge [international]  (12.93632,77.622203) osm:node/3013765074
+     285m  La Arabia  (12.933337,77.622692) osm:node/10068956759
+     290m  Fiorano Ristorante [spanish]  (12.933141,77.622851) osm:node/1464784876
+     294m  Casinova [indian]  (12.93368,77.622276) osm:node/5036131084
+     305m  Mahe Global Kitchen  (12.933693,77.622146) osm:node/12030715034
+     310m  Tuk Tuk Thai [thai]  (12.933345,77.622364) osm:node/11915646724
+     342m  Chianti [italian]  (12.933447,77.62191) osm:node/2148655413
+     342m  Chaska Bun  (12.935887,77.621426) osm:node/11096390255
+     346m  Taste of Bihar [indian]  (12.937674,77.626437) osm:node/1473308109
+     347m  China Pearl [chinese]  (12.936198,77.621467) osm:node/1457778754
+     348m  Great Indian Thali  (12.936516,77.627412) osm:node/1744342634
+     351m  154 Breakfast Club [american]  (12.933281,77.627074) osm:node/10728008693
+     353m  Beijing Bites [chinese]  (12.933431,77.621792) osm:node/1375978287
+     353m  Shyamji's Chole Bature  (12.935446,77.621255) osm:node/11096390254
+
+  -- fitness (16 total, showing 16) --
+     404m  Vibes  (12.9319,77.622941) osm:node/4772964932
+     533m  Snap Fitness  (12.939852,77.625702) osm:node/5915195100
+     747m  Aurum Elite Fitness Club  (12.933333,77.63112) osm:node/12115149769
+     884m  cult.fit  (12.932367,77.63212) osm:node/12115149776
+     893m  Posh Fitness  (12.932243,77.632164) osm:node/4489845028
+     921m  Iconic Fitness  (12.936441,77.616098) osm:node/11295513153
+    1025m  Iconic Gym  (12.931895,77.633331) osm:node/10075729404
+    2370m  Movement Fitness  (12.91855,77.638153) osm:node/12112721601
+    2373m  Cult  (12.918845,77.610437) osm:node/13061852801
+    2652m  cult.fit  (12.915763,77.610325) osm:node/9103732101
+    2655m  Mega Gym  (12.914084,77.613066) osm:node/945903479
+    2709m  Smack Fitness  (12.910841,77.624457) osm:node/12248328810
+    2776m  Fitness Tycoon  (12.914433,77.610275) osm:node/11464753896
+    2787m  Game On Fitness  (12.913943,77.610876) osm:node/14323462402
+    2860m  I-Fitness  (12.913557,77.61024) osm:node/11422632438
+    2956m  Xtreme Body Fitness  (12.908628,77.623631) osm:node/12248273668
+
+  -- clinic (73 total, showing 40) --
+     239m  Koramangala┬áPoly Clinic  (12.936673,77.622896) osm:node/4445505534
+     242m  Apollo Diagnostics  (12.937327,77.624017) osm:node/4447017356
+     300m  Toothsi  (12.933375,77.622458) osm:node/10068956767
+     301m  Skinsi  (12.933355,77.622471) osm:node/10068956766
+     391m  Vachani Vista  (12.932003,77.623) osm:node/4772969935
+     437m  Kamala Nethralaya  (12.931431,77.623358) osm:node/6939350511
+     517m  Nova IVI Fertility  (12.93383,77.619937) osm:node/4447127002
+     643m  Pinnacle Family Dental and Implant Clinic  (12.934822,77.630422) osm:node/10072982933
+     647m  Dental Lounge  (12.93938,77.628658) osm:node/10111481449
+     718m  Sabka Dentist  (12.941582,77.623508) osm:node/10036648517
+     783m  Sculptura Aesthetic Centre  (12.942025,77.622725) osm:node/3463769192
+     882m  Shradha Nursing Home  (12.942281,77.620828) osm:node/4446872947
+     897m  Clove Dental  (12.932205,77.63219) osm:node/12115149777
+     917m  The Apollo Clinic, Bengaluru Urban  (12.933927,77.616139) osm:node/1375978269
+     991m  Cherish Fertinity Clinic  (12.929614,77.631624) osm:node/12115251882
+    1008m  Devi Dental Clinic  (12.943412,77.628432) osm:node/10095557017
+    1117m  CGHS Dispensary No.7  (12.925152,77.624502) osm:node/6939418124
+    1155m  Sharadha Nursing Home  (12.942957,77.617408) osm:node/1466631787
+    1156m  J P Dental Clinic  (12.941864,77.616316) osm:node/6937841407
+    1204m  IVF Access - Fertility Clinic  (12.944933,77.619637) osm:node/10036561217
+    1267m  City Clinic  (12.927367,77.616005) osm:node/6944161560
+    1399m  Kaveri Speciality Hospital  (12.923677,77.619311) osm:node/6944290484
+    1447m  Shilpa Homeopathic Clinic  (12.926731,77.634638) osm:node/839826450
+    1665m  S.M.S. Nursing Home  (12.920831,77.620178) osm:node/6948201258
+    1699m  Dental Clinic  (12.950483,77.624388) osm:node/10159395931
+    1787m  Sanjith Clinic  (12.951161,77.622555) osm:node/10098185617
+    1797m  UPHC, Koramangala  (12.950157,77.618211) osm:way/1153736760
+    1805m  Vinayaka Sai Dental Clinic  (12.928795,77.609192) osm:node/7579924764
+    1815m  UPHC, Viveknagar  (12.951508,77.62524) osm:way/1153736761
+    1892m  Murthy Health and Research Centre  (12.924764,77.638286) osm:node/4442655749
+    1922m  Sankalpa Nursing Home  (12.941871,77.608139) osm:node/6938704941
+    1932m  Basha Clinic  (12.924661,77.638669) osm:node/1470765801
+    1960m  Tooth N Care  (12.930861,77.606971) osm:node/1474432226
+    1962m  Maithriye Clinic  (12.919538,77.632842) osm:node/6936708036
+    2054m  Health Centre  (12.943948,77.607806) osm:node/7043992385
+    2081m  Sri Jyoti Eye Clinic  (12.92212,77.610766) osm:node/7579924765
+    2102m  Mhaskars Srishti Clinic  (12.917678,77.631777) osm:node/1471712151
+    2228m  Ismile Dental & Oral Health Care Centre  (12.915785,77.619405) osm:node/4446317428
+    2253m  Vitiligo Clinic  (12.917204,77.614949) osm:node/7579924716
+    2342m  Amba Laser Clinic  (12.919185,77.610464) osm:node/7579924742
+
+  -- metro_station (4 total, showing 4) --
+    2114m  Central Silk Board  (12.916582,77.620567) osm:node/5760198212
+    2673m  Tavarekere  (12.929498,77.600538) osm:node/9906325542
+    2727m  BTM Layout  (12.916588,77.608118) osm:node/5760198226
+    2742m  Bommanahalli  (12.910616,77.626478) osm:node/5760198202
+
+  -- mall (8 total, showing 8) --
+     470m  Oasis Centre  (12.937535,77.628112) osm:way/111996869
+     943m  Tibet Mall  (12.9338,77.615915) osm:node/5915409398
+    1438m  Nexus Koramangala  (12.934586,77.611244) osm:way/23542631
+    1544m  Market Square Mall  (12.921902,77.620384) osm:way/239585279
+    1547m  Market Square Value Mall  (12.921904,77.620311) osm:node/2910639885
+    1568m  Davanam Sarovar Portico Suites  (12.921697,77.620318) osm:node/7164323510
+    1953m  Manokamana Cermanic  (12.942312,77.60802) osm:node/1824140227
+    2646m  ND Fusion Mall  (12.91581,77.610344) osm:way/348202500
+
+  -- college (25 total, showing 25) --
+     342m  Chinmaya Mission School  (12.935101,77.627651) osm:way/164627253
+     654m  Vemana Institute of Technology  (12.929623,77.622578) osm:way/134223205
+     658m  RJS Institute of Management Studies  (12.929462,77.623004) osm:way/134223490
+     684m  RJS Polytechnic  (12.929077,77.623861) osm:relation/1804672
+     903m  Jyoti Nivas Women's College  (12.932842,77.61653) osm:way/32290801
+    1008m  St. John's Medical College  (12.929679,77.617127) osm:relation/15699927
+    1094m  St. Francis Composite PU College  (12.927049,77.630146) osm:way/779344655
+    1141m  St. Francis College  (12.926251,77.629651) osm:way/133822899
+    1279m  Indian Institute of Psychology & Research  (12.930836,77.613584) osm:way/389341672
+    1371m  Krupanidhi College  (12.923817,77.629356) osm:way/133883975
+    1886m  National Dairy Research Institute Adugodi  (12.94599,77.611068) osm:relation/14455869
+    1896m  Ghousia Polytechnic  (12.93549,77.607008) osm:way/133524186
+    2103m  Alliance Business School Admin Office  (12.916949,77.6194) osm:node/1837440175
+    2106m  Christ University  (12.933733,77.605125) osm:way/38774082
+    2246m  Iqra International School, Bangalore  (12.917568,77.614393) osm:node/3702280940
+    2253m  National Institute of Animal Nutrition and Physiology  (12.94825,77.6086) osm:way/1086044112
+    2322m  Vidhya Bharathi College  (12.916731,77.634495) osm:way/133820242
+    2364m  Dharmaram Vidya Kshetra  (12.935645,77.602694) osm:way/1242193155
+    2448m  Wisdom International School  (12.919599,77.608563) osm:node/3702281012
+    2641m  Government Technical Industrial Institute  (12.93577,77.600139) osm:way/239738394
+    2847m  Carmel Convent PU College  (12.926847,77.599669) osm:way/40631636
+    2852m  Shakuntala Devi International Institute of Management Sciences and PreUniversity  (12.916555,77.642572) osm:way/240665267
+    2872m  Fire Service Campus  (12.933133,77.59808) osm:way/239738396
+    2926m  Oxford Management College  (12.915918,77.642868) osm:way/240663075
+    2971m  National Institute of Mental Health and NeuroSciences  (12.937616,77.597195) osm:relation/9365463
+
+  -- park (39 total, showing 39) --
+     296m  Akhila Park  (12.934546,77.621852) osm:way/201071753
+     447m  Leena Park  (12.937577,77.621179) osm:way/201068721
+     587m  Sidharth Park  (12.934157,77.619192) osm:way/32315160
+     605m  KHB Colony Park  (12.936695,77.619135) osm:way/1444097610
+     638m  Rectangle Park  (12.932181,77.629506) osm:way/362920330
+     638m  Amruth Park  (12.935842,77.618646) osm:way/515344856
+     676m  Lakshmi Devi Park  (12.939083,77.619706) osm:way/28186877
+     735m  Chandra Reddy  (12.936059,77.631226) osm:way/484687954
+     761m  Anuroopa Park  (12.936773,77.617663) osm:way/201069173
+     794m  S T Bed Park at 5th Cross  (12.934282,77.631763) osm:node/3145158638
+     801m  S T Bed Park at 5th Cross  (12.93422,77.631822) osm:way/362922597
+     847m  Heble Park  (12.928143,77.627433) osm:way/662280188
+     926m  Children's Park  (12.933136,77.632782) osm:way/362921972
+     943m  BBMP Park  (12.93089,77.631996) osm:way/37786371
+     945m  S T Bed Park and Field at 8th Cross  (12.933038,77.632929) osm:node/3145158639
+     986m  B R Ambedkar Park  (12.940503,77.617206) osm:way/166733773
+    1053m  NGV Park  (12.944654,77.623897) osm:way/172883350
+    1160m  Chamundeshwari Park  (12.941095,77.615669) osm:way/32316224
+    1165m  Fahad Hafiz Park  (12.930887,77.634294) osm:way/1458415588
+    1235m  Wipro Park  (12.928365,77.633486) osm:way/27789854
+    1314m  BBMP Park  (12.931413,77.613017) osm:way/1160859551
+    1320m  BDA Park  (12.930841,77.63583) osm:way/779344649
+    1375m  Madiwala Park  (12.924693,77.617805) osm:way/323458335
+    1469m  Swabhimana Park  (12.927514,77.635529) osm:way/362920876
+    1980m  Jayashankar Park  (12.918387,77.630512) osm:way/232237173
+    2026m  Teacher's Colony Park  (12.917545,77.629105) osm:way/313831699
+    2130m  Daniel Park  (12.91675,77.619224) osm:way/201072740
+    2284m  BBMP Park  (12.918361,77.636565) osm:way/362919672
+    2375m  BTM Park  (12.919225,77.609955) osm:way/125862474
+    2457m  Udupi Garden Park  (12.917825,77.61049) osm:way/125862469
+    2467m  Maruthi Layout Park  (12.920733,77.607243) osm:way/362886442
+    2475m  IBC Evacuation area park  (12.932576,77.601826) osm:way/585820761
+    2487m  BBMP Thavarkere Park  (12.928687,77.60255) osm:way/131610644
+    2610m  Agara Lake Park  (12.920351,77.643156) osm:way/610111576
+    2714m  Swachagraha Kalika Kendra  (12.915421,77.63917) osm:way/781287761
+    2832m  Kuvempu Park  (12.914754,77.608922) osm:way/28120266
+    2925m  Dr. BR Ambedkar Park  (12.954423,77.642925) osm:way/324651009
+    2952m  NALRA Park  (12.925947,77.598965) osm:way/755819916
+    3082m  Madiwala Lake Park  (12.909552,77.613721) osm:way/1265835948
+
+  -- marketplace (2 total, showing 2) --
+    1364m  Madiwala Market  (12.922951,77.623746) osm:way/343961637
+    1415m  Madiwala Market  (12.922615,77.622572) osm:node/1473298102
+
+### HSR
+
+  -- cafe (93 total, showing 40) --
+      43m  Amintiri  (12.911733,77.644463) osm:node/12927909821
+      72m  The Pet People Cafe  (12.912741,77.644505) osm:node/9649527842
+      78m  Blue Tokai [coffee_shop]  (12.912761,77.644851) osm:node/13175147184
+     124m  Pappu Chaiwala  (12.913213,77.644523) osm:node/7085464942
+     189m  Irani Chai  (12.913773,77.644273) osm:way/1089884373
+     199m  Iris cafe HSR  (12.911746,77.642802) osm:node/11372676269
+     251m  The  Coffee Brewery  (12.911831,77.642302) osm:node/12238349604
+     278m  Mannheim  (12.912174,77.647164) osm:node/13175147186
+     290m  The Faith Cafe  (12.912439,77.641951) osm:node/13227707085
+     309m  Beanlore [coffee_shop]  (12.912355,77.641764) osm:node/11061527357
+     330m  Paper & Pie  (12.914086,77.642334) osm:node/14358733319
+     337m  Cafe Coffee Day [coffee_shop]  (12.912446,77.641514) osm:node/5824776414
+     343m  Tim Hortons [coffee_shop]  (12.912021,77.647761) osm:node/13566435717
+     347m  Bubble Tea [bubble_tea]  (12.908983,77.644801) osm:node/13811113845
+     365m  Coffeetales  (12.912059,77.647963) osm:node/11277885672
+     368m  Tribes Coffee [coffee_shop]  (12.908973,77.64348) osm:node/13288585454
+     378m  Le K├⌐ne  (12.915498,77.644592) osm:node/11610336058
+     381m  Piro [coffee_shop]  (12.909135,77.646365) osm:node/13013958066
+     394m  Piro  (12.908878,77.646112) osm:node/12980092657
+     400m  Glen's Bakehouse  (12.912082,77.648294) osm:node/11085582497
+     402m  Hustle  (12.909097,77.642541) osm:node/12093192395
+     417m  Coffee Bean  (12.912397,77.640767) osm:node/1468245829
+     458m  Yewale  (12.908673,77.646939) osm:node/12482484107
+     474m  Lassi Treat  (12.916354,77.644931) osm:node/7085470153
+     519m  Mixnosh Art Cafe  (12.907526,77.645553) osm:node/14133768380
+     564m  Mara Coffee & Roasters [coffee_shop]  (12.907903,77.647524) osm:node/12406020970
+     569m  Silaa The Garden Cafe  (12.9125,77.63937) osm:node/13366228002
+     577m  Hebe's Cafe  (12.909184,77.640191) osm:node/10066903029
+     577m  Brewtroots Cafe  (12.911888,77.639285) osm:node/13366228003
+     611m  North Star  (12.911755,77.638978) osm:node/11982451441
+     611m  Third Wave Coffee  (12.911774,77.650229) osm:way/1222502578
+     625m  The Snug Cuppa  (12.908112,77.648657) osm:node/12980126189
+     644m  Shades of Coffee [coffee_shop]  (12.909427,77.63933) osm:node/11202391302
+     680m  Starbucks [coffee_shop]  (12.912124,77.650874) osm:node/9649527853
+     684m  Marseli Cafe & Patisserie  (12.916234,77.649274) osm:node/13130906992
+     691m  Chaayos [tea]  (12.911308,77.63828) osm:node/11896574561
+     693m  Wagh Bakri Tea Lounge  (12.911347,77.638256) osm:node/11896574562
+     694m  Go Native HSR  (12.91333,77.638324) osm:node/8252529146
+     700m  Coffee & More [coffee_shop]  (12.908577,77.649948) osm:node/11433878025
+     724m  Chai Point [coffee_shop]  (12.911586,77.63794) osm:node/9833630907
+
+  -- fast_food (83 total, showing 40) --
+     351m  Taco Bell [tex-mex]  (12.912385,77.641372) osm:node/11061527358
+     357m  King Ambur Hot Biriyani [biriyani]  (12.915303,77.644858) osm:node/2973906269
+     436m  Paratha Plaza  (12.90882,77.646798) osm:node/12980092658
+     460m  Also Bawarchi Biryani [indian]  (12.916092,77.643483) osm:node/14130387279
+     467m  HSR Fresh Cane Juice [juice]  (12.9122,77.648903) osm:node/11085582503
+     510m  Nagashree Juice [juice]  (12.913766,77.648984) osm:node/11085606212
+     516m  House Of Dakshina  (12.912132,77.649365) osm:node/11399914989
+     535m  Sai Ram Hot Chips  (12.91398,77.649146) osm:node/11085582499
+     539m  Gochick  (12.911768,77.649564) osm:node/11383593070
+     580m  My Affair with food  (12.906898,77.64417) osm:node/11293640388
+     605m  Koriken  (12.915268,77.649135) osm:node/11533130768
+     612m  Good Flippin' Burgers [burger]  (12.911865,77.638957) osm:node/12294001112
+     625m  HSR Juice Point [juice]  (12.909061,77.649455) osm:node/11309680643
+     651m  Alienkind  (12.915889,77.64918) osm:node/12946192955
+     671m  Frozen Bottle [juice]  (12.912472,77.638422) osm:node/13227707086
+     679m  Harvest Salad Co  (12.90602,77.644057) osm:node/13013792940
+     683m  Maiz Mexican Kitchen [mexican]  (12.90598,77.644061) osm:node/13013792937
+     685m  Burger King [burger]  (12.9119,77.638286) osm:node/9649527840
+     691m  KFC [chicken]  (12.913115,77.638309) osm:node/1625411089
+     702m  Krispy Kreme [donut]  (12.913589,77.638305) osm:node/3198628457
+     717m  McDonald's [burger]  (12.912187,77.637981) osm:node/1468908294
+     720m  Samosa Party [samosa]  (12.911869,77.637959) osm:node/10066902937
+     723m  Veg Sagar  (12.905602,77.644496) osm:node/2387044401
+     725m  Subway [sandwich]  (12.911817,77.637913) osm:node/10066902936
+     734m  Goli Vada Pav [indian]  (12.91187,77.65137) osm:node/4315983818
+     736m  Pizza Hut Delivery [pizza]  (12.914725,77.638364) osm:node/13374172537
+     737m  Popeyes [chicken]  (12.912156,77.637805) osm:node/9649527841
+     758m  BBQ Mechanic  (12.908518,77.650546) osm:node/11414534036
+     769m  Juice Shop  (12.908713,77.650788) osm:node/9649527860
+     771m  Go Pizza [pizza]  (12.912959,77.651654) osm:way/348151436
+     772m  The Momo Lab  (12.91232,77.651723) osm:node/11309680648
+     778m  Papa John's [pizza]  (12.913287,77.651677) osm:node/1299903066
+     807m  Domino's [pizza]  (12.912858,77.652001) osm:node/9649527855
+     823m  Indira Canteen [south_indian]  (12.904999,77.642448) osm:node/14211195556
+     838m  Juice Junction [juice]  (12.915202,77.651643) osm:node/10049313439
+     907m  Fresh Cane Juice [juice]  (12.905375,77.64933) osm:node/11085582498
+     912m  Belgian Waffles  (12.916129,77.651929) osm:node/5961239398
+     989m  Sri Ganesh Fruit Juice Centre [juice]  (12.919699,77.649334) osm:node/11533104868
+     998m  Srinidhi Sagar  (12.919885,77.649176) osm:node/11533112320
+    1004m  Juicy Fresh [juice]  (12.912742,77.635356) osm:node/11262514227
+
+  -- restaurant (193 total, showing 40) --
+      83m  Mast Marathi [indian;marathi]  (12.911408,77.644306) osm:node/13108370790
+      94m  Leon Grill  (12.911788,77.643793) osm:node/9833630902
+     122m  Nandini Cool Joint  (12.911006,77.644495) osm:node/3304204495
+     136m  Udaan  (12.91167,77.643421) osm:node/6601884724
+     149m  Helloo Delhi [regional]  (12.911789,77.643267) osm:node/4445372309
+     171m  Rashtrakutas  (12.913599,77.644943) osm:way/1089884358
+     174m  Brik Oven [pizza]  (12.913642,77.644891) osm:node/13013588748
+     219m  Rebarbiq  (12.912345,77.642592) osm:node/7085465358
+     232m  California Burrito [mexican]  (12.914153,77.644955) osm:node/14130387210
+     238m  Andhra Vilas  (12.914219,77.644915) osm:node/10177662894
+     275m  Paris Panini [panini]  (12.912117,77.647134) osm:node/10049386158
+     281m  The Pizza Bakery [pizza]  (12.912123,77.647193) osm:node/13175147185
+     305m  Shree Muthahalli Veg [indian]  (12.914841,77.644626) osm:node/11085606213
+     318m  Indian Coffee House [coffee_shop;indian]  (12.909237,77.644616) osm:node/11533595492
+     383m  Anands Kitchen  (12.908656,77.64459) osm:node/11262514226
+     429m  Just momo [chinese]  (12.912101,77.648561) osm:node/3198577860
+     458m  Silbatti [indian;chinese]  (12.916217,77.64458) osm:way/1236087650
+     462m  Hotel Tanish [indian;regional]  (12.915631,77.646853) osm:node/5984919168
+     473m  MTR  (12.916352,77.644573) osm:way/347415933
+     501m  Sri Muthanahalli Veg  (12.916607,77.644593) osm:node/10049434094
+     507m  Mezziki [mediterranean]  (12.911806,77.63993) osm:node/14208259435
+     515m  Goan POIEE [indian]  (12.913639,77.649079) osm:node/13959538001
+     519m  Namaste [indian]  (12.911793,77.639819) osm:way/609531878
+     534m  Cevi [indian]  (12.916885,77.645002) osm:node/12238343315
+     534m  Parika [seafood]  (12.911788,77.63968) osm:way/343678672
+     535m  Somras Bar and Kitchen  (12.912168,77.649531) osm:node/12260569946
+     548m  HSR Donne Biryani  (12.914695,77.648901) osm:node/11533141769
+     549m  Make Di Hatti  (12.912136,77.649666) osm:node/13175211583
+     558m  Imperio  (12.911711,77.649737) osm:node/11368536065
+     580m  Annapurna Andhra Veg [indian]  (12.91459,77.639903) osm:node/9796708090
+     593m  Galatta [ice_cream]  (12.915076,77.649141) osm:node/11964861618
+     602m  Basil Bistro  (12.915512,77.648912) osm:node/11302751559
+     605m  Kesari  (12.911801,77.639029) osm:node/11982451442
+     608m  Reddy Restaurant [regional]  (12.912147,77.650211) osm:node/4445083916
+     616m  Miss Misal  (12.915397,77.649163) osm:node/11302751566
+     645m  Mirchi Maharaj  (12.912453,77.638659) osm:node/10066902933
+     664m  The Vijayanagar Tiffins and Coffee  (12.915881,77.649347) osm:node/11533137080
+     669m  The Punjabi Rasoi [regional]  (12.911827,77.638433) osm:node/4445101752
+     670m  Hotel Thirthahalli [regional]  (12.918121,77.644732) osm:node/12201302000
+     684m  Babai Tiffins  (12.918248,77.64473) osm:node/13546510501
+
+  -- fitness (27 total, showing 27) --
+      68m  Snap fitness GYM  (12.911744,77.644086) osm:node/5265660303
+     155m  CULT Fitness center  (12.913456,77.644928) osm:way/1071630512
+     306m  cult.fit  (12.911549,77.641835) osm:node/10066854609
+     341m  Hammers  (12.912086,77.647742) osm:node/13175147188
+     453m  Apple Fitness  (12.912182,77.648776) osm:node/4490311867
+     457m  cult.fit  (12.912059,77.64882) osm:node/11085606208
+     620m  cult.fit  (12.915469,77.649155) osm:node/11302751567
+     627m  Fitness Tycoon  (12.908634,77.649161) osm:node/11409538673
+     787m  Next Move  (12.906732,77.649325) osm:node/12486963377
+     843m  Gold's Gym  (12.915438,77.651584) osm:node/4490422378
+    1001m  Movement Fitness  (12.91855,77.638153) osm:node/12112721601
+    1089m  Game Theory - HSR layout sector 7  (12.902444,77.642906) osm:node/14138646901
+    1164m  Slim Gym  (12.921423,77.649479) osm:node/11533112299
+    1297m  Fitness Gym Point  (12.922673,77.649658) osm:node/11532959816
+    1589m  HYFIT  (12.92504,77.65082) osm:node/13455363161
+    1952m  cult.fit  (12.897849,77.634086) osm:node/12706360455
+    2188m  Smack Fitness  (12.910841,77.624457) osm:node/12248328810
+    2202m  Club House / Gym - SJR Park Vista  (12.917185,77.66424) osm:way/610462158
+    2305m  Xtreme Body Fitness  (12.908628,77.623631) osm:node/12248273668
+    2499m  Fitness Republic  (12.922155,77.66522) osm:node/12979176593
+    2517m  Iconic Gym  (12.931895,77.633331) osm:node/10075729404
+    2614m  Posh Fitness  (12.932243,77.632164) osm:node/4489845028
+    2628m  cult.fit  (12.932367,77.63212) osm:node/12115149776
+    2648m  Iskcon - Sarjapur Road  (12.920947,77.667284) osm:way/1290198687
+    2660m  Fit City Gym  (12.89478,77.661531) osm:node/10685053928
+    2776m  Aurum Elite Fitness Club  (12.933333,77.63112) osm:node/12115149769
+    2989m  cult.fit  (12.923151,77.66974) osm:node/3170084419
+
+  -- clinic (59 total, showing 40) --
+     127m  Sankalp Netralaya and Polyclinic  (12.913213,77.644849) osm:node/6938819159
+     293m  Milann  (12.912398,77.641918) osm:node/12238310057
+     325m  Tooth Flora  (12.909243,77.643985) osm:node/10066903119
+     509m  Reform Dental Care  (12.913357,77.649118) osm:node/12482481196
+     580m  The Smile Studio  (12.912116,77.649952) osm:node/11309680646
+     593m  Aspire  (12.917436,77.64467) osm:node/10213564140
+     634m  sugar.fit  (12.908927,77.64946) osm:node/11309680644
+     713m  A K Clinic  (12.907628,77.649316) osm:node/1468908276
+     797m  Jiva Ayurveda  (12.912758,77.651924) osm:node/10718514443
+     826m  Dermaville  (12.910646,77.65207) osm:node/11411649457
+     841m  Care Clinic  (12.916395,77.650983) osm:node/11533134010
+     879m  Apollo Clinic  (12.913805,77.636685) osm:node/5961324191
+     884m  smiles.ai  (12.916263,77.651553) osm:node/11279852905
+     894m  Sabka Dentist  (12.916445,77.651541) osm:node/11279852906
+     914m  The Dentist  (12.918877,77.649377) osm:node/11533128576
+     919m  Padithem Health Centre  (12.907871,77.651886) osm:node/10778975981
+     958m  Olivia Hair & Skin Clinic  (12.917464,77.651512) osm:node/10049251595
+     965m  Janya Fertility  (12.917575,77.651508) osm:way/349721443
+     980m  Annayya Healthcare Pvt Ltd  (12.91826,77.638129) osm:node/4442661797
+    1001m  Dental Clinic  (12.918466,77.638068) osm:node/1470758421
+    1055m  Dr Batra's HealthCare Clinics  (12.918427,77.651848) osm:node/4446869487
+    1066m  Vasan Eye Care Hospital HSR Layout  (12.912167,77.634769) osm:node/6944578918
+    1095m  Ashirvad Clinic  (12.920669,77.64957) osm:node/11533109537
+    1117m  Sunkris Dental Health Care & Implant Centre  (12.92102,77.649332) osm:node/11533112310
+    1157m  West Mead Clinic  (12.916601,77.634972) osm:node/12270762304
+    1217m  Clove Dental  (12.920461,77.651851) osm:node/11397742484
+    1265m  Orange Health Labs  (12.9126,77.632936) osm:node/13430304762
+    1308m  Chandini Neuro Specialty Clinic  (12.912655,77.632549) osm:node/11250719123
+    1308m  Denton Dental Clinic  (12.912689,77.63255) osm:node/11250759679
+    1350m  Epicorium Skin Hair Nail Clinic  (12.915019,77.632512) osm:node/11250816374
+    1519m  Maithriye Clinic  (12.919538,77.632842) osm:node/6936708036
+    1522m  Mhaskars Srishti Clinic  (12.917678,77.631777) osm:node/1471712151
+    1538m  Basha Clinic  (12.924661,77.638669) osm:node/1470765801
+    1566m  Murthy Health and Research Centre  (12.924764,77.638286) osm:node/4442655749
+    1676m  Uma Nursing Home, Bengaluru Rural  (12.906356,77.6303) osm:node/6939448269
+    1930m  Bhaanu Nursing Home  (12.90746,77.627444) osm:node/6944138102
+    1953m  Shilpa Homeopathic Clinic  (12.926731,77.634638) osm:node/839826450
+    2047m  Liss Medical and Dental Clinic  (12.898469,77.657297) osm:node/8439422717
+    2060m  Aria Clinic  (12.910781,77.663561) osm:node/7298370324
+    2086m  Sri Lakshmi Clinic  (12.901563,77.660526) osm:way/24365167
+
+  -- metro_station (4 total, showing 4) --
+    1791m  Hongasandra  (12.901695,77.631986) osm:node/5760198198
+    1971m  Bommanahalli  (12.910616,77.626478) osm:node/5760198202
+    2534m  Kudlu Gate  (12.889926,77.639216) osm:node/5760198187
+    2652m  Central Silk Board  (12.916582,77.620567) osm:node/5760198212
+
+  -- mall (4 total, showing 4) --
+    2325m  PNR Felicity  (12.895133,77.657135) osm:way/1148303801
+    2840m  Davanam Sarovar Portico Suites  (12.921697,77.620318) osm:node/7164323510
+    2842m  Market Square Mall  (12.921902,77.620384) osm:way/239585279
+    2849m  Market Square Value Mall  (12.921904,77.620311) osm:node/2910639885
+
+  -- college (15 total, showing 15) --
+     464m  Oxford Management College  (12.915918,77.642868) osm:way/240663075
+     542m  Shakuntala Devi International Institute of Management Sciences and PreUniversity  (12.916555,77.642572) osm:way/240665267
+     711m  Government First Grade College  (12.914743,77.650575) osm:way/1050019895
+     881m  National Institute of Fashion Technology  (12.911974,77.652731) osm:way/232044884
+    1210m  Vidhya Bharathi College  (12.916731,77.634495) osm:way/133820242
+    1809m  ICAT Design & Media College  (12.903684,77.630321) osm:way/1424372722
+    1827m  The Oxford College of Engineering  (12.902052,77.631261) osm:node/3214264917
+    1927m  Oxford College  (12.90101,77.630935) osm:way/349648491
+    2055m  The Oxford Dental College & Hospital  (12.900151,77.630134) osm:node/1311760453
+    2104m  Krupanidhi College  (12.923817,77.629356) osm:way/133883975
+    2259m  St. Francis College  (12.926251,77.629651) osm:way/133822899
+    2284m  St. Francis Composite PU College  (12.927049,77.630146) osm:way/779344655
+    2784m  Alliance Business School Admin Office  (12.916949,77.6194) osm:node/1837440175
+    2935m  RJS Polytechnic  (12.929077,77.623861) osm:relation/1804672
+    2975m  ALT training college  (12.917498,77.671489) osm:way/631225531
+
+  -- park (34 total, showing 34) --
+     322m  Sector 2 Park  (12.909768,77.646355) osm:way/323094310
+     463m  Swabhiman Park  (12.911001,77.640477) osm:way/741214123
+     518m  HSR Friends Park  (12.90785,77.642643) osm:way/741212145
+     568m  Kaveri Park  (12.912845,77.649784) osm:way/90843344
+     600m  Independence Park  (12.907384,77.647299) osm:way/233128987
+     605m  Hemavati Park  (12.916289,77.648164) osm:way/286439576
+     629m  Twin park 1  (12.908057,77.640543) osm:way/323642593
+     673m  Twin park 2  (12.907538,77.640521) osm:way/323642594
+     695m  Swachagraha Kalika Kendra  (12.915421,77.63917) osm:way/781287761
+     931m  Agara Lake Park  (12.920351,77.643156) osm:way/610111576
+    1078m  Nethravathi Park  (12.917062,77.65315) osm:way/90843342
+    1115m  BBMP Park  (12.918361,77.636565) osm:way/362919672
+    1230m  ITI Layout Lake Park  (12.902166,77.639609) osm:way/1254749649
+    1370m  ITI Layout Park  (12.900319,77.640896) osm:way/432729333
+    1510m  Somasundarapalya Lake Park  (12.89892,77.647945) osm:way/1312729960
+    1679m  Jayashankar Park  (12.918387,77.630512) osm:way/232237173
+    1785m  Teacher's Colony Park  (12.917545,77.629105) osm:way/313831699
+    1976m  Swabhimana Park  (12.927514,77.635529) osm:way/362920876
+    2090m  Raja Rajeshwari Apartment Common Area  (12.897829,77.632054) osm:way/678062490
+    2098m  Main Park  (12.914658,77.663777) osm:way/235147107
+    2173m  Wipro Park  (12.928365,77.633486) osm:way/27789854
+    2290m  BDA Park  (12.930841,77.63583) osm:way/779344649
+    2369m  Fahad Hafiz Park  (12.930887,77.634294) osm:way/1458415588
+    2496m  BBMP Park  (12.93089,77.631996) osm:way/37786371
+    2578m  Heble Park  (12.928143,77.627433) osm:way/662280188
+    2644m  Iblur Lake Park  (12.922099,77.666737) osm:relation/16057542
+    2650m  S T Bed Park and Field at 8th Cross  (12.933038,77.632929) osm:node/3145158639
+    2667m  Children's Park  (12.933136,77.632782) osm:way/362921972
+    2741m  Virat Nagar Park  (12.903608,77.620855) osm:way/262857972
+    2768m  Rectangle Park  (12.932181,77.629506) osm:way/362920330
+    2799m  Daniel Park  (12.91675,77.619224) osm:way/201072740
+    2823m  S T Bed Park at 5th Cross  (12.93422,77.631822) osm:way/362922597
+    2832m  S T Bed Park at 5th Cross  (12.934282,77.631763) osm:node/3145158638
+    3057m  Kaikondrahalli Lake Park  (12.913396,77.672777) osm:way/610094122
+
+  -- marketplace (2 total, showing 2) --
+    2562m  Madiwala Market  (12.922951,77.623746) osm:way/343961637
+    2658m  Madiwala Market  (12.922615,77.622572) osm:node/1473298102
+
+### WHITEFIELD
+
+  -- cafe (95 total, showing 40) --
+     300m  Myka  (12.976894,77.725476) osm:node/5133344122
+     374m  Cafe Levista  (12.981335,77.727546) osm:node/13461599601
+     855m  Blue Tokai Coffee Roasters [coffee_shop]  (12.970771,77.725316) osm:node/14107867459
+     933m  Covai Cafe  (12.984235,77.733763) osm:node/13533451301
+    1036m  Qmin  (12.977124,77.718479) osm:node/1163058385
+    1174m  Chai Point [coffee_shop]  (12.968495,77.723281) osm:node/5540517744
+    1280m  Coffee Central  (12.986714,77.735713) osm:node/13192032431
+    1290m  Starbucks [coffee_shop]  (12.989597,77.728081) osm:node/11556692144
+    1294m  Third Wave Coffee Roasters [coffee_shop]  (12.989632,77.728403) osm:node/11555685099
+    1312m  Lavonne  (12.989796,77.72766) osm:node/11556692146
+    1328m  3 min  (12.989938,77.727979) osm:node/10127417296
+    1357m  Starbucks [coffee_shop]  (12.987156,77.736278) osm:node/10861897026
+    1373m  Chaayos [tea]  (12.987217,77.736433) osm:node/10151991207
+    1384m  Chai Point [coffee_shop]  (12.989562,77.732722) osm:node/13816579188
+    1412m  Issimo  (12.989844,77.73269) osm:node/13816579187
+    1420m  Open Canopy  (12.979245,77.714955) osm:way/181695465
+    1431m  Open Canopy  (12.979373,77.714872) osm:way/181695452
+    1432m  Open Canopy  (12.979266,77.714848) osm:way/181695493
+    1481m  Paper & Pie [coffee_shop]  (12.96545,77.732576) osm:node/10649418819
+    1484m  Cafe 19  (12.973616,77.715066) osm:node/11799139355
+    1612m  Cafe Zaffron  (12.989127,77.718468) osm:node/13887867408
+    1669m  Chaklivan  (12.965347,77.719717) osm:node/11832523169
+    1678m  The Chef  (12.979244,77.71257) osm:node/12981491768
+    1699m  Cafe Coffee Day [coffee_shop]  (12.978316,77.712326) osm:node/1160603218
+    1738m  Chai Point [coffee_shop]  (12.974371,77.712398) osm:node/13382849642
+    1775m  New Chai Gully [coffee_shop]  (12.967379,77.715772) osm:node/9981800902
+    1796m  Blue Tokai Coffe Roasters [coffee_shop]  (12.98237,77.712039) osm:node/13564652716
+    1877m  Kaapi Kadai  (12.96476,77.717252) osm:node/1371859199
+    1886m  Irani Chai  (12.967486,77.714341) osm:node/12050490633
+    1930m  Breads & Banter  (12.964388,77.716947) osm:node/9271778721
+    1963m  Ira Cafe  (12.966213,77.714517) osm:node/12050490642
+    1965m  Third Wave Coffee Roasters [coffee_shop]  (12.973176,77.710551) osm:node/13382970538
+    1970m  Boba Bhai [bubble_tea]  (12.973112,77.710528) osm:node/13586092209
+    1991m  Teaday  (12.965815,77.714532) osm:node/12050490648
+    2000m  Breads & Banter  (12.964763,77.715497) osm:way/503382150
+    2018m  Third Wave Coffee Roasters [coffee_shop]  (12.963223,77.717183) osm:node/1363280651
+    2020m  Just Parathas  (12.965873,77.714117) osm:node/10111818817
+    2024m  Sendhoor Coffee [coffee_shop]  (12.96442,77.715557) osm:node/12050487262
+    2058m  Namma Ashram Cafe  (12.960034,77.732566) osm:node/12208448672
+    2061m  Sandwich2Poha  (12.964608,77.714854) osm:node/13708631423
+
+  -- fast_food (158 total, showing 40) --
+     222m  La Pino'z Pizza [pizza]  (12.979795,77.727104) osm:node/10276021138
+     342m  Domino's  (12.976958,77.725028) osm:node/14252304558
+     357m  Juice Junction [juice]  (12.976907,77.7249) osm:node/13461590103
+     366m  Va Chai 24 [juice]  (12.976897,77.724819) osm:node/14252304559
+     386m  Vindoos [sandwich;juice;coffee_shop;tea;salad;local]  (12.976286,77.731096) osm:way/1424969526
+     857m  GOPIZZA  (12.970846,77.725045) osm:node/14107867461
+    1090m  Domino's [pizza]  (12.969463,77.732944) osm:node/14247145764
+    1094m  Sri Vinayaka Juice Centre [juice]  (12.969738,77.733478) osm:node/14252780645
+    1179m  Aladdin Shawarma  (12.98289,77.718349) osm:node/13860042346
+    1259m  Vada Pav  (12.989251,77.726732) osm:node/12534145131
+    1259m  Vada Pav  (12.989251,77.726732) osm:node/12534184758
+    1259m  Boss Burger [burger]  (12.989311,77.728453) osm:node/12862846444
+    1307m  McDonald's [burger]  (12.989748,77.727736) osm:node/11556692141
+    1310m  Sandowitch [sandwich]  (12.988649,77.733166) osm:node/13816579189
+    1332m  McDonald's [burger]  (12.987172,77.735904) osm:node/10861897028
+    1349m  Mojo Box  (12.968049,77.735126) osm:node/14252780615
+    1379m  Domino's [pizza]  (12.986835,77.736926) osm:node/1604575910
+    1390m  Burger King [burger]  (12.987184,77.736697) osm:node/10861897027
+    1402m  Subway [sandwich]  (12.987155,77.736891) osm:node/13192098304
+    1406m  Sri Sai Ram Hot Chips  (12.966693,77.733799) osm:node/14254041061
+    1448m  Sowparnika Bakery And Sweets  (12.969124,77.737778) osm:node/5833761331
+    1501m  Ice Burg [juice]  (12.97371,77.714865) osm:node/11799207842
+    1525m  The Juice [juice]  (12.967754,77.718644) osm:node/11832800815
+    1573m  SK Food Center  (12.967123,77.718715) osm:node/11832523234
+    1583m  Lassi & Juice World [juice]  (12.96701,77.718711) osm:node/11832523230
+    1590m  ChefD Mutton Biryani  (12.988984,77.718599) osm:node/13887889684
+    1595m  The Rasoi Cafe  (12.989045,77.718603) osm:node/13887853065
+    1617m  Sri Manjunatha Juice [juice]  (12.963801,77.731211) osm:node/14221909388
+    1673m  Bangarpet Chats  (12.965339,77.71966) osm:node/11832523171
+    1681m  Beijing Bites [chinese]  (12.967668,77.716677) osm:node/11832523309
+    1681m  Chai Venue [juice]  (12.979105,77.712528) osm:node/12981491769
+    1695m  Juice Joint [juice]  (12.979264,77.712409) osm:node/13708298782
+    1704m  Sri Ganesha Fruit Juice Centre [juice]  (12.96561,77.718745) osm:node/11832523205
+    1721m  McDonald's [burger]  (12.967059,77.716762) osm:node/1091213717
+    1735m  G. Pulla Reddy Sweets [sweets]  (12.96727,77.716373) osm:node/9964457680
+    1739m  Sri Dwaraka Foods  (12.974528,77.712355) osm:node/14349648178
+    1741m  Srinidhi Sagar [indian]  (12.991836,77.720482) osm:node/988724816
+    1753m  Wok Face [chinese]  (12.967338,77.716078) osm:node/9981800903
+    1779m  Khusboo Fast Food  (12.963062,77.733872) osm:node/14259280716
+    1815m  Milano Pizza [pizza]  (12.962368,77.732826) osm:node/13104081667
+
+  -- restaurant (259 total, showing 40) --
+     177m  Bangalore Dosa  (12.977003,77.726721) osm:node/12462598540
+     206m  Cafe Champakam  (12.976851,77.726506) osm:node/13286851347
+     229m  Anjappar  (12.979861,77.727094) osm:node/13461596701
+     234m  Essotto  (12.976921,77.726142) osm:node/11215614045
+     244m  Beijing Bites [chinese;thai]  (12.980021,77.727119) osm:node/1093355140
+     249m  New Udupi Delicacy  (12.980043,77.727048) osm:node/10715811635
+     250m  Hyderabad Chefs  (12.976044,77.726871) osm:node/10651299084
+     252m  Sai restaurant  (12.979064,77.730056) osm:node/5053373338
+     260m  Bahuka  (12.975994,77.726773) osm:node/10744702189
+     278m  Flechazo [international]  (12.977296,77.725534) osm:node/5637428721
+     280m  Southern Spice [regional]  (12.975791,77.726761) osm:node/5833741153
+     283m  Kritunga Restaurant [indian]  (12.975699,77.726886) osm:node/4119294793
+     283m  Biriyani Zone  (12.975823,77.726653) osm:node/4133687489
+     346m  Brik Oven [pizza]  (12.977253,77.724901) osm:node/11215614050
+     347m  Biryani by kilo  (12.977218,77.724899) osm:node/11215614043
+     350m  Babai Hotel  (12.976904,77.724974) osm:node/12432747643
+     358m  Absolute Barbecue - Whitefield  (12.976946,77.72488) osm:node/5053373346
+     430m  Garden Woods  (12.980032,77.724628) osm:node/14277394308
+     838m  Oota Bangalore [regional;indian;karnataka]  (12.982396,77.721713) osm:node/6374363820
+     841m  Andhra biryanis  (12.983282,77.73356) osm:node/6795662019
+     842m  Windmills Craftworks [spanish;indian;italian]  (12.982529,77.721768) osm:node/2189204878
+     854m  Litbox  (12.970833,77.725176) osm:node/14107867462
+     858m  KILA  (12.970875,77.724964) osm:node/14107867460
+    1021m  Khaaja Chowk [regional]  (12.986111,77.732423) osm:node/4444420057
+    1102m  Telugu Vindu [indian]  (12.969507,77.733238) osm:node/14247145766
+    1107m  Sashay Taproom Kitchen  (12.976045,77.717983) osm:node/10678572931
+    1154m  Pasta Street [pasta]  (12.988169,77.730105) osm:node/12461000334
+    1156m  Green Hyderabad Biryani House [indian]  (12.988242,77.72984) osm:node/9937521069
+    1186m  Laila [international]  (12.987264,77.733434) osm:node/5920403846
+    1218m  Andhra Kafe Bar & Restaurant [indian;andhra]  (12.988847,77.726433) osm:way/1084458369
+    1222m  New Ambur Dum Biryani  (12.98344,77.718201) osm:node/9874782365
+    1228m  The Marigold - Fine Dine [international]  (12.969828,77.735625) osm:node/3654380563
+    1250m  Zarf  (12.989052,77.73013) osm:node/12102898478
+    1271m  Kuuraku [japanese]  (12.989425,77.727767) osm:node/12927909820
+    1279m  Davanagere Benne Dosa [indian]  (12.969126,77.735513) osm:node/14254042726
+    1287m  Mitahi Mahal  (12.988073,77.733853) osm:node/12972911335
+    1292m  Sri Alok Park Veg  (12.988062,77.733965) osm:node/6448154191
+    1295m  Chowki  (12.968884,77.735439) osm:node/11826963019
+    1296m  Smoke House Deli [italian]  (12.98965,77.728186) osm:node/10727955500
+    1300m  Celeb's  (12.968817,77.735425) osm:node/11640744663
+
+  -- fitness (37 total, showing 37) --
+     655m  Falcon Gym | Dance | Zoomba  (12.979845,77.733741) osm:node/13436163549
+    1145m  cult.fit  (12.988092,77.730096) osm:node/8169318986
+    1643m  Klub 3  (12.9642,77.733432) osm:node/14257202101
+    1751m  Result Fitness  (12.967341,77.716106) osm:node/12303923001
+    1978m  Fitness Emporium  (12.966376,77.71418) osm:node/11787368385
+    2038m  Gym X  (12.965936,77.713837) osm:node/12050489474
+    2084m  Prajapathi Brahmakumaris Ishwariya Vishwa Vidyalaya  (12.964807,77.714342) osm:node/13049405751
+    2104m  cult.fit  (12.962627,77.716674) osm:node/11313855101
+    2123m  KRS Yoga  (12.97151,77.746425) osm:way/1318032785
+    2179m  Burnout Fitness  (12.959639,77.720965) osm:node/9883500562
+    2220m  N. S. Fitness Studio  (12.96402,77.713377) osm:node/12050485693
+    2224m  cult.fit  (12.984483,77.708581) osm:node/11297456548
+    2247m  Klub Fit  (12.961023,77.716754) osm:node/4489868918
+    2315m  Ashish Yoga Fitness  (12.96304,77.713138) osm:node/11192491331
+    2327m  Vera Yoga  (12.95985,77.71731) osm:node/9975346481
+    2341m  Asana  (12.958924,77.718857) osm:node/13321349873
+    2351m  Rashtrotthana Arogya Sankeerna  (12.961954,77.713869) osm:way/1104753187
+    2353m  Burnout Fitness  (12.962495,77.713228) osm:node/12050406751
+    2399m  Vera Fitness  (12.958968,77.717575) osm:node/9917513504
+    2425m  Rock's Gym  (12.984464,77.749377) osm:node/13022417947
+    2426m  Akshar Power Yoga Academy  (12.971809,77.749471) osm:way/1155369196
+    2440m  Phoenix Fitness  (12.984429,77.74953) osm:node/13022417958
+    2455m  Ample Fit  (12.984358,77.749693) osm:node/13022417927
+    2474m  Rock's Gym  (12.955752,77.728137) osm:node/10284845772
+    2515m  Fitness First  (12.972781,77.750584) osm:node/12946368098
+    2519m  Sama  (12.972707,77.750608) osm:node/12951553767
+    2526m  cult.fit  (12.956159,77.7216) osm:node/12277915321
+    2529m  Elite Gym  (12.979422,77.75129) osm:node/12852812564
+    2534m  Gold's Gym  (12.972191,77.750611) osm:node/4489795667
+    2543m  cult.fit  (12.968483,77.749338) osm:node/5772000762
+    2545m  Aikyam Yoga  (12.958604,77.715525) osm:node/13358966043
+    2553m  M Fitness  (12.968707,77.749544) osm:node/6620856880
+    2666m  cult.fit  (12.983602,77.751925) osm:node/12999157278
+    2718m  Welcare  (12.956084,77.716899) osm:node/12809380566
+    2861m  Fitness Arena  (12.954346,77.717602) osm:node/13376047336
+    2950m  cult.fit  (12.955827,77.713045) osm:node/13652236513
+    2958m  Stayfit  (12.957263,77.745105) osm:node/12877246636
+
+  -- clinic (68 total, showing 40) --
+    1048m  Aswitha Poly Clinic  (12.969691,77.732559) osm:node/14247145761
+    1676m  Clove Dental  (12.963752,77.73304) osm:node/11826962881
+    1690m  K M Gastro Center  (12.963466,77.732548) osm:node/14250851066
+    1775m  Sai Medical  (12.96307,77.733801) osm:node/14259280717
+    1812m  Vita Life clinic  (12.964894,77.718056) osm:node/1371859178
+    1822m  Sancheswar Clinic  (12.991048,77.717824) osm:node/1107350598
+    1865m  Growing Smiles  (12.96188,77.732765) osm:node/14250851082
+    1870m  Step Care  (12.961833,77.73276) osm:node/14250851083
+    1894m  Little Angel Clinic for children  (12.966172,77.715428) osm:node/514178762
+    1990m  Ojus Healthcare (Nirmaya Clinic)  (12.963001,77.717987) osm:node/6938777946
+    2003m  Nova IVF  (12.964435,77.715833) osm:node/11387140627
+    2041m  Manipal Clinics  (12.965892,77.713846) osm:node/12050489473
+    2098m  Nexa White  (12.960263,77.721385) osm:node/13619251684
+    2119m  White tooth  (12.959342,77.731978) osm:node/14250851086
+    2144m  Sattva Fertility  (12.964161,77.714223) osm:node/12050490176
+    2201m  Image  (12.958593,77.732016) osm:node/14250851088
+    2206m  Health Bloom Poly Clinic  (12.960334,77.718737) osm:node/9884929792
+    2280m  Femlife  (12.961009,77.716221) osm:node/13525670853
+    2305m  G. S. Clinic  (12.959469,77.718459) osm:node/9945555278
+    2306m  Dr. Raj's  (12.958779,77.720002) osm:node/10676226620
+    2335m  Ivory Dental  (12.963807,77.712118) osm:node/5812487527
+    2355m  Smile Experts  (12.957051,77.731178) osm:node/14250851112
+    2371m  Dr.RegishΓÇÖs Dental care & implant Center  (12.962235,77.713271) osm:node/12050465775
+    2382m  Axiss Dental  (12.962029,77.713348) osm:node/5812487968
+    2383m  Smiles On  (12.958952,77.717913) osm:node/11209525663
+    2406m  Maa Sheshasayi Multi Speciality Dental Clinic  (12.961669,77.71343) osm:node/5812487970
+    2408m  Baby Sciences IVF Clinic Pvt Ltd  (12.956349,77.728487) osm:node/12506342830
+    2466m  Sachins Dental Clinic  (12.960851,77.713564) osm:node/12050485608
+    2473m  Dentyscan 3D  (12.956152,77.732284) osm:node/12714132890
+    2483m  Smaya's Dento Care  (12.95577,77.730186) osm:node/10284845773
+    2520m  Kids Dentist  (12.972858,77.750646) osm:node/12951565828
+    2521m  Tata MD  (12.972777,77.750639) osm:node/11898639322
+    2553m  Smile Zone  (12.96854,77.74947) osm:node/12860399931
+    2558m  Srinivasa Clinic  (12.968535,77.749518) osm:node/12860399902
+    2558m  D White Feather  (12.96849,77.749496) osm:node/12860399930
+    2564m  MS Clinic, Diagnostic & Scan Center  (12.970139,77.750248) osm:node/12987428709
+    2570m  Apoorva Dental Clinic  (12.96819,77.749474) osm:node/2623324531
+    2587m  Sai Dental Clinic  (12.969029,77.750026) osm:node/4640317260
+    2588m  Kosmoderma dermatologist  (12.955583,77.721571) osm:node/9874558791
+    2588m  Dr. O'grady Health And Welfare Center  (12.970136,77.750475) osm:way/141454553
+
+  -- metro_station (8 total, showing 8) --
+     359m  Sri Sathya Sai Hospital  (12.981195,77.727536) osm:node/5760197751
+     370m  Nallurahalli  (12.976641,77.724885) osm:node/5760197754
+    1349m  Kundalahalli  (12.977594,77.715559) osm:node/5760197755
+    1507m  Pattandur Agrahara  (12.987639,77.737772) osm:node/5760197749
+    2106m  Seetharampalya  (12.980856,77.708785) osm:node/5760197757
+    2170m  Hoodi  (12.988803,77.711326) osm:node/5760197761
+    2229m  Kadugodi Tree Park  (12.98565,77.747012) osm:node/11941186870
+    2989m  Hopefarm Channasandra  (12.987297,77.753884) osm:node/5760197745
+
+  -- mall (5 total, showing 5) --
+    1282m  Nexus Shantinekatan  (12.98953,77.728074) osm:way/635700526
+    1353m  Park Square Mall  (12.986985,77.736415) osm:way/124394941
+    1715m  Brookfield Mall  (12.966135,77.717887) osm:way/41748510
+    2583m  HyperCity  (12.957882,77.716079) osm:node/4564481189
+    2969m  Nexus Whitefield  (12.959697,77.747946) osm:way/99178891
+
+  -- college (9 total, showing 9) --
+     294m  Vydehi Institute of Medical Science and Research Center  (12.976723,77.730372) osm:way/494678981
+     420m  Vydehi Medical College Building  (12.975337,77.730753) osm:relation/1969878
+     981m  Jain University School of Allied Healthcare & Sciences  (12.985245,77.733167) osm:way/1144296232
+    1401m  Gopalan International School  (12.98527,77.717435) osm:way/322896805
+    1510m  GCEM-Gopalan College of Engineering and Management  (12.986472,77.717112) osm:node/13685065908
+    1522m  GSAP-Gopalan College Of Architecture  (12.986424,77.716933) osm:way/886184261
+    1545m  GPUC-Gopalan PU College  (12.986428,77.716662) osm:node/8196809332
+    1552m  GCC-Gopalan College of Commerce  (12.98652,77.716657) osm:node/13685065907
+    2118m  CMR Institute of Technology  (12.966566,77.712364) osm:way/122691466
+
+  -- park (26 total, showing 26) --
+     915m  Nallurahalli Park  (12.969877,77.729332) osm:way/376041268
+    1386m  Igate Park  (12.972451,77.716544) osm:way/469415969
+    1659m  Seetharampalya Lake Park  (12.983027,77.713586) osm:relation/19073064
+    1724m  Tower 17 Childrens park  (12.993406,77.729801) osm:way/531497825
+    1750m  PSN West Side ground  (12.993653,77.726281) osm:way/469345926
+    1793m  PSN Central park  (12.994113,77.728509) osm:way/531496933
+    1807m  PSN Courts and forest  (12.99416,77.729763) osm:way/531496318
+    1815m  AECS Layout Park  (12.966618,77.715988) osm:way/122686452
+    1878m  Tower 9 park  (12.994888,77.727745) osm:way/560133870
+    1894m  Childrens Park Tower 9  (12.995032,77.72767) osm:node/5365354922
+    1903m  Childrens Park  (12.995111,77.728462) osm:way/541310745
+    1930m  Park between tower 11 and 12  (12.995319,77.729239) osm:way/531498332
+    1944m  Park between tower 12 and 13  (12.995369,77.730057) osm:way/531498206
+    2140m  Children's Park  (12.962991,77.715636) osm:way/353437620
+    2144m  BDA Park  (12.96005,77.720762) osm:way/757666950
+    2153m  Thubarahalli Lake Park  (12.958776,77.725646) osm:relation/19073062
+    2212m  Kadugodi Reserved Forest  (12.987216,77.74609) osm:way/1156196453
+    2282m  Sheelavanthana Kere Park  (12.964419,77.743791) osm:way/641761936
+    2299m  Inner Circle Park  (12.971439,77.748121) osm:way/122401862
+    2435m  St. Joseph's Convent Playground  (12.976707,77.75043) osm:way/159031314
+    2477m  Kodigehalli Lake Park  (13.000272,77.72771) osm:relation/19908854
+    2596m  Chinnapanahalli Lake Park  (12.966217,77.707314) osm:way/582562270
+    2771m  Hoodi Lake Park  (13.000347,77.716689) osm:way/1123146976
+    2864m  Munekola Lake Park  (12.960985,77.708158) osm:relation/19073063
+    2888m  Sigma Park  (12.957164,77.743914) osm:way/470510882
+    2975m  BBMP Park  (12.96859,77.702298) osm:way/464282944

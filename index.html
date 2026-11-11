@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SiteBrain — AI Geospatial Commercial Real Estate Decision Intelligence</title>
+  <meta name="description" content="Determine commercial store profitability before you sign the lease. Deterministic Python financial modeling meets Google Gemini 2.5 Pro reasoning for high-precision micro-market intelligence." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SiteBrain — Determine Store Profitability Before You Sign The Lease" />
+  <meta property="og:description" content="3km competitor scans, deterministic break-even underwriting, and Gemini-powered execution masterplans for retail founders." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%230071E3'/%3E%3Ccircle cx='12' cy='12' r='3.2' fill='white'/%3E%3Ccircle cx='12' cy='12' r='7.5' stroke='white' stroke-width='1.4' fill='none' stroke-dasharray='3 3'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) & JetBrains Mono (Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN + shared design tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- SiteBrain Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+</head>
+
+<body class="spatial-grid-bg relative text-apple-title selection:bg-brand/15 selection:text-brand">
+  <div class="spatial-grid-overlay"></div>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 1. FLOATING APPLE ISLAND NAVBAR          -->
+  <!-- ════════════════════════════════════════ -->
+  <nav id="mainNav" class="fixed top-0 left-0 right-0 z-50 px-4 pt-4 transition-all duration-300">
+    <div id="navCapsule" class="max-w-7xl mx-auto px-6 h-16 rounded-full glass-panel flex items-center justify-between transition-all duration-300">
+
+      <!-- Left: Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-8 h-8 rounded-xl bg-brand flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="3.2" fill="white"/>
+            <circle cx="12" cy="12" r="8" stroke="white" stroke-width="1.6" stroke-dasharray="3.2 3.2"/>
+            <line x1="12" y1="2" x2="12" y2="5.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="12" y1="18.5" x2="12" y2="22" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="2" y1="12" x2="5.5" y2="12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+            <line x1="18.5" y1="12" x2="22" y2="12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="font-semibold tracking-tight text-lg text-apple-title">SiteBrain</span>
+      </a>
+
+      <!-- Center: Section Links (Desktop) -->
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="#product" class="text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors">Workbench</a>
+        <a href="#pipeline" class="text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors">Pipeline</a>
+        <a href="#simulator" class="text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors">ROI Simulator</a>
+        <a href="#marketplace" class="text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors">Network</a>
+        <a href="#team" class="text-[13px] font-medium text-apple-muted hover:text-apple-title transition-colors">Team</a>
+      </div>
+
+      <!-- Right: Primary CTA -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="survey.html" class="btn-apple-primary text-xs !py-2.5 !px-5 whitespace-nowrap shadow-2xs">
+          <span>Start Location Survey</span>
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-full text-apple-title hover:bg-black/5 transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden max-w-7xl mx-auto mt-2 px-6 py-4 rounded-3xl glass-panel-strong flex flex-col gap-3 shadow-xl">
+      <a href="#product" class="text-sm font-medium text-apple-title hover:text-brand py-1">Workbench</a>
+      <a href="#pipeline" class="text-sm font-medium text-apple-title hover:text-brand py-1">Pipeline</a>
+      <a href="#simulator" class="text-sm font-medium text-apple-title hover:text-brand py-1">ROI Simulator</a>
+      <a href="#marketplace" class="text-sm font-medium text-apple-title hover:text-brand py-1">Network</a>
+      <a href="#team" class="text-sm font-medium text-apple-title hover:text-brand py-1">Team</a>
+      <a href="survey.html" class="btn-apple-primary text-center mt-2">Start Location Survey →</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 2. HERO — SPLIT LAYOUT + PRODUCT MOCK    -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="relative pt-32 lg:pt-40 pb-16 overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+
+        <!-- Left: Copy -->
+        <div class="lg:col-span-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand/[0.07] border border-brand/20 mb-7 shadow-2xs">
+            <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+            <span class="text-xs font-medium text-brand tracking-wide">Google Cloud &amp; Gemini API Powered</span>
+            <span class="text-xs text-apple-muted/60">|</span>
+            <span class="text-xs font-medium text-apple-muted tracking-wide">Startup Buildathon India 2026</span>
+          </div>
+
+          <h1 class="hero-headline max-w-xl mx-auto lg:mx-0 mb-6">
+            Determine store profitability.<br/>
+            <span class="text-brand">Before you sign the lease.</span>
+          </h1>
+
+          <p class="text-lg text-apple-body max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+            SiteBrain scans a 3km micro-market for competitors, footfall anchors, and verified listings — then underwrites the lease with deterministic math before Gemini 2.5 Pro turns the numbers into an execution plan.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 mb-8">
+            <a href="survey.html" class="btn-apple-primary text-base !py-3.5 !px-8 shadow-sm">
+              <span>Start Location Survey</span>
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#pipeline" class="btn-apple-secondary text-base !py-3.5 !px-7">
+              <span>Inspect the Pipeline</span>
+              <svg class="w-4 h-4 text-apple-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <ul class="flex flex-wrap items-center justify-center lg:justify-start gap-x-5 gap-y-2 text-xs text-apple-muted">
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-risk-low" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Zero math hallucination
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-risk-low" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Bengaluru-calibrated data
+            </li>
+            <li class="flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-risk-low" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              60-second survey
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Product Mock -->
+        <div class="lg:col-span-6 relative">
+          <div class="app-window">
+            <div class="app-window-bar">
+              <span class="chrome-dot chrome-dot-red"></span>
+              <span class="chrome-dot chrome-dot-yellow"></span>
+              <span class="chrome-dot chrome-dot-green"></span>
+              <span class="chrome-url-pill">sitebrain.app/survey?location=indiranagar&category=qsr</span>
+            </div>
+            <div class="grid grid-cols-5">
+              <!-- Mock Map -->
+              <div class="mock-map col-span-5 sm:col-span-3 h-[260px] sm:h-[330px]">
+                <div class="mock-road" style="left:6%;top:20%;width:88%;height:9px;"></div>
+                <div class="mock-road" style="left:6%;top:54%;width:88%;height:13px;"></div>
+                <div class="mock-road" style="left:6%;top:78%;width:88%;height:9px;"></div>
+                <div class="mock-road" style="left:24%;top:0;height:100%;width:9px;"></div>
+                <div class="mock-road" style="left:62%;top:0;height:100%;width:7px;"></div>
+
+                <!-- 3km catchment -->
+                <div style="position:absolute;left:50%;top:50%;width:210px;height:210px;margin:-105px 0 0 -105px;border:2px dashed rgba(0,113,227,0.55);border-radius:50%;background:rgba(0,113,227,0.05);"></div>
+                <div class="mock-pin" style="background:#0071E3;left:50%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;"></div>
+
+                <!-- Competitors (crimson) -->
+                <div class="mock-pin" style="background:#FF3B30;left:38%;top:32%;"></div>
+                <div class="mock-pin" style="background:#FF3B30;left:57%;top:38%;"></div>
+                <div class="mock-pin" style="background:#FF3B30;left:45%;top:63%;"></div>
+                <div class="mock-pin" style="background:#FF3B30;left:64%;top:60%;"></div>
+                <div class="mock-pin" style="background:#FF3B30;left:33%;top:52%;"></div>
+                <!-- Anchors (cobalt) -->
+                <div class="mock-pin" style="background:#0071E3;left:71%;top:26%;"></div>
+                <div class="mock-pin" style="background:#0071E3;left:28%;top:70%;"></div>
+                <!-- Listings (diamonds) -->
+                <div class="mock-pin-diamond" style="background:#34C759;left:52%;top:24%;"></div>
+                <div class="mock-pin-diamond" style="background:#FF9500;left:70%;top:72%;"></div>
+
+                <!-- In-map status chip -->
+                <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur border border-black/[0.06] shadow-2xs text-[10px] font-mono font-semibold text-apple-title">
+                  <span class="inline-block w-1.5 h-1.5 rounded-full bg-risk-high mr-1.5 align-middle"></span>12 competitors · 3km radius
+                </div>
+              </div>
+
+              <!-- Mock Diagnostic Panel -->
+              <div class="hidden sm:flex col-span-2 flex-col p-4 bg-white">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-wider">Viability Index</span>
+                  <span class="text-[9px] font-mono px-1.5 py-0.5 rounded bg-risk-low-bg text-risk-low border border-risk-low-border font-semibold">LOW RISK</span>
+                </div>
+                <svg viewBox="0 0 120 70" class="w-full -mb-3">
+                  <path d="M 15 60 A 45 45 0 0 1 105 60" fill="none" stroke="#E5E5EA" stroke-width="9" stroke-linecap="round"/>
+                  <path d="M 15 60 A 45 45 0 0 1 105 60" fill="none" stroke="#34C759" stroke-width="9" stroke-linecap="round" stroke-dasharray="141.4" stroke-dashoffset="37"/>
+                  <text x="52" y="52" font-size="17" font-weight="700" fill="#1D1D1F" font-family="SF Mono, Menlo, monospace">74</text>
+                  <text x="74" y="52" font-size="8" fill="#86868B">/100</text>
+                </svg>
+
+                <div class="space-y-2 mt-2">
+                  <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+                    <span class="text-apple-muted">Break-even</span>
+                    <span class="font-mono font-semibold text-apple-title">Month 22.1</span>
+                  </div>
+                  <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+                    <span class="text-apple-muted">Covers/day</span>
+                    <span class="font-mono font-semibold text-apple-title">124 vs 81 req.</span>
+                  </div>
+                  <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+                    <span class="text-apple-muted">Rent stress</span>
+                    <span class="font-mono font-semibold text-apple-title">25% of revenue</span>
+                  </div>
+                </div>
+
+                <!-- Weekly volume bars -->
+                <div class="mt-auto pt-3">
+                  <div class="text-[9px] font-mono text-apple-muted uppercase tracking-wider mb-1.5">Projected weekly volume</div>
+                  <div class="flex items-end gap-1.5 h-12">
+                    <div class="flex-1 rounded-t bg-brand/25" style="height:62%"></div>
+                    <div class="flex-1 rounded-t bg-brand/25" style="height:71%"></div>
+                    <div class="flex-1 rounded-t bg-brand/25" style="height:66%"></div>
+                    <div class="flex-1 rounded-t bg-brand/25" style="height:78%"></div>
+                    <div class="flex-1 rounded-t bg-brand/25" style="height:74%"></div>
+                    <div class="flex-1 rounded-t bg-brand" style="height:100%"></div>
+                    <div class="flex-1 rounded-t bg-brand" style="height:95%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating annotation chips -->
+          <div class="float-chip absolute -top-5 -right-3 sm:-right-6 z-10 glass-panel-strong px-3.5 py-2 rounded-2xl border border-risk-low-border shadow-lg">
+            <div class="text-[10px] font-mono font-bold text-risk-low">VIABILITY 74/100</div>
+            <div class="text-[9px] text-apple-muted">High feasibility · low risk</div>
+          </div>
+          <div class="float-chip-delayed absolute -bottom-5 -left-3 sm:-left-8 z-10 glass-panel-strong px-3.5 py-2 rounded-2xl border border-brand/20 shadow-lg">
+            <div class="text-[10px] font-mono font-bold text-brand">₹350/SQ.FT RENT BENCHMARK</div>
+            <div class="text-[9px] text-apple-muted">14,200 daily pedestrians</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick-Launch Hotspot Selector -->
+      <div class="max-w-3xl mx-auto mt-16 lg:mt-20 glass-panel-strong rounded-2xl p-4 shadow-sm border border-black/[0.06]">
+        <div class="text-[11px] font-semibold text-apple-muted uppercase tracking-wider mb-2.5 text-center">
+          Launch a pre-calibrated micro-market survey:
+        </div>
+        <div class="flex flex-wrap justify-center gap-2">
+          <button class="hotspot-chip text-xs font-medium px-3.5 py-1.5 rounded-full bg-apple-surface hover:bg-brand/10 hover:text-brand border border-black/[0.04] transition-all cursor-pointer" data-location="indiranagar" data-category="qsr">
+            Indiranagar 100ft Rd · QSR
+          </button>
+          <button class="hotspot-chip text-xs font-medium px-3.5 py-1.5 rounded-full bg-apple-surface hover:bg-brand/10 hover:text-brand border border-black/[0.04] transition-all cursor-pointer" data-location="koramangala" data-category="coffee">
+            Koramangala 5th Block · Coffee
+          </button>
+          <button class="hotspot-chip text-xs font-medium px-3.5 py-1.5 rounded-full bg-apple-surface hover:bg-brand/10 hover:text-brand border border-black/[0.04] transition-all cursor-pointer" data-location="hsr" data-category="coffee">
+            HSR Layout Sector 2 · Coffee
+          </button>
+          <button class="hotspot-chip text-xs font-medium px-3.5 py-1.5 rounded-full bg-apple-surface hover:bg-brand/10 hover:text-brand border border-black/[0.04] transition-all cursor-pointer" data-location="whitefield" data-category="coffee">
+            Whitefield ITPL Rd · Coffee
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 3. TRUST STRIP — ENGINEERED ON           -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="relative py-8 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col items-center justify-center gap-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+        <span class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-widest">Engineered on</span>
+        <div class="flex flex-wrap justify-center gap-2.5 text-xs font-medium text-apple-body">
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#4285F4]"></span> Google Cloud</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-brand"></span> Gemini 2.5 Pro</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#34A853]"></span> FastAPI</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#FBBC04]"></span> PostGIS</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#EA4335]"></span> Leaflet</span>
+          <span class="px-3.5 py-1.5 rounded-full bg-white border border-black/[0.06] shadow-2xs flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-[#7EB3F5]"></span> OpenStreetMap</span>
+        </div>
+      </div>
+      <p class="text-[11px] text-apple-muted text-center">
+        Grounded in real data: 47 OSM-verified competitors, 22 footfall anchors (BMRCL Sep 2025 ridership), and 16 corridor listings across 4 Bengaluru micro-markets — <a href="datasets.html" class="text-brand font-medium hover:underline">inspect the Data Room</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 4. THE PROBLEM — STAT BAND               -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="relative py-20 lg:py-28 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-start mb-12">
+        <div class="lg:col-span-5 reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-risk-high-bg border border-risk-high-border mb-4">
+            <span class="text-xs font-medium text-risk-high">The Problem</span>
+          </div>
+          <h2 class="section-headline mb-4">Location decisions are made blind.</h2>
+          <p class="text-base text-apple-body leading-relaxed">
+            Founders commit to commercial leases on landlord footfall claims and gut feel. The deposit is locked, the fit-out is paid for — and only then does the P&amp;L reveal the truth about saturation, rent stress, and break-even volume.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7 grid sm:grid-cols-3 gap-4">
+          <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] reveal">
+            <div class="text-3xl lg:text-4xl font-semibold font-mono tracking-tight text-risk-high mb-1.5">₹42L</div>
+            <div class="text-xs font-semibold text-apple-title mb-1">locked before the first sale</div>
+            <p class="text-[11px] text-apple-muted leading-relaxed">Bengaluru's 10-month deposit norm at ₹350/sq.ft on a 1,200 sq.ft lease (C&amp;W Q4 2025).</p>
+          </div>
+          <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] reveal">
+            <div class="text-3xl lg:text-4xl font-semibold font-mono tracking-tight text-risk-medium mb-1.5">6–12</div>
+            <div class="text-xs font-semibold text-apple-title mb-1">competitors within 800m</div>
+            <p class="text-[11px] text-apple-muted leading-relaxed">Incumbents already capture demand on any prime corridor.</p>
+          </div>
+          <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] reveal">
+            <div class="text-3xl lg:text-4xl font-semibold font-mono tracking-tight text-apple-title mb-1.5">18 mo</div>
+            <div class="text-xs font-semibold text-apple-title mb-1">make-or-break window</div>
+            <p class="text-[11px] text-apple-muted leading-relaxed">Typical capital runway before a store must prove itself.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-apple-muted reveal max-w-2xl mx-auto">
+        SiteBrain exists so that by the time you sit across from a landlord, every number in your head has already been proven.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 5. DARK BAND — ANTI-HALLUCINATION PIPELINE -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="pipeline" class="dark-band relative py-20 lg:py-28 overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-14 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 mb-4">
+          <span class="text-xs font-medium text-[#7EB3F5]">The Anti-Hallucination Pipeline</span>
+        </div>
+        <h2 class="section-headline !text-white mb-3">Every number is proven<br class="hidden sm:block"/> before the AI speaks.</h2>
+        <p class="text-base text-white/60 max-w-2xl mx-auto leading-relaxed">
+          Financial figures are mathematically computed upstream. Gemini 2.5 Pro operates purely as strategic counsel downstream of immutable numbers — it never does arithmetic.
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden lg:block absolute top-[26px] left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"></div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <!-- Stage 01 -->
+          <div class="dark-glass rounded-2xl p-6 reveal relative">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold text-[#7EB3F5]">STAGE 01</span>
+              <svg class="w-5 h-5 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="3" x2="12" y2="7.5"/><line x1="12" y1="16.5" x2="12" y2="21"/><line x1="3" y1="12" x2="7.5" y2="12"/><line x1="16.5" y1="12" x2="21" y2="12"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-2">PostGIS 3km Spatial Query</h3>
+            <p class="text-xs text-white/55 leading-relaxed mb-4">
+              A radial polygon query extracts competitor nodes, pedestrian anchors, and verified listings within a 3,000m catchment.
+            </p>
+            <span class="text-[10px] font-mono px-2 py-1 rounded bg-white/[0.06] text-white/45 border border-white/10">ST_DWithin(geom, pt, 3000)</span>
+          </div>
+
+          <!-- Stage 02 -->
+          <div class="dark-glass rounded-2xl p-6 reveal relative">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold text-[#7EB3F5]">STAGE 02</span>
+              <svg class="w-5 h-5 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/><line x1="8" y1="15" x2="13" y2="15"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-2">Deterministic Math Core</h3>
+            <p class="text-xs text-white/55 leading-relaxed mb-4">
+              A FastAPI engine computes burn, break-even volume, and rent stress with explicit algebra — no stochastic LLM arithmetic.
+            </p>
+            <span class="text-[10px] font-mono px-2 py-1 rounded bg-white/[0.06] text-white/45 border border-white/10">FastAPI · Pydantic v2</span>
+          </div>
+
+          <!-- Stage 03 -->
+          <div class="dark-glass rounded-2xl p-6 reveal relative">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold text-[#7EB3F5]">STAGE 03</span>
+              <svg class="w-5 h-5 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l1.9 5.7L20 10l-6.1 1.3L12 17l-1.9-5.7L4 10l6.1-1.3z"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-2">Locked JSON Handoff</h3>
+            <p class="text-xs text-white/55 leading-relaxed mb-4">
+              Figures are serialized into typed, immutable schemas — the model receives strictly formatted facts it cannot fabricate.
+            </p>
+            <span class="text-[10px] font-mono px-2 py-1 rounded bg-white/[0.06] text-white/45 border border-white/10">Typed Schema Contract</span>
+          </div>
+
+          <!-- Stage 04 -->
+          <div class="dark-glass rounded-2xl p-6 reveal relative">
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-mono font-semibold text-[#7EB3F5]">STAGE 04</span>
+              <svg class="w-5 h-5 text-white/50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><circle cx="12" cy="12" r="4.5"/></svg>
+            </div>
+            <h3 class="text-sm font-semibold text-white mb-2">Gemini Strategic Verdict</h3>
+            <p class="text-xs text-white/55 leading-relaxed mb-4">
+              Gemini 2.5 Pro converts proven numbers into differentiation playbooks, negotiation ceilings, and license checklists.
+            </p>
+            <span class="text-[10px] font-mono px-2 py-1 rounded bg-white/[0.06] text-white/45 border border-white/10">Gemini 2.5 Pro API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 6. WORKBENCH SHOWCASE — FIVE ANSWERS     -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="product" class="relative py-20 lg:py-28">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+
+      <div class="text-center mb-14 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">The Workbench</span>
+        </div>
+        <h2 class="section-headline mb-3">One survey. Five answers.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          A full-screen split workbench: an animated 3km map scan on the left, a staged diagnostic pipeline on the right.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-5">
+
+        <!-- Tile 1: Geospatial Scan (wide) -->
+        <a href="survey.html" class="sm:col-span-2 lg:col-span-4 glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all reveal group">
+          <div class="grid sm:grid-cols-5 gap-5 items-center">
+            <div class="mock-map sm:col-span-3 h-36 rounded-2xl border border-black/[0.04]">
+              <div class="mock-road" style="left:6%;top:30%;width:88%;height:8px;"></div>
+              <div class="mock-road" style="left:6%;top:64%;width:88%;height:11px;"></div>
+              <div class="mock-road" style="left:30%;top:0;height:100%;width:8px;"></div>
+              <div style="position:absolute;left:50%;top:50%;width:120px;height:120px;margin:-60px 0 0 -60px;border:2px dashed rgba(0,113,227,0.55);border-radius:50%;background:rgba(0,113,227,0.05);"></div>
+              <div class="mock-pin" style="background:#0071E3;left:50%;top:50%;transform:translate(-50%,-50%);width:11px;height:11px;"></div>
+              <div class="mock-pin" style="background:#FF3B30;left:40%;top:36%;width:9px;height:9px;"></div>
+              <div class="mock-pin" style="background:#FF3B30;left:58%;top:58%;width:9px;height:9px;"></div>
+              <div class="mock-pin" style="background:#FF3B30;left:60%;top:30%;width:9px;height:9px;"></div>
+              <div class="mock-pin" style="background:#FF3B30;left:34%;top:60%;width:9px;height:9px;"></div>
+              <div class="mock-pin-diamond" style="background:#34C759;left:47%;top:24%;"></div>
+              <div class="mock-pin" style="background:#0071E3;left:72%;top:44%;width:9px;height:9px;"></div>
+            </div>
+            <div class="sm:col-span-2">
+              <div class="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider mb-1.5">Step 1–2</div>
+              <h3 class="text-lg font-semibold text-apple-title mb-2 group-hover:text-brand transition-colors">Animated 3km geospatial scan</h3>
+              <p class="text-xs text-apple-body leading-relaxed">
+                The map flies to your micro-market, draws the pulsing catchment radius, then drops competitor, anchor, and listing pins in a staggered radar sweep — every pin opens a live dossier.
+              </p>
+              <div class="flex flex-wrap gap-1.5 mt-3">
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-apple-surface text-apple-muted border border-black/[0.04]">Leaflet.js</span>
+                <span class="text-[10px] font-mono px-2 py-1 rounded bg-apple-surface text-apple-muted border border-black/[0.04]">CartoDB Positron</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tile 2: Viability Verdict -->
+        <a href="survey.html" class="sm:col-span-2 lg:col-span-2 glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all reveal group">
+          <div class="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider mb-1.5">Step 4</div>
+          <h3 class="text-lg font-semibold text-apple-title mb-3 group-hover:text-brand transition-colors">Risk-vs-reward speedometer</h3>
+          <svg viewBox="0 0 120 70" class="w-full max-w-[190px] mx-auto -mb-2">
+            <path d="M 15 60 A 45 45 0 0 1 40.4 22.4" fill="none" stroke="#FF3B30" stroke-width="9" stroke-linecap="round" opacity="0.15"/>
+            <path d="M 40.4 22.4 A 45 45 0 0 1 82.9 27.9" fill="none" stroke="#FF9500" stroke-width="9" stroke-linecap="round" opacity="0.15"/>
+            <path d="M 82.9 27.9 A 45 45 0 0 1 105 60" fill="none" stroke="#34C759" stroke-width="9" stroke-linecap="round" opacity="0.15"/>
+            <path d="M 15 60 A 45 45 0 0 1 105 60" fill="none" stroke="#34C759" stroke-width="9" stroke-linecap="round" stroke-dasharray="141.4" stroke-dashoffset="37"/>
+            <text x="52" y="52" font-size="17" font-weight="700" fill="#1D1D1F" font-family="SF Mono, Menlo, monospace">74</text>
+            <text x="74" y="52" font-size="8" fill="#86868B">/100</text>
+          </svg>
+          <p class="text-xs text-apple-body leading-relaxed mt-2">
+            A graded 0–100 needle sweep backed by explicit risk factors vs. reward drivers from the scan.
+          </p>
+        </a>
+
+        <!-- Tile 3: Competitive Intel -->
+        <a href="survey.html" class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all reveal group lg:col-span-2">
+          <div class="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider mb-1.5">Step 2</div>
+          <h3 class="text-lg font-semibold text-apple-title mb-3 group-hover:text-brand transition-colors">Competitive intel</h3>
+          <div class="space-y-1.5">
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="font-medium text-apple-title">Glen's Bakehouse</span>
+              <span class="font-mono text-apple-muted">★4.4 · 88m</span>
+            </div>
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="font-medium text-apple-title">Truffles</span>
+              <span class="font-mono text-apple-muted">★4.5 · 265m</span>
+            </div>
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="font-medium text-apple-title">Starbucks</span>
+              <span class="font-mono text-apple-muted">★4.5 · 454m</span>
+            </div>
+            <div class="text-[10px] font-mono text-apple-muted pt-1">+ 9 more OSM-verified within the catchment →</div>
+          </div>
+        </a>
+
+        <!-- Tile 4: Underwriting -->
+        <a href="survey.html" class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all reveal group lg:col-span-2">
+          <div class="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider mb-1.5">Step 3</div>
+          <h3 class="text-lg font-semibold text-apple-title mb-3 group-hover:text-brand transition-colors">Deterministic underwriting</h3>
+          <div class="space-y-1.5">
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="text-apple-muted">Deposit (10 mo)</span>
+              <span class="font-mono font-semibold text-apple-title">₹49L</span>
+            </div>
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="text-apple-muted">Monthly burn</span>
+              <span class="font-mono font-semibold text-apple-title">₹8.43L</span>
+            </div>
+            <div class="flex justify-between items-center text-[11px] px-2.5 py-2 rounded-xl bg-apple-surface">
+              <span class="text-apple-muted">Break-even</span>
+              <span class="font-mono font-semibold text-risk-low">Month 22.1</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Tile 5: Execution Masterplan -->
+        <a href="survey.html" class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all reveal group lg:col-span-2">
+          <div class="text-[10px] font-mono font-semibold text-brand uppercase tracking-wider mb-1.5">Step 5</div>
+          <h3 class="text-lg font-semibold text-apple-title mb-3 group-hover:text-brand transition-colors">Gemini execution masterplan</h3>
+          <ul class="space-y-2 text-xs text-apple-body">
+            <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Positioning wedge vs. scanned incumbents</li>
+            <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Rent ceiling to hold stress ≤ 18%</li>
+            <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>FSSAI · BBMP · Fire NOC checklist</li>
+            <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Verified landlord term-sheet unlock</li>
+          </ul>
+        </a>
+      </div>
+
+      <div class="text-center mt-10 reveal">
+        <a href="survey.html" class="btn-apple-primary text-sm !py-3 !px-7">
+          <span>Explore the live workbench</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 7. INTERACTIVE ROI SIMULATOR (APP WINDOW) -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="simulator" class="relative py-20 lg:py-28 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Real-Time Mathematical Engine</span>
+        </div>
+        <h2 class="section-headline mb-3">Stress-test a lease in 10 seconds.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Drag the sliders. The same deterministic engine that powers the full survey computes break-even, volume, and rent stress live — no LLM arithmetic anywhere.
+        </p>
+      </div>
+
+      <div class="app-window reveal">
+        <!-- Window chrome -->
+        <div class="app-window-bar">
+          <span class="chrome-dot chrome-dot-red"></span>
+          <span class="chrome-dot chrome-dot-yellow"></span>
+          <span class="chrome-dot chrome-dot-green"></span>
+          <span class="chrome-url-pill">sitebrain.app · quick-roi-simulator</span>
+          <span class="text-[9px] font-mono font-bold px-2 py-0.5 rounded-full bg-risk-low-bg text-risk-low border border-risk-low-border tracking-widest">LIVE</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 p-8 lg:p-10">
+
+          <!-- Slider Controls -->
+          <div class="space-y-7">
+            <div>
+              <div class="flex justify-between items-baseline mb-2.5">
+                <label class="text-sm font-semibold text-apple-title" for="landSimInvest">Initial CapEx Budget</label>
+                <span class="text-sm font-mono font-semibold text-brand" id="landInvestVal">₹45.0L</span>
+              </div>
+              <input type="range" id="landSimInvest" min="1500000" max="10000000" step="100000" value="4500000" />
+              <div class="flex justify-between mt-1 text-[10px] font-mono text-apple-muted">
+                <span>₹15L</span><span>₹50L</span><span>₹1Cr</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-baseline mb-2.5">
+                <label class="text-sm font-semibold text-apple-title" for="landSimRent">Estimated Monthly Rent</label>
+                <span class="text-sm font-mono font-semibold text-brand" id="landRentVal">₹250k/mo</span>
+              </div>
+              <input type="range" id="landSimRent" min="60000" max="500000" step="5000" value="250000" />
+              <div class="flex justify-between mt-1 text-[10px] font-mono text-apple-muted">
+                <span>₹60k</span><span>₹280k</span><span>₹500k</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between items-baseline mb-2.5">
+                <label class="text-sm font-semibold text-apple-title" for="landSimTicket">Average Order Value (AOV)</label>
+                <span class="text-sm font-mono font-semibold text-brand" id="landTicketVal">₹450</span>
+              </div>
+              <input type="range" id="landSimTicket" min="150" max="2500" step="25" value="450" />
+              <div class="flex justify-between mt-1 text-[10px] font-mono text-apple-muted">
+                <span>₹150 (Coffee)</span><span>₹1,200</span><span>₹2,500 (Dine-in)</span>
+              </div>
+            </div>
+
+            <p class="text-[11px] text-apple-muted leading-relaxed">
+              Assumptions: 72% gross margin, 26% rent-linked overheads (marketing + CAM + maintenance), ₹1.62L payroll &amp; utilities, steady-state at 130% of break-even volume.
+            </p>
+          </div>
+
+          <!-- Output Cards -->
+          <div class="grid grid-cols-2 gap-3 content-center">
+            <div class="col-span-2 p-5 rounded-2xl bg-apple-surface border border-black/[0.04]">
+              <span class="text-xs text-apple-muted block mb-1">Calculated Break-Even Horizon</span>
+              <div class="text-3xl font-semibold font-mono text-apple-title" id="landOutBreakeven">Month 31.0</div>
+              <span class="text-[11px] text-apple-muted mt-1 block">Full amortized payback on initial capital</span>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-apple-surface border border-black/[0.04]">
+              <span class="text-xs text-apple-muted block mb-1">Required Daily Orders</span>
+              <div class="text-2xl font-semibold font-mono text-brand" id="landOutCovers">64 covers/day</div>
+              <span class="text-[11px] text-apple-muted mt-1 block">Sustains burn at steady state</span>
+            </div>
+
+            <div class="p-5 rounded-2xl bg-apple-surface border border-black/[0.04]">
+              <span class="text-xs text-apple-muted block mb-1">Rent-to-Revenue Stress</span>
+              <div class="text-2xl font-semibold font-mono text-apple-title" id="landOutRtr">28.9%</div>
+              <span class="text-[11px] text-apple-muted mt-1 block">Keep under 18% where possible</span>
+            </div>
+
+            <div class="col-span-2 p-5 rounded-2xl bg-white border border-black/[0.06] shadow-2xs">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-xs text-apple-muted">Lease Stress Status</span>
+                <span id="landOutRiskPill" class="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full bg-risk-medium-bg text-risk-medium border border-risk-medium-border">Rent Negotiation Advised</span>
+              </div>
+              <div class="text-2xl font-semibold font-mono text-risk-medium" id="landOutRisk">MODERATE CAUTION</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Window footer -->
+        <div class="px-8 py-4 bg-apple-surface/70 border-t border-black/[0.04] flex flex-col sm:flex-row items-center justify-between gap-3">
+          <span class="text-[11px] text-apple-muted">Numbers computed by the deterministic engine — identical math to the full survey workbench.</span>
+          <a href="survey.html" class="btn-apple-primary text-xs !py-2.5 !px-5 whitespace-nowrap">
+            <span>Open Full 3km Survey</span>
+            <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 8. TWO-SIDED BROKER MARKETPLACE          -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="marketplace" class="relative py-20 lg:py-28">
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+
+      <div class="text-center mb-14 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">Institutional Real Estate Network</span>
+        </div>
+        <h2 class="section-headline mb-3">A two-sided marketplace,<br class="hidden sm:block"/> unlocked only by the math.</h2>
+        <p class="text-base text-apple-body max-w-2xl mx-auto leading-relaxed">
+          Matchmaking between founders and landlords activates only in algorithmically validated zones — saturated corridors stay locked to protect founder capital.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- For Retailers -->
+        <div class="glass-panel-strong rounded-3xl p-8 border border-black/[0.06] shadow-sm flex flex-col justify-between reveal">
+          <div>
+            <div class="w-11 h-11 rounded-2xl bg-brand/10 text-brand flex items-center justify-center mb-5">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-apple-title mb-2">For founders &amp; retailers</h3>
+            <p class="text-sm text-apple-body leading-relaxed mb-6">
+              Never sign a lease based on landlord footfall exaggerations. Inspect scanned competitors, break-even velocity, and request term sheets without broker markups.
+            </p>
+            <ul class="space-y-2.5 text-xs text-apple-body mb-8">
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>3km radial competitor radar with live dossiers</li>
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Deterministic rent-to-revenue stress test</li>
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Capital protection lock on saturated zones</li>
+            </ul>
+          </div>
+          <a href="survey.html" class="btn-apple-primary text-xs justify-center py-3">Launch Location Survey →</a>
+        </div>
+
+        <!-- For Landlords -->
+        <div class="glass-panel-strong rounded-3xl p-8 border border-black/[0.06] shadow-sm flex flex-col justify-between reveal">
+          <div>
+            <div class="w-11 h-11 rounded-2xl bg-brand/10 text-brand flex items-center justify-center mb-5">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div class="flex items-center gap-2.5 mb-2">
+              <h3 class="text-xl font-semibold text-apple-title">For landlords &amp; brokers</h3>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-apple-surface text-apple-muted border border-black/[0.05] font-semibold">Q2 2026</span>
+            </div>
+            <p class="text-sm text-apple-body leading-relaxed mb-6">
+              Connect prime commercial vacancies directly with pre-funded, AI-qualified tenants. Receive standardized institutional tenant dossiers with pre-vetted balance sheets.
+            </p>
+            <ul class="space-y-2.5 text-xs text-apple-body mb-8">
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Zero unqualified inquiries or window shoppers</li>
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Verified CapEx allocations and business concepts</li>
+              <li class="flex items-start gap-2"><svg class="w-3.5 h-3.5 text-risk-low mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Faster deal velocity on 3–5 year lock-in leases</li>
+            </ul>
+          </div>
+          <div>
+            <button id="landlordCtaBtn" class="btn-apple-secondary text-xs justify-center py-3 w-full">Register Commercial Inventory</button>
+            <p id="landlordNote" class="hidden text-[11px] text-apple-muted text-center mt-2.5">Broker registry onboarding opens Q2 2026 — reach the founding team via CHRIST University, Bengaluru.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 9. FOUNDING TEAM                         -->
+  <!-- ════════════════════════════════════════ -->
+  <section id="team" class="relative py-20 lg:py-24 bg-apple-surface/40 border-t border-black/[0.04]">
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+
+      <div class="text-center mb-12 reveal">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand/[0.07] border border-brand/20 mb-4">
+          <span class="text-xs font-medium text-brand">CHRIST University AI Engineering</span>
+        </div>
+        <h2 class="section-headline mb-3">Built by two engineers,<br class="hidden sm:block"/> one obsession with honest numbers.</h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm flex items-start gap-5 reveal">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center border-2 border-brand/25 text-xl font-semibold text-brand flex-shrink-0">SP</div>
+          <div>
+            <h3 class="text-base font-semibold text-apple-title">Shreeram Prakasan PK</h3>
+            <p class="text-xs font-medium text-brand mb-1">Team Lead · Full-Stack &amp; AI Integrator</p>
+            <p class="text-xs text-apple-muted font-mono mb-2.5">CS &amp; AI Engineering, CHRIST University</p>
+            <p class="text-xs text-apple-body leading-relaxed mb-3">PostGIS spatial indexing, the FastAPI math engine, and end-to-end Gemini API orchestration for non-hallucinatory lease-risk synthesis.</p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">PostGIS 3.4</span>
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">FastAPI</span>
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">Gemini 2.5 Pro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-panel-strong rounded-3xl p-6 border border-black/[0.06] shadow-sm flex items-start gap-5 reveal">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-brand/20 to-brand/5 flex items-center justify-center border-2 border-brand/25 text-xl font-semibold text-brand flex-shrink-0">AJ</div>
+          <div>
+            <h3 class="text-base font-semibold text-apple-title">Abhinav Jadhav</h3>
+            <p class="text-xs font-medium text-brand mb-1">Co-Founder · UI/UX &amp; Frontend Lead</p>
+            <p class="text-xs text-apple-muted font-mono mb-2.5">CSE IoT, CHRIST University</p>
+            <p class="text-xs text-apple-body leading-relaxed mb-3">Component architecture, interactive Leaflet geospatial rendering, and Apple-grade design tokens for the split-screen workbench.</p>
+            <div class="flex flex-wrap gap-1.5 font-mono text-[10px]">
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">Design Systems</span>
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">Leaflet.js</span>
+              <span class="px-2 py-0.5 rounded bg-white text-apple-muted border border-black/[0.05]">Apple HIG</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 10. CLOSING CTA BAND                     -->
+  <!-- ════════════════════════════════════════ -->
+  <section class="relative py-20 lg:py-28">
+    <div class="relative z-10 max-w-4xl mx-auto px-6">
+      <div class="relative rounded-[2.5rem] bg-gradient-to-b from-brand/[0.08] to-brand/[0.03] border border-brand/15 px-8 py-16 lg:py-20 text-center overflow-hidden reveal">
+        <div class="absolute inset-0 dot-grid-subtle"></div>
+        <h2 class="section-headline relative mb-4">Stop guessing where to sign.</h2>
+        <p class="text-base text-apple-body max-w-xl mx-auto mb-9 leading-relaxed relative">
+          Run a full 3km micro-market survey — competitors, underwriting, verdict, and execution masterplan — before your next landlord meeting.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3.5 relative">
+          <a href="survey.html" class="btn-apple-primary text-base !py-4 !px-10 shadow-md">
+            <span>Start Location Survey</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <span class="text-xs text-apple-muted">Free · No signup · Runs in your browser</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ -->
+  <!-- 11. FOOTER                               -->
+  <!-- ════════════════════════════════════════ -->
+  <footer class="relative border-t border-black/[0.06] bg-apple-surface/40">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
+
+        <!-- Brand column -->
+        <div class="md:col-span-5">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-7 h-7 rounded-lg bg-brand flex items-center justify-center text-white">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.5" fill="white"/><circle cx="12" cy="12" r="8" stroke="white" stroke-width="1.6" stroke-dasharray="3 3"/></svg>
+            </div>
+            <span class="font-semibold text-apple-title">SiteBrain</span>
+          </div>
+          <p class="text-xs text-apple-body leading-relaxed max-w-sm mb-5">
+            AI geospatial decision intelligence for commercial real estate. Deterministic math first, Gemini counsel second — never the other way around.
+          </p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/[0.06] border border-brand/15">
+            <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+            <span class="text-[11px] font-medium text-brand">Built for Google Cloud &amp; Gemini API Startup Buildathon India 2026</span>
+          </div>
+        </div>
+
+        <!-- Product column -->
+        <div class="md:col-span-2">
+          <h4 class="text-xs font-semibold text-apple-title uppercase tracking-wider mb-4">Product</h4>
+          <ul class="space-y-2.5 text-xs text-apple-body">
+            <li><a href="survey.html" class="hover:text-brand transition-colors">Survey Workbench</a></li>
+            <li><a href="#simulator" class="hover:text-brand transition-colors">ROI Simulator</a></li>
+            <li><a href="#pipeline" class="hover:text-brand transition-colors">Architecture</a></li>
+            <li><a href="#product" class="hover:text-brand transition-colors">Workbench Tour</a></li>
+            <li><a href="datasets.html" class="hover:text-brand transition-colors">Data Room &amp; Sources</a></li>
+          </ul>
+        </div>
+
+        <!-- Network column -->
+        <div class="md:col-span-2">
+          <h4 class="text-xs font-semibold text-apple-title uppercase tracking-wider mb-4">Network</h4>
+          <ul class="space-y-2.5 text-xs text-apple-body">
+            <li><a href="survey.html" class="hover:text-brand transition-colors">For Founders</a></li>
+            <li><a href="#marketplace" class="hover:text-brand transition-colors">For Landlords</a></li>
+            <li><a href="#marketplace" class="hover:text-brand transition-colors">Broker Registry</a></li>
+          </ul>
+        </div>
+
+        <!-- Team column -->
+        <div class="md:col-span-3">
+          <h4 class="text-xs font-semibold text-apple-title uppercase tracking-wider mb-4">Team</h4>
+          <ul class="space-y-2.5 text-xs text-apple-body">
+            <li>Shreeram Prakasan PK — Team Lead</li>
+            <li>Abhinav Jadhav — UI/UX Lead</li>
+            <li class="text-apple-muted">CHRIST (Deemed to be University)<br/>Bengaluru, India</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-black/[0.05] flex flex-col sm:flex-row items-center justify-between gap-3">
+        <span class="text-xs text-apple-muted">© 2026 SiteBrain Intelligence Inc.</span>
+        <span class="text-[10px] font-mono text-apple-muted/70">Deterministic core · Gemini counsel · Bengaluru</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SiteBrain Landing Page JavaScript (shared deterministic engine + landing interactivity) -->
+  <script src="assets/js/utils.js"></script>
+  <script src="assets/js/financial-gauge.js"></script>
+  <script src="assets/js/landing.js"></script>
+</body>
+</html>
