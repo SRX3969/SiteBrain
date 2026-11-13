@@ -28,10 +28,11 @@ window.financialGauge = (function () {
 
   /* ── Deterministic metric computation ─────────────────────────── */
 
-  function calculateMetrics(locId, catId, customBudget) {
-    const loc = window.SITEBRAIN_DATA.locations[locId];
+  function calculateMetrics(locOrId, catId, customBudget) {
+    const loc = (locOrId && typeof locOrId === 'object') ? locOrId : window.SITEBRAIN_DATA.locations[locOrId];
     const cat = window.SITEBRAIN_DATA.categories[catId];
     if (!loc || !cat) return null;
+    const locId = loc.id || (typeof locOrId === 'string' ? locOrId : 'custom');
 
     // Space & rent
     const sqft = cat.typicalSqft;
@@ -165,8 +166,8 @@ window.financialGauge = (function () {
 
   /* ── Full financial panel render with count-up values ─────────── */
 
-  function render(locId, catId, customBudget) {
-    const m = calculateMetrics(locId, catId, customBudget);
+  function render(locOrId, catId, customBudget) {
+    const m = calculateMetrics(locOrId, catId, customBudget);
     if (!m) return null;
 
     const u = U();

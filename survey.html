@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SiteBrain Workbench — Geospatial Location Survey &amp; AI Diagnostic</title>
+  <title>SiteBrain Workbench â€” Geospatial Location Survey &amp; AI Diagnostic</title>
   <meta name="description" content="Interactive geospatial commercial real estate intelligence survey. 3km radial competitor scanning, deterministic break-even calculations, and Google Gemini 2.5 Pro execution masterplan." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="SiteBrain Workbench — AI Geospatial Location Survey" />
+  <meta property="og:title" content="SiteBrain Workbench â€” AI Geospatial Location Survey" />
   <meta property="og:description" content="Determine store profitability before you sign the lease. 3km competitor scans, deterministic underwriting, and a Gemini execution masterplan." />
   <meta property="og:type" content="website" />
 
@@ -34,9 +34,9 @@
 
 <body class="spatial-grid-bg h-screen flex flex-col overflow-hidden text-apple-title selection:bg-brand/15 selection:text-brand">
 
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <!-- 1. TOP APP HEADER BAR                   -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <header class="h-16 px-5 border-b border-black/[0.06] glass-panel-strong z-30 flex items-center justify-between gap-3 flex-shrink-0">
 
     <!-- Left: Navigation Back, Logo & Hotspot Pills -->
@@ -55,7 +55,7 @@
         <span class="font-semibold text-sm tracking-tight hidden md:inline">SiteBrain Workbench</span>
       </div>
 
-      <!-- Hotspot Quick-Switch Pills -->
+      <!-- Hotspot Quick-Switch Pills (Bengaluru presets) -->
       <div class="hidden lg:flex items-center gap-1.5 ml-1">
         <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="indiranagar">Indiranagar</button>
         <button class="wb-hotspot text-[11px] font-medium px-2.5 py-1 rounded-full bg-white text-apple-body border border-black/[0.06] hover:border-brand/40 hover:text-brand transition-colors" data-location="koramangala">Koramangala</button>
@@ -68,10 +68,10 @@
     <div id="headerStatusPill" class="hidden xl:flex items-center gap-2 px-4 py-1.5 rounded-full bg-apple-surface border border-black/[0.05] text-xs shadow-2xs">
       <span class="w-2 h-2 rounded-full bg-risk-low animate-pulse"></span>
       <span class="font-medium text-apple-title">Indiranagar 100ft Rd</span>
-      <span class="text-apple-muted">•</span>
+      <span class="text-apple-muted">â€¢</span>
       <span class="text-apple-body">Specialty Coffee</span>
-      <span class="text-apple-muted">•</span>
-      <span class="font-mono text-brand font-semibold">CapEx: ₹45L</span>
+      <span class="text-apple-muted">â€¢</span>
+      <span class="font-mono text-brand font-semibold">CapEx: â‚¹45L</span>
     </div>
 
     <!-- Right: Actions -->
@@ -96,25 +96,25 @@
 
   </header>
 
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <!-- 2. MAIN SPLIT WORKBENCH CONTAINER        -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <main class="flex-1 flex flex-col lg:flex-row overflow-hidden relative">
 
-    <!-- ── LEFT VIEWPORT: GEOSPATIAL MAP SURFACE ── -->
+    <!-- â”€â”€ LEFT VIEWPORT: GEOSPATIAL MAP SURFACE â”€â”€ -->
     <section id="mapSection" class="w-full lg:w-[60%] h-[60vh] lg:h-full relative flex-shrink-0 bg-white" aria-label="3km catchment map scan">
 
       <!-- Map header strip: coordinates + scan status -->
       <div id="mapHeaderStrip" class="absolute top-0 left-0 right-0 z-[350] flex items-center justify-between gap-3 px-4 py-2.5 bg-white/80 backdrop-blur border-b border-black/[0.06] shadow-sm">
         <div class="hidden sm:flex items-center gap-2.5 px-3 py-1 rounded-full glass-panel-strong border border-black/[0.08] shadow-2xs text-xs font-mono text-apple-title">
           <span class="w-2 h-2 rounded-full bg-brand animate-ping"></span>
-          <span id="map-coord-display">12.9784° N, 77.6408° E • 3km Catchment</span>
+          <span id="map-coord-display">12.9784Â° N, 77.6408Â° E â€¢ 3km Catchment</span>
         </div>
         <div id="scanningOverlay" class="hidden-modal flex items-center gap-2.5 px-4 py-2 rounded-full glass-panel-strong border border-brand/25 shadow-lg text-xs font-medium text-apple-title whitespace-nowrap">
           <span class="relative flex items-center justify-center w-4 h-4">
             <span class="absolute w-4 h-4 rounded-full border-2 border-brand/30 border-t-brand animate-spin"></span>
           </span>
-          <span id="scanningText">Scanning 3km catchment zone…</span>
+          <span id="scanningText">Scanning 3km catchment zoneâ€¦</span>
         </div>
         <div class="flex items-center gap-2">
           <button id="mapCollapseBtn" onclick="window.mapEngine.togglePanelCollapse()" class="p-2 rounded-full glass-panel border border-black/[0.05] shadow-sm text-xs text-apple-title hover:bg-white transition-colors" title="Collapse panel">
@@ -130,7 +130,7 @@
       <div id="layerControlsBottom" class="absolute bottom-0 left-0 right-0 z-[350] flex items-center justify-center gap-2 px-4 py-3 bg-white/70 backdrop-blur border-t border-black/[0.06] shadow-sm">
           <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
             <input type="checkbox" id="toggleIsochrone" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('isochrone')" />
-            <span>3km Catchment</span>
+            <span id="layerRadiusLabel">3.0 km Catchment</span>
           </label>
           <label class="flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-black/[0.05] shadow-sm cursor-pointer text-xs font-medium text-apple-title hover:bg-white select-none">
             <input type="checkbox" id="toggleCompetitors" checked class="accent-brand w-3.5 h-3.5 cursor-pointer" onchange="window.mapEngine.toggleLayer('competitors')" />
@@ -157,9 +157,9 @@
         <div class="flex flex-col gap-1 text-[11px] font-medium text-apple-body">
           <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-risk-high shadow-2xs"></span>Competitor Shop</div>
           <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-brand shadow-2xs"></span>Footfall Anchor</div>
-          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-low shadow-2xs"></span>Listing — Rent</div>
-          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-[#5856D6] shadow-2xs"></span>Listing — Sale</div>
-          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-medium shadow-2xs"></span>Listing — BTS Lease</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-low shadow-2xs"></span>Listing â€” Rent</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-[#5856D6] shadow-2xs"></span>Listing â€” Sale</div>
+          <div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rotate-45 bg-risk-medium shadow-2xs"></span>Listing â€” BTS Lease</div>
         </div>
       </div>
 
@@ -170,13 +170,13 @@
       <div id="mapDivider" class="hidden lg:block w-1 cursor-ew-resize bg-black/[0.08] hover:bg-brand/40 transition-colors z-[300]"></div>
     </section>
 
-    <!-- ── RIGHT VIEWPORT: SCROLLABLE DIAGNOSTIC PANEL ── -->
+    <!-- â”€â”€ RIGHT VIEWPORT: SCROLLABLE DIAGNOSTIC PANEL â”€â”€ -->
     <section id="diagPanel" class="w-full lg:w-[40%] h-full overflow-y-auto border-l border-black/[0.06] bg-apple-surface/30 flex flex-col" aria-label="Diagnostic survey panel">
       <!-- Sticky 5-Step Pipeline Stepper -->
       <div class="sticky top-0 z-20 bg-apple-surface/30 backdrop-blur-2xl border-b border-black/[0.05] px-5 sm:px-7 pt-4 pb-3">
         <div class="flex items-center justify-between">
           <span class="text-[10px] font-mono font-semibold text-apple-muted uppercase tracking-widest">Survey Pipeline</span>
-          <span class="text-[10px] font-mono text-apple-muted">PostGIS → FastAPI → Gemini</span>
+          <span class="text-[10px] font-mono text-apple-muted">PostGIS â†’ FastAPI â†’ Gemini</span>
         </div>
         <div class="stepper mt-2.5">
           <div class="step-item" data-step="1"><span class="step-dot"></span><span class="step-label">Brief</span></div>
@@ -214,7 +214,7 @@
             </div>
             <div class="p-3 rounded-2xl bg-apple-surface">
               <span class="text-[10px] text-apple-muted block leading-tight">Avg Commercial Rent</span>
-              <span class="font-mono font-semibold text-apple-title text-base" id="ov-rent">₹350/sq.ft</span>
+              <span class="font-mono font-semibold text-apple-title text-base" id="ov-rent">â‚¹350/sq.ft</span>
             </div>
             <div class="p-3 rounded-2xl bg-apple-surface">
               <span class="text-[10px] text-apple-muted block leading-tight">Foot Traffic Index</span>
@@ -240,7 +240,7 @@
               </div>
               <div>
                 <h3 class="text-sm font-semibold text-apple-title">Deterministic Financial Underwriting</h3>
-                <p class="text-[10px] text-apple-muted font-mono">Python FastAPI Math Core • Zero Math Hallucination</p>
+                <p class="text-[10px] text-apple-muted font-mono">Python FastAPI Math Core â€¢ Zero Math Hallucination</p>
               </div>
             </div>
             <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-brand/10 text-brand">Cloud Run v1.2</span>
@@ -254,37 +254,37 @@
                 <div class="p-3 rounded-2xl bg-apple-surface flex justify-between items-center">
                   <div>
                     <span class="font-semibold text-apple-title block">Monthly Base Rent</span>
-                    <span class="text-[10px] text-apple-muted" id="fg-rent-sqft">₹350/sq.ft</span>
+                    <span class="text-[10px] text-apple-muted" id="fg-rent-sqft">â‚¹350/sq.ft</span>
                   </div>
-                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-monthly-rent">₹4,20,000</span>
+                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-monthly-rent">â‚¹4,20,000</span>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   <div class="p-3 rounded-2xl bg-apple-surface">
                     <span class="text-[10px] text-apple-muted block mb-0.5">Security Deposit (10 Mo)</span>
-                    <span class="font-mono font-semibold text-apple-title" id="fg-deposit">₹42,00,000</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-deposit">â‚¹42,00,000</span>
                   </div>
                   <div class="p-3 rounded-2xl bg-apple-surface">
                     <span class="text-[10px] text-apple-muted block mb-0.5">Interior Fit-out &amp; Signage</span>
-                    <span class="font-mono font-semibold text-apple-title" id="fg-fitout">₹22,20,000</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-fitout">â‚¹22,20,000</span>
                   </div>
                 </div>
                 <div class="grid grid-cols-2 gap-2">
                   <div class="p-3 rounded-2xl bg-apple-surface">
                     <span class="text-[10px] text-apple-muted block mb-0.5">Equipment &amp; Initial Licensing</span>
-                    <span class="font-mono font-semibold text-apple-title" id="fg-equipment">₹12,50,000</span>
-                    <span class="text-[10px] text-apple-muted font-mono block" id="fg-licensing">incl. ₹1,40,000 licensing</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-equipment">â‚¹12,50,000</span>
+                    <span class="text-[10px] text-apple-muted font-mono block" id="fg-licensing">incl. â‚¹1,40,000 licensing</span>
                   </div>
                   <div class="p-3 rounded-2xl bg-apple-surface">
                     <span class="text-[10px] text-apple-muted block mb-0.5">Working Capital Reserve (3 Mo)</span>
-                    <span class="font-mono font-semibold text-apple-title" id="fg-working-capital">₹20,73,600</span>
+                    <span class="font-mono font-semibold text-apple-title" id="fg-working-capital">â‚¹20,73,600</span>
                   </div>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-white border border-black/[0.06] shadow-2xs flex justify-between items-center">
                   <div>
                     <span class="font-semibold text-apple-title block">Total Setup Capital Required</span>
-                    <span class="text-[10px] font-mono font-semibold text-risk-high" id="fg-budget-gap">− ₹53.84L vs budget</span>
+                    <span class="text-[10px] font-mono font-semibold text-risk-high" id="fg-budget-gap">âˆ’ â‚¹53.84L vs budget</span>
                   </div>
-                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-total-capex">₹98,83,600</span>
+                  <span class="font-mono font-semibold text-apple-title text-sm" id="fg-total-capex">â‚¹98,83,600</span>
                 </div>
               </div>
             </div>
@@ -295,19 +295,19 @@
               <div class="grid grid-cols-2 gap-2">
                 <div class="p-3 rounded-2xl bg-apple-surface">
                   <span class="text-[10px] text-apple-muted block mb-0.5">Staff Payroll &amp; Benefits</span>
-                  <span class="font-mono font-semibold text-apple-title" id="fg-payroll">₹1,20,000</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-payroll">â‚¹1,20,000</span>
                 </div>
                 <div class="p-3 rounded-2xl bg-apple-surface">
                   <span class="text-[10px] text-apple-muted block mb-0.5">Power, Water &amp; Internet</span>
-                  <span class="font-mono font-semibold text-apple-title" id="fg-utilities">₹42,000</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-utilities">â‚¹42,000</span>
                 </div>
                 <div class="p-3 rounded-2xl bg-apple-surface">
                   <span class="text-[10px] text-apple-muted block mb-0.5">Marketing &amp; CAM Charges</span>
-                  <span class="font-mono font-semibold text-apple-title" id="fg-marketing">₹1,09,200</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-marketing">â‚¹1,09,200</span>
                 </div>
                 <div class="p-3 rounded-2xl bg-apple-surface">
                   <span class="text-[10px] text-apple-muted block mb-0.5">COGS at Projected Volume</span>
-                  <span class="font-mono font-semibold text-apple-title" id="fg-cogs">₹2,53,260</span>
+                  <span class="font-mono font-semibold text-apple-title" id="fg-cogs">â‚¹2,53,260</span>
                 </div>
               </div>
               <div class="p-3.5 rounded-2xl bg-brand/5 border border-brand/15 flex justify-between items-center mt-2">
@@ -315,7 +315,7 @@
                   <span class="font-semibold text-brand block">Fixed Monthly Cash Burn (OpEx)</span>
                   <span class="text-[10px] text-apple-muted">Rent + Payroll + Utilities + Marketing + Maintenance</span>
                 </div>
-                <span class="font-mono font-semibold text-brand text-sm" id="fg-fixed-burn">₹6.91L/mo</span>
+                <span class="font-mono font-semibold text-brand text-sm" id="fg-fixed-burn">â‚¹6.91L/mo</span>
               </div>
             </div>
 
@@ -337,7 +337,7 @@
               <div class="p-3 rounded-2xl bg-apple-surface mt-2">
                 <div class="flex justify-between items-center mb-1.5">
                   <span class="text-[10px] text-apple-muted">Volume Coverage vs Break-Even</span>
-                  <span class="text-[10px] font-mono font-semibold" id="fg-achieved-label" style="color:#FF3B30;">67 projected vs 72 required covers/day · 93% of break-even volume</span>
+                  <span class="text-[10px] font-mono font-semibold" id="fg-achieved-label" style="color:#FF3B30;">67 projected vs 72 required covers/day Â· 93% of break-even volume</span>
                 </div>
                 <div class="gauge-track">
                   <div class="gauge-fill" id="fg-achieved-bar" style="width:93%;background:#FF3B30;"></div>
@@ -350,7 +350,7 @@
                 </div>
                 <div class="p-3 rounded-2xl bg-apple-surface">
                   <span class="text-[10px] text-apple-muted block mb-0.5">Monthly Net at Projection</span>
-                  <span class="font-mono font-semibold text-risk-high text-base" id="fg-net-monthly">− ₹0.40L</span>
+                  <span class="font-mono font-semibold text-risk-high text-base" id="fg-net-monthly">âˆ’ â‚¹0.40L</span>
                 </div>
               </div>
             </div>
@@ -362,7 +362,7 @@
           <div class="flex items-center justify-between mb-4">
             <div>
               <h3 class="text-sm font-semibold text-apple-title">Risk vs. Reward Speedometer</h3>
-              <p class="text-[11px] text-apple-muted font-mono">0–100 Micro-Market Viability Index</p>
+              <p class="text-[11px] text-apple-muted font-mono">0â€“100 Micro-Market Viability Index</p>
             </div>
             <span id="speedoRiskBadge" class="text-xs font-semibold px-3 py-1 rounded-full border" style="color:#FF3B30;border-color:#FF3B3040;background:#FF3B3012;">Severe Risk / Capital Exposure</span>
           </div>
@@ -370,7 +370,7 @@
           <!-- SVG Speedometer with graded risk zones -->
           <div class="speedometer-container my-3">
             <svg viewBox="0 0 200 120" class="w-full" role="img" aria-label="Viability score gauge">
-              <!-- Graded zone arcs: Crimson 0–40, Amber 41–69, Emerald 70–100 -->
+              <!-- Graded zone arcs: Crimson 0â€“40, Amber 41â€“69, Emerald 70â€“100 -->
               <path d="M 25 100 A 75 75 0 0 1 76.83 28.67" class="gauge-zone gauge-zone-red" />
               <path d="M 76.83 28.67 A 75 75 0 0 1 144.08 39.32" class="gauge-zone gauge-zone-amber" />
               <path d="M 144.08 39.32 A 75 75 0 0 1 175 100" class="gauge-zone gauge-zone-green" />
@@ -412,6 +412,12 @@
           </div>
         </div>
 
+        <!-- Competition analysis & how to win -->
+        <div id="competitionInsightsContainer" aria-live="polite"></div>
+
+        <!-- Nearby real-estate options suited to needs -->
+        <div id="suitedListingsContainer" aria-live="polite"></div>
+
         <!-- STEP 5: FINAL EXECUTION MASTERPLAN -->
         <div id="geminiMasterplanContainer" aria-live="polite">
           <!-- Rendered dynamically by gemini-survey.js -->
@@ -422,90 +428,80 @@
 
   </main>
 
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <!-- MODAL: INTERACTIVE RESEARCH SETUP POPUP  -->
-  <!-- ════════════════════════════════════════ -->
   <div id="researchSetupModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="setupModalTitle">
-    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[92vh] overflow-y-auto">
-
+    <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-2xl w-full border border-black/[0.08] shadow-2xl relative max-h-[92vh] overflow-y-auto">
       <button onclick="window.geminiSurvey.closeSetupModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close research setup">
         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-
       <div class="flex items-center gap-2.5 mb-2">
         <div class="w-8 h-8 rounded-xl bg-brand/10 text-brand flex items-center justify-center">
           <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
         </div>
-        <h3 id="setupModalTitle" class="text-lg font-semibold text-apple-title">What business do you want to research &amp; launch?</h3>
+        <h3 id="setupModalTitle" class="text-lg font-semibold text-apple-title">Survey a location (Bengaluru)</h3>
       </div>
-      <p class="text-xs text-apple-muted mb-5 leading-relaxed">
-        Select your micro-market, retail category, and capital budget. Gemini will summarize demographics and run an animated 3km competitor scan.
-      </p>
-
-      <div class="space-y-4 mb-6">
-        <!-- Target Micro-Market -->
+      <p class="text-xs text-apple-muted mb-4 leading-relaxed">Pick a place on the world map, set radius, budget and category. Gemini summarizes your concept; underwriting is deterministic (0ï¿½100). Works without API keys via local fallback.</p>
+      <div class="space-y-4 mb-5">
         <div>
-          <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupLocationSelect">Target Bengaluru Micro-Market</label>
-          <select id="setupLocationSelect" class="w-full text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand">
-            <option value="indiranagar">📍 Indiranagar 100ft Rd (Affluent Tech / High Elasticity)</option>
-            <option value="koramangala">📍 Koramangala 5th Block (Peak Volume / High Saturation)</option>
-            <option value="hsr">📍 HSR Layout Sector 2 &amp; 4 (Rapid Gentrification / Fastest Payback)</option>
-            <option value="whitefield">📍 Whitefield ITPL Main Rd (Tech Park Heavy / Weekend Slump)</option>
-          </select>
+          <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupPlaceInput">Place / area</label>
+          <div class="flex gap-2">
+            <input id="setupPlaceInput" type="text" class="flex-1 text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand" placeholder="Search Bengaluru (e.g. Indiranagar 100ft Rd, MG Road) or pick on map" />
+            <button type="button" onclick="window.geminiSurvey.searchPlace()" class="px-3 py-2 rounded-xl bg-white border border-black/[0.06] text-xs font-medium hover:border-brand/40 whitespace-nowrap">Search</button>
+            <button type="button" onclick="window.geminiSurvey.pickOnMap()" class="px-3 py-2 rounded-xl bg-white border border-black/[0.06] text-xs font-medium hover:border-brand/40 whitespace-nowrap">Pick on map</button>
+          </div>
+          <div class="mt-1.5 flex flex-wrap items-center gap-2 text-[11px] text-apple-muted">
+            <span>Selected: <span id="setupSelectedPlace" class="font-medium text-apple-title">Indiranagar 100ft Rd (preset)</span></span>
+            <span class="font-mono" id="setupSelectedCoords">12.9784, 77.6408</span>
+          </div>
+          <p class="text-[10px] text-apple-muted mt-1">Click ï¿½Pick on mapï¿½ then click the map to set the exact center. Search uses OpenStreetMap (no key).</p>
         </div>
-
-        <!-- Business Category -->
-        <div>
-          <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupCategorySelect">Business Category</label>
-          <select id="setupCategorySelect" class="w-full text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand">
-            <option value="coffee">☕ Specialty Coffee &amp; Roastery</option>
-            <option value="qsr">🍽️ Fast-Casual QSR / Cloud Kitchen</option>
-            <option value="fitness">🏋️ Boutique Fitness Studio</option>
-            <option value="clinic">🩺 Diagnostic / Dental Clinic</option>
-          </select>
-        </div>
-
-        <!-- Capital Budget Slider -->
         <div>
           <div class="flex justify-between items-baseline mb-1.5">
-            <label class="text-xs font-semibold text-apple-title" for="setupBudgetInput">Total Capital Budget (CapEx + 3mo Runway)</label>
-            <span class="text-xs font-mono font-semibold text-brand" id="setupBudgetLabel">₹45.0 Lakhs (45,00,000)</span>
+            <label class="text-xs font-semibold text-apple-title" for="setupRadiusInput">Scan radius</label>
+            <span class="text-xs font-mono font-semibold text-brand" id="setupRadiusLabel">3.0 km</span>
           </div>
-          <input type="range" id="setupBudgetInput" min="2500000" max="15000000" step="250000" value="4500000" />
-          <div class="flex justify-between text-[10px] font-mono text-apple-muted mt-1">
-            <span>₹25 Lakhs</span>
-            <span>₹87.5 Lakhs</span>
-            <span>₹1.5 Crore</span>
+          <input type="range" id="setupRadiusInput" min="0.5" max="5" step="0.5" value="3" />
+          <div class="flex justify-between text-[10px] font-mono text-apple-muted mt-1"><span>0.5 km</span><span>3 km</span><span>5 km</span></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-apple-title mb-1.5" for="setupCategorySelect">Business category</label>
+            <select id="setupCategorySelect" class="w-full text-xs font-medium p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand">
+              <option value="coffee">Specialty Coffee &amp; Roastery</option>
+              <option value="qsr">Fast-Casual QSR / Cloud Kitchen</option>
+              <option value="fitness">Boutique Fitness Studio</option>
+              <option value="clinic">Diagnostic / Dental Clinic</option>
+            </select>
+          </div>
+          <div>
+            <div class="flex justify-between items-baseline mb-1.5">
+              <label class="text-xs font-semibold text-apple-title" for="setupBudgetInput">Total capital budget</label>
+              <span class="text-xs font-mono font-semibold text-brand" id="setupBudgetLabel">?45.0 Lakhs</span>
+            </div>
+            <input type="range" id="setupBudgetInput" min="2500000" max="15000000" step="250000" value="4500000" />
+            <div class="flex justify-between text-[10px] font-mono text-apple-muted mt-1"><span>?25L</span><span>?1.5Cr</span></div>
           </div>
         </div>
-
-        <!-- Concept Description Textarea -->
         <div>
           <div class="flex justify-between items-baseline mb-1.5">
-            <label class="text-xs font-semibold text-apple-title" for="setupConceptInput">Describe Your Concept in Natural Language</label>
-            <span class="text-[10px] text-apple-muted">Raw Founder Notes</span>
+            <label class="text-xs font-semibold text-apple-title" for="setupConceptInput">Describe your concept</label>
+            <span class="text-[10px] text-apple-muted">Raw founder notes</span>
           </div>
-          <textarea id="setupConceptInput" rows="3" class="w-full text-xs p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand leading-relaxed" placeholder="e.g., I want to open a 1,200 sq.ft specialty artisanal cafe targeting remote tech workers, specialty pour-overs, and weekend evening crowd..."></textarea>
+          <textarea id="setupConceptInput" rows="3" class="w-full text-xs p-3 rounded-xl bg-apple-surface border border-black/[0.06] text-apple-title outline-none focus:border-brand leading-relaxed" placeholder="e.g., 1,200 sq.ft specialty cafe for remote workers, pour-over focus, weekday mornings + weekend evenings..."></textarea>
         </div>
-
-        <!-- Enhance with Gemini -->
         <button type="button" id="btnEnhanceGemini" onclick="window.geminiSurvey.enhanceWithGemini()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand/10 to-purple-500/10 text-brand text-xs font-medium hover:from-brand/15 hover:to-purple-500/15 border border-brand/20 transition-all flex items-center justify-center gap-1.5">
           <svg class="w-4 h-4 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93"/></svg>
-          <span>✨ Enhance &amp; Summarize with Gemini 2.5 Pro</span>
+          <span>Enhance &amp; summarize with Gemini 2.5 Pro</span>
         </button>
       </div>
-
-      <!-- Primary Action -->
-      <button onclick="window.geminiSurvey.submitSetupAndScan()" class="w-full py-3.5 rounded-2xl bg-brand text-white text-xs font-medium hover:bg-brand-hover transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm font-semibold">
-        <span>Build 3km Radius &amp; Scan Nearby Shops →</span>
+      <button onclick="window.geminiSurvey.submitSetupAndScan()" class="w-full py-3.5 rounded-2xl bg-brand text-white text-xs font-semibold hover:bg-brand-hover transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm">
+        <span>Scan radius &amp; analyze risk/reward ?</span>
       </button>
-
     </div>
   </div>
-
-  <!-- ════════════════════════════════════════ -->
   <!-- MODAL: INSTITUTIONAL LANDLORD TERM SHEET -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="termSheetModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="tsModalHeading">
     <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-lg w-full border border-black/[0.08] shadow-2xl relative">
       <button onclick="window.geminiSurvey.closeTermSheetModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close term sheet">
@@ -535,11 +531,11 @@
         </div>
         <div class="flex justify-between items-center">
           <span class="text-apple-muted">Asking Monthly Rent:</span>
-          <span class="font-mono font-semibold text-brand" id="tsModalRent">₹3,36,000 / month (₹280/sq.ft)</span>
+          <span class="font-mono font-semibold text-brand" id="tsModalRent">â‚¹3,36,000 / month (â‚¹280/sq.ft)</span>
         </div>
         <div class="flex justify-between items-center">
           <span class="text-apple-muted">Security Deposit:</span>
-          <span class="font-mono text-apple-title" id="tsModalDeposit">₹33,60,000 (10 Months)</span>
+          <span class="font-mono text-apple-title" id="tsModalDeposit">â‚¹33,60,000 (10 Months)</span>
         </div>
         <div class="flex justify-between items-center">
           <span class="text-apple-muted">Rent-Free Fit-out:</span>
@@ -552,14 +548,14 @@
       </div>
 
       <button onclick="window.geminiSurvey.submitTenantDossier()" class="w-full py-3.5 rounded-2xl bg-brand text-white text-xs font-medium hover:bg-brand-hover transition-all active:scale-[0.99] flex items-center justify-center gap-2 shadow-sm font-semibold">
-        <span>Dispatch Pre-Qualified Tenant Dossier to Landlord →</span>
+        <span>Dispatch Pre-Qualified Tenant Dossier to Landlord â†’</span>
       </button>
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <!-- MODAL: RELATED LOCATIONS                  -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="relatedLocationsModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="relModalHeading">
     <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[90vh] overflow-y-auto">
       <button onclick="window.geminiSurvey.closeRelatedLocationsModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close modal">
@@ -580,9 +576,9 @@
     </div>
   </div>
 
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <!-- MODAL: LEASE NEGOTIATION SCRIPT          -->
-  <!-- ════════════════════════════════════════ -->
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
   <div id="scriptModal" class="modal-overlay hidden-modal fixed inset-0 z-[9999] flex items-center justify-center p-4 bg-black/45 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="scriptModalHeading">
     <div class="modal-content glass-panel-strong rounded-3xl p-6 sm:p-8 max-w-xl w-full border border-black/[0.08] shadow-2xl relative max-h-[90vh] overflow-y-auto">
       <button onclick="window.geminiSurvey.closeScriptModal()" class="absolute top-6 right-6 text-apple-muted hover:text-apple-title transition-colors" aria-label="Close modal">
@@ -618,7 +614,7 @@
 
   <div id="fullscreenHint" class="fullscreen-hint">Press Esc to exit full-screen map</div>
 
-  <!-- ── SITEBRAIN JS ENGINE SCRIPTS ── -->
+  <!-- â”€â”€ SITEBRAIN JS ENGINE SCRIPTS â”€â”€ -->
   <script src="assets/js/data.js"></script>
   <script src="assets/js/utils.js"></script>
   <script src="assets/js/api.js"></script>
